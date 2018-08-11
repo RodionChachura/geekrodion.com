@@ -1,14 +1,19 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
 
 import * as pages from '../pages'
-
 import * as genericActions from '../actions/generic'
 import { connectTo } from '../utils/generic'
+import { THEME } from '../constants'
 
 class MainLayout extends React.Component {
   render() {
     const Page = pages[this.props.page]
-    return <Page />
+    return (
+      <ThemeProvider theme={THEME}>
+        <Page />
+      </ThemeProvider>
+    )
   }
 
   componentDidMount() {
