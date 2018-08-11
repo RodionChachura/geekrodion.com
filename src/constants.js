@@ -7,8 +7,11 @@ export const PHOTOS = Array.from(Array(8).keys()).map(number => `/photos/${numbe
 
 export const DOB = DateTime.fromMillis(892371600000)
 
+export const EMAIL = 'geekrodion@gmail.com'
+
 export const THEME = {
   color: {
-    fontColor: '#FFFFFF'
+    fontColor: '#FFFFFF',
+    backgroundColor: '#111111'
   }
 }

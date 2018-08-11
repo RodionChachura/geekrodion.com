@@ -33,7 +33,6 @@ export function* exitPage({ payload }) {
 export function* startApp() {
   while(true) {
     yield put(tick())
-    console.log('tick')
     yield call(delay, TICK_PERIOD)
   }
 }

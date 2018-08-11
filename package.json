@@ -4,6 +4,11 @@
   "private": false,
   "homepage": "https://geekrodion.com",
   "dependencies": {
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.2",
+    "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
+    "@fortawesome/free-solid-svg-icons": "^5.2.0",
+    "@fortawesome/react-fontawesome": "^0.1.1",
     "lodash": "^4.17.10",
     "luxon": "^1.3.3",
     "react": "^16.4.1",
