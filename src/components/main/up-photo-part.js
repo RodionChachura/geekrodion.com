@@ -2,8 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { DateTime } from 'luxon'
 
-import { DOB } from '../../constants';
-
+import { DOB } from '../../constants'
 
 const UpPhotoPart = styled.div`
   position: absolute;
@@ -34,16 +33,28 @@ const Age = styled.h5`
   border-radius: 4px;
   padding: 4px;
   margin-top: 10px;
-  background-color:${props => props.theme.color.backgroundColor};
-  color: ${props => props.theme.color.fontColor}
+  background-color: ${props => props.theme.color.backgroundColor};
+  color: ${props => props.theme.color.fontColor};
 `
 
 export default () => {
-  const { years, months, days } = DateTime.fromMillis(Date.now()).diff(DOB,[ 'year', 'months', 'days'])
+  const { years, months, days } = DateTime.fromMillis(Date.now()).diff(DOB, [
+    'year',
+    'months',
+    'days'
+  ])
   return (
     <UpPhotoPart>
-      <Quote target="_blank" href="https://medium.com/@geekrodion/increaser-mindset-dc828a2bcd4d">Time waits for no one, and it won’t wait for me</Quote>
-      <Age>{Math.round(years)} years {Math.round(months)} months {Math.round(days)} days</Age>
+      <Quote
+        target="_blank"
+        href="https://medium.com/@geekrodion/increaser-mindset-dc828a2bcd4d"
+      >
+        Time waits for no one, and it won’t wait for me
+      </Quote>
+      <Age>
+        {Math.round(years)} years {Math.round(months)} months {Math.round(days)}{' '}
+        days
+      </Age>
     </UpPhotoPart>
   )
 }
