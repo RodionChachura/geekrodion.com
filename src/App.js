@@ -1,4 +1,5 @@
 import React from 'react'
+import { YMInitializer } from 'react-yandex-metrika'
 import { Provider } from 'react-redux'
 
 import './utils/array-extensions'
@@ -12,9 +13,24 @@ import { startApp } from './actions/generic'
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <Main />
-    </Provider>
+    <div>
+      <Provider store={store}>
+        <Main />
+      </Provider>
+      {process.env.NODE_ENV === 'production' && (
+        <YMInitializer
+          accounts={[50995253]}
+          version="2"
+          options={{
+            id: 50995253,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+          }}
+        />
+      )}
+    </div>
   )
 }
 

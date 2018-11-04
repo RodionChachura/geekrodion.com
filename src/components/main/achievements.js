@@ -9,22 +9,39 @@ const AchievementLink = styled.a`
   color: ${props => props.theme.color.fontColor};
   cursor: pointer;
   background-color: ${props => props.theme.color.backgroundColor};
-  padding: 10px
 `
 
 export default () => (
   <div>
     <Achievement>
-      Creator of <AchievementLink target="_blank" href={'https://increaser.org'}>increaser.org</AchievementLink>
+      <p>
+        Creator of{' '}
+        <AchievementLink target="_blank" href={'https://increaser.org'}>
+          increaser.org
+        </AchievementLink>
+      </p>
     </Achievement>
     <Achievement>
-      <AchievementLink target="_blank" href={'https://medium.com/@geekrodion'}>Medium</AchievementLink> writer
+      <p>
+        <AchievementLink
+          target="_blank"
+          href={'https://medium.com/@geekrodion'}
+        >
+          Medium
+        </AchievementLink>{' '}
+        writer
+      </p>
     </Achievement>
     <Achievement>
-      Senior Software Engineer at <AchievementLink target="_blank" href={'https://kreo.net'}>KREO</AchievementLink>
+      <p>
+        Senior Software Engineer at{' '}
+        <AchievementLink target="_blank" href={'https://kreo.net'}>
+          KREO
+        </AchievementLink>
+      </p>
     </Achievement>
     <Achievement>
-      BSUIR student
+      <p>BSUIR student</p>
     </Achievement>
   </div>
 )

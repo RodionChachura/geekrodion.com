@@ -10,12 +10,12 @@ const Header = styled.div`
 `
 
 const Name = styled.h1`
-  color: ${props => props.theme.color.fontColor}
+  color: ${props => props.theme.color.fontColor};
 `
 
 const StageName = styled.h2`
   color: ${props => props.theme.color.fontColor};
-  padding-top: 10px
+  padding-top: 10px;
 `
 
 export default () => (
