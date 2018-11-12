@@ -3,6 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
+      - cd front
       - npm install
   build:
     commands:
