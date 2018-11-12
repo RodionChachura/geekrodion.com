@@ -7,4 +7,4 @@ phases:
       - npm install
   build:
     commands:
-      - . ./front/management/deploy.sh
+      - . ./management/deploy.sh
