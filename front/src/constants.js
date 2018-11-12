@@ -14,6 +14,6 @@ export const EMAIL = 'geekrodion@gmail.com'
 export const THEME = {
   color: {
     fontColor: '#FFFFFF',
-    backgroundColor: '#111111'
+    backgroundColor: '#111111',
   }
 }

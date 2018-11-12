@@ -14,7 +14,7 @@ const Achievement = styled.div`
 
 export default ({ children }) => (
   <Achievement>
-    <FontAwesomeIcon style={{ paddingRight: 20, color: '#FF4136' }} size={'2x'} icon={faRocket}/>
+    <FontAwesomeIcon style={{ paddingRight: 20, color: '#39CCCC' }} size={'2x'} icon={faRocket}/>
     {children}
   </Achievement>
 )
