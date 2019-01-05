@@ -3,11 +3,11 @@ import { delay } from 'redux-saga'
 
 import { to } from '../actions/navigation'
 import { finishEnterPage } from '../actions/generic'
-import { tick } from '../actions/main';
-import { TICK_PERIOD } from '../constants';
+import { tick, updateActiveUsersNumber } from '../actions/main'
+import { TICK_PERIOD, POMODORO_ACTIVE_USERS_URL } from '../constants'
+import { get } from '../utils/api'
 
-const enters = {
-}
+const enters = {}
 
 export function* enterPage() {
   const state = yield select()
@@ -31,8 +31,14 @@ export function* exitPage({ payload }) {
 }
 
 export function* startApp() {
-  while(true) {
+  while (true) {
     yield put(tick())
     yield call(delay, TICK_PERIOD)
+
+    try {
+      const { activeUsersNumber } = yield call(get, POMODORO_ACTIVE_USERS_URL)
+      const number = Number(activeUsersNumber)
+      yield put(updateActiveUsersNumber({ app: 'pomodoro', number }))
+    } catch (err) {}
   }
 }

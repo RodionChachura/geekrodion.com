@@ -1,20 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRocket } from '@fortawesome/fontawesome-free-solid'
 
 const Achievement = styled.div`
   margin: 40px;
   font-size: 1.8vmax;
   color: ${props => props.theme.color.fontColor};
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 `
 
-export default ({ children }) => (
-  <Achievement>
-    <FontAwesomeIcon style={{ paddingRight: 20, color: '#39CCCC' }} size={'2x'} icon={faRocket}/>
-    {children}
-  </Achievement>
-)
+export default ({ children }) => <Achievement>{children}</Achievement>

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { DateTime } from 'luxon'
 
-import { DOB } from '../../constants'
+import { DOB, TIME_WAITS_FOR_NO_ONE_URL } from '../../constants'
 
 const UpPhotoPart = styled.div`
   position: absolute;
@@ -45,10 +45,7 @@ export default () => {
   ])
   return (
     <UpPhotoPart>
-      <Quote
-        target="_blank"
-        href="https://medium.com/@geekrodion/increaser-mindset-dc828a2bcd4d"
-      >
+      <Quote target="_blank" href={TIME_WAITS_FOR_NO_ONE_URL}>
         Time waits for no one, and it won’t wait for me
       </Quote>
       <Age>

@@ -18,7 +18,6 @@ const Container = styled.div`
 `
 
 const InfoPart = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
