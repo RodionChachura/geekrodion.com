@@ -20,7 +20,6 @@ const AchievementLink = styled.a`
 `
 
 const Achievements = ({ activeUsers: { pomodoro } }) => {
-  console.log(pomodoro)
   return (
     <div>
       <Achievement>
