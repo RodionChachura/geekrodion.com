@@ -1,5 +1,5 @@
 import React from 'react'
-import { YMInitializer } from 'react-yandex-metrika'
+import ReactGA from 'react-ga'
 import { Provider } from 'react-redux'
 
 import './utils/array-extensions'
@@ -13,24 +13,9 @@ import { startApp } from './actions/generic'
 
 const App = () => {
   return (
-    <div>
-      <Provider store={store}>
-        <Main />
-      </Provider>
-      {process.env.NODE_ENV === 'production' && (
-        <YMInitializer
-          accounts={[50995253]}
-          version="2"
-          options={{
-            id: 50995253,
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true
-          }}
-        />
-      )}
-    </div>
+    <Provider store={store}>
+      <Main />
+    </Provider>
   )
 }
 
@@ -48,3 +33,7 @@ if (process.env.REACT_APP_MOCK) {
 }
 
 window.history.pushState({}, '', '')
+if (process.env.NODE_ENV === 'production') {
+  ReactGA.initialize('UA-131566304-2')
+  ReactGA.pageview(window.location.pathname + window.location.search)
+}
