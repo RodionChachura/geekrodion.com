@@ -37,17 +37,13 @@ export function* startApp() {
     yield call(delay, TICK_PERIOD)
 
     const now = Date.now()
-    if (!lastRequestToGA) {
+    if (!lastRequestToGA || (now - lastRequestToGA) / 1000 > 30) {
       lastRequestToGA = now
-      continue
+      try {
+        const { activeUsersNumber } = yield call(get, POMODORO_ACTIVE_USERS_URL)
+        const number = Number(activeUsersNumber)
+        yield put(updateActiveUsersNumber({ app: 'pomodoro', number }))
+      } catch (err) {}
     }
-    const secondsFromLastCall = (now - lastRequestToGA) / 1000
-    if (secondsFromLastCall < 30) continue
-
-    try {
-      const { activeUsersNumber } = yield call(get, POMODORO_ACTIVE_USERS_URL)
-      const number = Number(activeUsersNumber)
-      yield put(updateActiveUsersNumber({ app: 'pomodoro', number }))
-    } catch (err) {}
   }
 }
