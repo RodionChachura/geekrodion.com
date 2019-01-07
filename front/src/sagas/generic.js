@@ -31,9 +31,18 @@ export function* exitPage({ payload }) {
 }
 
 export function* startApp() {
+  let lastRequestToGA = undefined
   while (true) {
     yield put(tick())
     yield call(delay, TICK_PERIOD)
+
+    const now = Date.now()
+    if (!lastRequestToGA) {
+      lastRequestToGA = now
+      continue
+    }
+    const secondsFromLastCall = (now - lastRequestToGA) / 1000
+    if (secondsFromLastCall < 30) continue
 
     try {
       const { activeUsersNumber } = yield call(get, POMODORO_ACTIVE_USERS_URL)

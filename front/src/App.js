@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/browser'
 import React from 'react'
 import ReactGA from 'react-ga'
 import { Provider } from 'react-redux'
@@ -34,6 +35,9 @@ if (process.env.REACT_APP_MOCK) {
 
 window.history.pushState({}, '', '')
 if (process.env.NODE_ENV === 'production') {
+  Sentry.init({
+    dsn: 'https://aff70b4589af4cf4a33468d927d30d70@sentry.io/1365408'
+  })
   ReactGA.initialize('UA-131566304-2')
   ReactGA.pageview(window.location.pathname + window.location.search)
 }
