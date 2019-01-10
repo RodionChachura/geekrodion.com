@@ -23,11 +23,13 @@ const forward = (state, page) => {
   }
 }
 
-const possibleBackPairs = [
-]
+const possibleBackPairs = []
 
 const back = (state, noCheck = false) => {
-  const pushNumber = window.history.state.pushNumber || 0
+  const pushNumber =
+    window.history.state && window.history.state.pushNumber
+      ? window.history.state.pushNumber
+      : 0
   if (
     noCheck ||
     (state.history.length > 1 && state.currentPushNumber > pushNumber)
@@ -53,8 +55,8 @@ const back = (state, noCheck = false) => {
 export default createReducer(
   {
     [a.to]: forward,
-    
-    [a.back]: back,
+
+    [a.back]: back
   },
   DEFAULT_STATE
 )
