@@ -1,19 +1,13 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
 
 import * as pages from '../pages'
 import * as genericActions from '../actions/generic'
 import { connectTo } from '../utils/generic'
-import { THEME } from '../constants'
 
 class MainLayout extends React.Component {
   render() {
     const Page = pages[this.props.page]
-    return (
-      <ThemeProvider theme={THEME}>
-        <Page />
-      </ThemeProvider>
-    )
+    return <Page />
   }
 
   componentDidMount() {
@@ -33,7 +27,7 @@ class MainLayout extends React.Component {
 
 export default connectTo(
   state => ({
-    page: state.navigation.page,
+    page: state.navigation.page
   }),
   genericActions,
   MainLayout

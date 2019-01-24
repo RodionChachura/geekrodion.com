@@ -12,11 +12,10 @@ import {
 import { connectTo } from '../../utils/generic'
 
 const AchievementLink = styled.a`
-  color: ${props => props.theme.color.fontColor};
+  color: ${props => props.theme.color.mainFont};
   font-style: italic;
-  color: ${props => props.theme.color.fontColor};
+  color: ${props => props.theme.color.mainFont};
   cursor: pointer;
-  background-color: ${props => props.theme.color.backgroundColor};
 `
 
 const Achievements = ({ activeUsers: { pomodoro } }) => {

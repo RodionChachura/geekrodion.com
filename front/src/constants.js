@@ -18,9 +18,3 @@ export const POMODORO_URL = 'https://pomodoro.increaser.org'
 export const MEDIUM_URL = 'https://medium.com/@geekrodion'
 export const TIME_WAITS_FOR_NO_ONE_URL =
   'https://medium.com/@geekrodion/increaser-mindset-dc828a2bcd4d'
-export const THEME = {
-  color: {
-    fontColor: '#FFFFFF',
-    backgroundColor: '#2c3e50'
-  }
-}

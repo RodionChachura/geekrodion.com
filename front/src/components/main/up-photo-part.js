@@ -17,15 +17,14 @@ const UpPhotoPart = styled.div`
 const Quote = styled.a`
   border-radius: 10px;
   padding: 10px;
-  background-color: ${props => props.theme.color.backgroundColor};
-  color: ${props => props.theme.color.fontColor};
+  background: ${props => props.theme.color.primary};
+  color: ${props => props.theme.color.mainFont};
   font-style: italic;
   cursor: pointer;
   text-decoration: none;
   :hover {
-    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
-    background-color: ${props => props.theme.color.fontColor};
-    color: ${props => props.theme.color.backgroundColor};
+    transition: ${props => props.theme.transition.default};
+    background: ${props => props.theme.colorHover.primary};
   }
 `
 
@@ -33,8 +32,8 @@ const Age = styled.h5`
   border-radius: 4px;
   padding: 4px;
   margin-top: 10px;
-  background-color: ${props => props.theme.color.backgroundColor};
-  color: ${props => props.theme.color.fontColor};
+  background: ${props => props.theme.color.pageBackground};
+  color: ${props => props.theme.color.mainFont};
 `
 
 export default () => {

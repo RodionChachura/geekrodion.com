@@ -14,7 +14,7 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: row;
-  background: ${props => props.theme.color.backgroundColor};
+  background: ${props => props.theme.color.pageBackground};
 `
 
 const InfoPart = styled.div`
@@ -46,7 +46,7 @@ const AchievementsContainer = styled.div`
 `
 
 const MobileContainer = styled.div`
-  background: ${props => props.theme.color.backgroundColor};
+  background: ${props => props.theme.color.pageBackground};
   display: flex;
   flex-direction: column;
   align-items: center;

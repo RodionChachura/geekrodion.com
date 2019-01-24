@@ -2,6 +2,8 @@ import * as Sentry from '@sentry/browser'
 import React from 'react'
 import ReactGA from 'react-ga'
 import { Provider } from 'react-redux'
+import { THEME } from 'increaser-components'
+import { ThemeProvider } from 'styled-components'
 
 import './utils/array-extensions'
 
@@ -14,9 +16,11 @@ import { startApp } from './actions/generic'
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <Main />
-    </Provider>
+    <ThemeProvider theme={THEME}>
+      <Provider store={store}>
+        <Main />
+      </Provider>
+    </ThemeProvider>
   )
 }
 
