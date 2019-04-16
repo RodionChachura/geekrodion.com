@@ -3,12 +3,7 @@ import styled from 'styled-components'
 
 import Achievement from './achievement'
 import ActiveUsers from './active-users'
-import {
-  JOB_URL,
-  INCREASER_URL,
-  POMODORO_URL,
-  MEDIUM_URL
-} from '../../constants'
+import { JOB_URL, POMODORO_URL, MEDIUM_URL } from '../../constants'
 import { connectTo } from '../../utils/generic'
 
 const AchievementLink = styled.a`
