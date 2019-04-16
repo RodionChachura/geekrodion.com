@@ -42,15 +42,15 @@ export default () => {
     'months',
     'days'
   ])
+  const age = `${Math.round(years)} years${
+    Math.round(months) > 0 ? ` ${Math.round(months)} months` : ''
+  }${Math.round(days) > 0 ? ` ${Math.round(days)} days` : ''}`
   return (
     <UpPhotoPart>
       <Quote target="_blank" href={TIME_WAITS_FOR_NO_ONE_URL}>
         Time waits for no one, and it won’t wait for me
       </Quote>
-      <Age>
-        {Math.round(years)} years {Math.round(months)} months {Math.round(days)}{' '}
-        days
-      </Age>
+      <Age>{age}</Age>
     </UpPhotoPart>
   )
 }

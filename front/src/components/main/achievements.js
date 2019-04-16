@@ -24,14 +24,6 @@ const Achievements = ({ activeUsers: { pomodoro } }) => {
       <Achievement>
         <p>
           Creator of{' '}
-          <AchievementLink target="_blank" href={INCREASER_URL}>
-            Increaser
-          </AchievementLink>
-        </p>
-      </Achievement>
-      <Achievement>
-        <p>
-          Creator of{' '}
           <AchievementLink target="_blank" href={POMODORO_URL}>
             Pomodoro by Increaser
           </AchievementLink>
@@ -43,7 +35,18 @@ const Achievements = ({ activeUsers: { pomodoro } }) => {
           <AchievementLink target="_blank" href={MEDIUM_URL}>
             Medium
           </AchievementLink>{' '}
-          writer
+          Writer
+        </p>
+      </Achievement>
+      <Achievement>
+        <p>
+          <AchievementLink
+            target="_blank"
+            href={'https://www.udemy.com/user/rodion-chachura/'}
+          >
+            Udemy
+          </AchievementLink>{' '}
+          Instructor
         </p>
       </Achievement>
       <Achievement>
