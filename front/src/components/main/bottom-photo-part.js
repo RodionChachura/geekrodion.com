@@ -1,9 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import { faInstagram, faGithub, faLinkedin, faMedium } from '@fortawesome/free-brands-svg-icons'
+import {
+  faInstagram,
+  faGithub,
+  faLinkedin,
+  faMedium,
+  faYoutube
+} from '@fortawesome/free-brands-svg-icons'
 
 import IconLink from './icon-link'
-
+import {
+  MEDIUM_URL,
+  YOUTUBE_URL,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  INSTAGRAM_URL
+} from '../../constants'
 
 const BottomPhotoPart = styled.div`
   position: absolute;
@@ -16,11 +28,18 @@ const BottomPhotoPart = styled.div`
   padding-bottom: 20px;
 `
 
+const links = [
+  [faInstagram, INSTAGRAM_URL],
+  [faLinkedin, LINKEDIN_URL],
+  [faGithub, GITHUB_URL],
+  [faMedium, MEDIUM_URL],
+  [faYoutube, YOUTUBE_URL]
+]
+
 export default () => (
   <BottomPhotoPart>
-    <IconLink icon={faInstagram} destination={'https://www.instagram.com/geekrodion/'}/>
-    <IconLink icon={faLinkedin} destination={'https://www.linkedin.com/in/rodion-chachura-04aa8a156/'}/>
-    <IconLink icon={faGithub} destination={'https://github.com/RodionChachura'}/>
-    <IconLink icon={faMedium} destination={'https://medium.com/@geekrodion'}/>
+    {links.map(([icon, destination]) => (
+      <IconLink {...{ icon, destination }} key={destination} />
+    ))}
   </BottomPhotoPart>
 )

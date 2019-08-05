@@ -12,8 +12,17 @@ export const DOB = DateTime.fromMillis(892371600000)
 export const EMAIL = 'geekrodion@gmail.com'
 export const POMODORO_ACTIVE_USERS_URL =
   'https://9pzddbezx9.execute-api.eu-central-1.amazonaws.com/tf-analytics-taker/tf-analytics-taker'
-export const JOB_URL = 'https://www.kreo.net/'
+
 export const POMODORO_URL = 'https://pomodoro.increaser.org'
 export const MEDIUM_URL = 'https://medium.com/@geekrodion'
+export const UDEMY_URL = 'https://www.udemy.com/user/rodion-chachura/'
+export const SKILLSHARE_URL =
+  'https://www.skillshare.com/r/profile/Rodion-Chachura/4366140'
+export const YOUTUBE_URL =
+  'https://www.youtube.com/channel/UCPl7uA48MtZrOGWtIZM62Jg'
+export const GITHUB_URL = 'https://github.com/RodionChachura'
+export const LINKEDIN_URL =
+  'https://www.linkedin.com/in/rodion-chachura-04aa8a156/'
+export const INSTAGRAM_URL = 'https://www.instagram.com/geekrodion/'
 export const TIME_WAITS_FOR_NO_ONE_URL =
   'https://medium.com/@geekrodion/increaser-mindset-dc828a2bcd4d'

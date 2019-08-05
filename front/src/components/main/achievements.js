@@ -3,7 +3,12 @@ import styled from 'styled-components'
 
 import Achievement from './achievement'
 import ActiveUsers from './active-users'
-import { JOB_URL, POMODORO_URL, MEDIUM_URL } from '../../constants'
+import {
+  POMODORO_URL,
+  MEDIUM_URL,
+  SKILLSHARE_URL,
+  UDEMY_URL
+} from '../../constants'
 import { connectTo } from '../../utils/generic'
 
 const AchievementLink = styled.a`
@@ -35,21 +40,14 @@ const Achievements = ({ activeUsers: { pomodoro } }) => {
       </Achievement>
       <Achievement>
         <p>
-          <AchievementLink
-            target="_blank"
-            href={'https://www.udemy.com/user/rodion-chachura/'}
-          >
+          <AchievementLink target="_blank" href={UDEMY_URL}>
             Udemy
-          </AchievementLink>{' '}
-          Instructor
-        </p>
-      </Achievement>
-      <Achievement>
-        <p>
-          Senior Software Engineer at{' '}
-          <AchievementLink target="_blank" href={JOB_URL}>
-            KREO
           </AchievementLink>
+          {' and '}
+          <AchievementLink target="_blank" href={SKILLSHARE_URL}>
+            Skillshare
+          </AchievementLink>
+          {' Instructor'}
         </p>
       </Achievement>
     </div>
