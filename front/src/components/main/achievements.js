@@ -25,7 +25,7 @@ const Achievements = ({ activeUsers: { pomodoro } }) => {
         <p>
           Creator of{' '}
           <AchievementLink target="_blank" href={POMODORO_URL}>
-            Pomodoro by Increaser
+            Increaser
           </AchievementLink>
         </p>
         {pomodoro > 0 && <ActiveUsers number={pomodoro} />}
