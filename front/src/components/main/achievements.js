@@ -7,7 +7,8 @@ import {
   POMODORO_URL,
   MEDIUM_URL,
   SKILLSHARE_URL,
-  UDEMY_URL
+  UDEMY_URL,
+  BOOKS_CONCEPTS_URL
 } from '../../constants'
 import { connectTo } from '../../utils/generic'
 
@@ -29,6 +30,14 @@ const Achievements = ({ activeUsers: { pomodoro } }) => {
           </AchievementLink>
         </p>
         {pomodoro > 0 && <ActiveUsers number={pomodoro} />}
+      </Achievement>
+      <Achievement>
+        <p>
+          Creator of{' '}
+          <AchievementLink target="_blank" href={BOOKS_CONCEPTS_URL}>
+            BooksConcepts
+          </AchievementLink>
+        </p>
       </Achievement>
       <Achievement>
         <p>

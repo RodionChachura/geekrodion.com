@@ -11,10 +11,11 @@ import {
 import IconLink from './icon-link'
 import {
   MEDIUM_URL,
-  YOUTUBE_URL,
   GITHUB_URL,
   LINKEDIN_URL,
-  INSTAGRAM_URL
+  INSTAGRAM_URL,
+  YOUTUBE_CODING_URL,
+  YOUTUBE_INCREASER_URL
 } from '../../constants'
 
 const BottomPhotoPart = styled.div`
@@ -33,13 +34,14 @@ const links = [
   [faLinkedin, LINKEDIN_URL],
   [faGithub, GITHUB_URL],
   [faMedium, MEDIUM_URL],
-  [faYoutube, YOUTUBE_URL]
+  [faYoutube, YOUTUBE_INCREASER_URL, 1],
+  [faYoutube, YOUTUBE_CODING_URL, 2]
 ]
 
 export default () => (
   <BottomPhotoPart>
-    {links.map(([icon, destination]) => (
-      <IconLink {...{ icon, destination }} key={destination} />
+    {links.map(([icon, destination, text]) => (
+      <IconLink {...{ icon, destination, text }} key={destination} />
     ))}
   </BottomPhotoPart>
 )
