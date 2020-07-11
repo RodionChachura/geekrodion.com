@@ -1,9 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import Layout from '../components/layout'
+
 const IndexPage = () => {
   return (
-   <h1>Geekrodion</h1>
+    <Layout>
+      <h1>Geekrodion</h1>
+    </Layout>
   )
 }
 
