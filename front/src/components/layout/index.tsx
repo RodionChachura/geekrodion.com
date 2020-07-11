@@ -1,13 +1,19 @@
 import React from 'react'
 
-import { Container, GlobalStyle } from './styles'
+import { Container, Content, GlobalStyle } from './styles'
+import Navbar from '../navbar'
 
 const Layout = ({ children }) => {
   return (
-    <Container>
+    <>
       <GlobalStyle/>
-      {children}
-    </Container>
+      <Container>
+        <Content>
+          <Navbar/>
+          {children}
+        </Content>
+      </Container>
+    </>
   )
 }
 

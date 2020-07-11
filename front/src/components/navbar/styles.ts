@@ -1,7 +1,13 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-  width: 100%;
+export const Placeholder = styled.div`
+  flex-shrink: 0;
+  height: 60px;
+  width: inherit;
+`
+
+export const Container = styled(Placeholder)`
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
