@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
+import { useInterval } from 'beautiful-react-hooks'
+import _ from "lodash"
+import { withTheme } from 'styled-components'
 
-import Text from '../text'
 import { Container } from './styles'
 
 const query = graphql`
@@ -24,16 +27,25 @@ const query = graphql`
   }
 `
 
+const IMAGE_DURATION = 20000
+
 const AuthorPhoto = () => {
   const { allFile: { edges }} = useStaticQuery(query)
+  const photos = edges.map(e => e.node.childImageSharp.fluid)
+
+  const { current: shuffledPhotos } = useRef(_.shuffle(photos))
+  const [photoIndex, setPhotoIndex] = useState(0)
+
+  useInterval(() => {
+    const newPhotoIndex = photoIndex + 1
+    setPhotoIndex(newPhotoIndex)
+  }, IMAGE_DURATION);
 
   return (
     <Container>
-      <Text>
-        {JSON.stringify(edges.map(e => e.node))}
-      </Text>
+      <Img fluid={shuffledPhotos[photoIndex % shuffledPhotos.length]}/>
     </Container>
   )
 }
 
-export default AuthorPhoto
+export default withTheme(AuthorPhoto)
