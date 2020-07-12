@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 `
 
-const MAX_WIDTH = 1220
+export const MAX_WIDTH = 1220
 
 export const Container = styled.div`
   width: 100%;

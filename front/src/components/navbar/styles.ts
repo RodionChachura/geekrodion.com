@@ -4,6 +4,7 @@ export const Placeholder = styled.div`
   flex-shrink: 0;
   height: 80px;
   width: inherit;
+  background: ${p => p.theme.color.background};
 `
 
 export const Container = styled(Placeholder)`
