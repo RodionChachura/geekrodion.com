@@ -7,19 +7,9 @@ export const Navbar = () => {
   return (
     <>
       <Container>
-        <Logo>
-          <Text>
-            GeekRodion
-          </Text>
-        </Logo>
-        <Navigation>
-          <Text>
-            Projects
-          </Text>
-          <Text>
-            Courses
-          </Text>
-        </Navigation>
+        <Text bold size={30}>
+          GEEKRODION
+        </Text>
       </Container>
       <Placeholder/>
     </>

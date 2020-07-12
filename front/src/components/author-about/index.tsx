@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Text, { TEXT_SIZE } from '../text'
+import Text from '../text'
 
 const AuthorAbout = () => {
   return (

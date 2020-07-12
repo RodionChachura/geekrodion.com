@@ -30,9 +30,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: { },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `nunito`,
+        ],
+        display: 'swap'
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
+  ]
 }

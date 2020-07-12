@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { TEXT_SIZE, TEXT_COLOR, SUPPORTED_TAGS } from './constants'
+import { TEXT_COLOR, SUPPORTED_TAGS } from './constants'
 import { TextComponent } from './styles'
 
 const getTextComponent = (tag: string) => {
@@ -21,7 +21,7 @@ const Text = ({
   children,
   customColor,
   tag = 'p',
-  size = TEXT_SIZE.M,
+  size = 18,
   color = TEXT_COLOR.DEFAULT,
   underline = false,
   ...rest

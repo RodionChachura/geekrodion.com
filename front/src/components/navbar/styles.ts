@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Placeholder = styled.div`
   flex-shrink: 0;
-  height: 60px;
+  height: 80px;
   width: inherit;
 `
 

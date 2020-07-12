@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     outline: none;
     box-sizing: border-box;
-    font-family: 'Regular', sans-serif;
+    font-family: 'Nunito', sans-serif;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
   }
 `
