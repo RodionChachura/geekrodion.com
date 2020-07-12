@@ -1,14 +1,12 @@
 import React from "react"
 
 import Layout from '../components/layout'
-import AuthorPhoto from '../components/author-photo'
-import AuthorAbout from '../components/author-about'
+import Author from '../components/author'
 
 const IndexPage = () => {
   return (
     <Layout>
-      <AuthorPhoto/>
-      <AuthorAbout/>
+      <Author/>
     </Layout>
   )
 }
