@@ -2,6 +2,7 @@ import React from 'react'
 
 import Text from '../../text'
 import { Container, TextWrapper } from './styles'
+import Social from './social'
 
 const AuthorAbout = () => {
   return (
@@ -13,6 +14,7 @@ const AuthorAbout = () => {
       <TextWrapper>
         <Text>I strive to stay open-minded, so my interests change over time. Right now, I’m fascinated with the idea of bootstrapped SAAS, how to balance productivity with creativity, and being comfortable with myself.</Text>
       </TextWrapper>
+      <Social/>
     </Container>
   )
 }

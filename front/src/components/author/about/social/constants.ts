@@ -1,0 +1,5 @@
+export const INSTAGRAM = 'https://www.instagram.com/geekrodion/'
+export const LINKEDIN = 'https://www.linkedin.com/in/rodion-chachura-04aa8a156/'
+export const YOUTUBE = 'https://www.youtube.com/channel/UCPl7uA48MtZrOGWtIZM62Jg'
+export const MEDIUM = 'https://medium.com/@geekrodion'
+export const GITHUB = 'https://github.com/RodionChachura'

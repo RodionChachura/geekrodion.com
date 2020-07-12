@@ -5,6 +5,7 @@ import { TEXT_COLOR, SUPPORTED_TAGS } from './constants'
 export const getTextColor = (theme, textColor) => {
   return {
     [TEXT_COLOR.DEFAULT]: theme.color.text,
+    [TEXT_COLOR.PRIMARY]: theme.color.primary
   }[textColor]
 }
 
