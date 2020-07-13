@@ -4,7 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { INSTAGRAM, LINKEDIN, YOUTUBE, MEDIUM, GITHUB } from './constants'
 import { Container, SocialLink } from './styles'
-import Text, { TEXT_COLOR } from '../../../text'
+import Text, { TEXT_COLOR } from '../../text'
+import { MOBILE_WIDTH } from '../styles'
+import { useMediaQuery } from 'beautiful-react-hooks'
 
 type Icon = [string, IconDefinition]
 
@@ -17,11 +19,13 @@ const ICONS = [
 ]
 
 const Social = () => {
+  const isMobile = useMediaQuery(`(max-width: ${MOBILE_WIDTH}px)`)
+
   return (
     <Container>
       {ICONS.map(([href, icon]: Icon) => (
         <SocialLink key={href} href={href} target="_blank" rel="noopener noreferrer" >
-          <Text color={TEXT_COLOR.PRIMARY} size={24}>
+          <Text color={TEXT_COLOR.PRIMARY} size={isMobile ? 30 : 24}>
             <FontAwesomeIcon icon={icon} />
           </Text>
         </SocialLink>

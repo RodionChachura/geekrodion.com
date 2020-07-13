@@ -7,6 +7,7 @@ export const Container = styled.div`
   margin-right: 40px;
   @media(max-width: ${ONE_COLUMN_WIDTH}px) {
     margin-right: 0;
+    flex: 0;
   }
 `
 
