@@ -11,6 +11,7 @@ export const Container = styled.div`
   overflow: hidden;
   border-radius: 40px;
   box-shadow: 2px 14px 20px #0C111467;
+  margin: 20px 0;
   @media(max-width: ${MAX_WIDTH}px) {
     width: 40vw;
     height: 40vw;
