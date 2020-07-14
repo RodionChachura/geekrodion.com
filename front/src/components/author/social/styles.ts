@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { MOBILE_WIDTH } from '../styles'
+import { OutboundLink } from 'gatsby-plugin-amplitude-analytics'
 
 export const Container = styled.div`
   display: flex;
@@ -11,7 +12,7 @@ export const Container = styled.div`
   }
 `
 
-export const SocialLink = styled.a`
+export const SocialLink = styled(OutboundLink)`
   margin-right: 20px;
   @media(max-width: ${MOBILE_WIDTH}px) {
     margin-right: 0;
