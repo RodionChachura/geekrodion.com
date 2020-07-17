@@ -1,8 +1,10 @@
 import styled, { css } from 'styled-components'
 
+export const NAVBAR_HEIGHT = 80
+
 const commonStyle = css`
   flex-shrink: 0;
-  height: 80px;
+  height: ${NAVBAR_HEIGHT}px;
   width: inherit;
   background: ${p => p.theme.color.background};
   @media(max-width: 600px) {
