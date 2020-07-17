@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-export const NavbarPlaceholder = styled.div`
+export const Placeholder = styled.div`
   flex-shrink: 0;
   height: 80px;
   width: inherit;
   background: ${p => p.theme.color.background};
 `
 
-export const NavbarContainer = styled(NavbarPlaceholder)`
+export const Container = styled(Placeholder)`
   position: fixed;
   display: flex;
   align-items: center;
@@ -15,9 +15,9 @@ export const NavbarContainer = styled(NavbarPlaceholder)`
   z-index: 1;
 `
 
-export const NavbarLogo = styled.div``
+export const Logo = styled.div``
 
-export const NavbarNavigation = styled.div`
+export const Navigation = styled.div`
   display: flex;
   align-items: center;
 `

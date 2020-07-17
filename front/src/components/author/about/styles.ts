@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { ONE_COLUMN_WIDTH } from '../styles'
 
-export const AboutAuthorContainer = styled.div`
+export const Container = styled.div`
   flex: 1;
   margin-right: 40px;
   @media(max-width: ${ONE_COLUMN_WIDTH}px) {
@@ -11,6 +11,6 @@ export const AboutAuthorContainer = styled.div`
   }
 `
 
-export const AboutAuthorTextWrapper = styled.div`
+export const TextWrapper = styled.div`
   margin: 10px 0;
 `

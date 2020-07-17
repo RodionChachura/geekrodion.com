@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const ONE_COLUMN_WIDTH = 800
 export const MOBILE_WIDTH = 600
 
-export const AuthorContainer = styled.div`
+export const Container = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
