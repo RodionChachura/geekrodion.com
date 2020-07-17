@@ -7,7 +7,7 @@ export const MOBILE_WIDTH = 600
 
 export const Container = styled.div`
   width: 100%;
-  min-height: calc(100% - ${NAVBAR_HEIGHT}px);
+  min-height: calc(100vh - ${NAVBAR_HEIGHT}px);
   display: flex;
   align-items: center;
   margin: 20px 0;

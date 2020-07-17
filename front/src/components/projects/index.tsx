@@ -1,11 +1,14 @@
 import React from 'react'
 
-import { Container } from './styles'
+import { Container, Content, ProjectFrame } from './styles'
+import { EMBEDDED_INCREASER } from '../../constants/links'
 
 const Projects = () => {
   return (
     <Container>
-      Projects will be here...
+      <Content>
+        <ProjectFrame src={EMBEDDED_INCREASER}></ProjectFrame>
+      </Content>
     </Container>
   )
 }
