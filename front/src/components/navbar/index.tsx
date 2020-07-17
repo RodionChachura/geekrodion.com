@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMediaQuery } from 'beautiful-react-hooks'
 
-import { Placeholder, Container } from './styles'
+import { NavbarPlaceholder, NavbarContainer } from './styles'
 import Text from '../text'
 import { MOBILE_WIDTH } from '../author/styles'
 
@@ -13,12 +13,12 @@ export const Navbar = () => {
 
   return (
     <>
-      <Container>
+      <NavbarContainer>
         <Text bold size={30}>
           GEEKRODION
         </Text>
-      </Container>
-      <Placeholder/>
+      </NavbarContainer>
+      <NavbarPlaceholder/>
     </>
   )
 }

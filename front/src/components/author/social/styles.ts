@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { MOBILE_WIDTH } from '../styles'
 import { OutboundLink } from 'gatsby-plugin-amplitude-analytics'
 
-export const Container = styled.div`
+export const AuthorSocialContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;

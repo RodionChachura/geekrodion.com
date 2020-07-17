@@ -5,7 +5,7 @@ import { useInterval } from 'beautiful-react-hooks'
 import _ from "lodash"
 import { withTheme } from 'styled-components'
 
-import { Container } from './styles'
+import { AuthorPhotoContainer } from './styles'
 
 const query = graphql`
   query {
@@ -42,9 +42,9 @@ const AuthorPhoto = () => {
   }, IMAGE_DURATION);
 
   return (
-    <Container>
+    <AuthorPhotoContainer>
       <Img fluid={shuffledPhotos[photoIndex % shuffledPhotos.length]}/>
-    </Container>
+    </AuthorPhotoContainer>
   )
 }
 

@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const MAX_WIDTH = 1220
 
-export const Container = styled.div`
+export const LayoutContainer = styled.div`
   width: 100%;
   min-height: 100%;
   background: ${p => p.theme.color.background};
@@ -36,7 +36,7 @@ export const Container = styled.div`
   justify-content: center;
 `
 
-export const Content = styled.div`
+export const LayoutContent = styled.div`
   width: ${MAX_WIDTH}px;
   min-height: 100%;
   display: flex;

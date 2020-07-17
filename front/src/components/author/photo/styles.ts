@@ -5,7 +5,7 @@ import { ONE_COLUMN_WIDTH } from '../styles'
 
 export const MAX_SIDE = 600
 
-export const Container = styled.div`
+export const AuthorPhotoContainer = styled.div`
   width: ${MAX_SIDE}px;
   height: ${MAX_SIDE}px;
   overflow: hidden;
