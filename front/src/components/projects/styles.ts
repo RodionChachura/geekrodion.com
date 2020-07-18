@@ -10,11 +10,14 @@ export const Container = styled.div`
 export const Content = styled.div`
   flex: 1;
   margin: 20px 0;
+  display: flex;
+  flex-direction: column;
 `
 
 export const ProjectFrame = styled.iframe`
   width: 100%;
-  height: 50%;
+  margin: 10px 0;
+  flex: 1;
   border: none;
   border-radius: 20px;
   box-shadow: 2px 14px 20px #0C111467;
