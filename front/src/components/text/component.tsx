@@ -14,7 +14,8 @@ type Props = {
   color?: string,
   customColor?: string,
   underline?: boolean
-  bold?: boolean
+  bold?: boolean,
+  onClick?: () => void
 }
 
 const Text = ({
@@ -24,12 +25,15 @@ const Text = ({
   size = 18,
   color = TEXT_COLOR.DEFAULT,
   underline = false,
+  onClick,
   ...rest
 }: Props) => {
   const Text = getTextComponent(tag)
 
   return (
     <Text
+      onClick={onClick}
+      clickable={!!onClick}
       underline={underline}
       size={size}
       customColor={customColor}

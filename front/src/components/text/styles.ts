@@ -12,7 +12,7 @@ export const getTextColor = (theme, textColor) => {
 export const getTextHoverColor = (theme: any, textColor: string) => {
   return (
     {
-      [TEXT_COLOR.DEFAULT]: theme.color.secondary,
+      [TEXT_COLOR.DEFAULT]: theme.color.primary,
     }[textColor] || getTextColor(theme, textColor)
   )
 }
