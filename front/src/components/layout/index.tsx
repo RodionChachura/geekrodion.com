@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle/>
-      <Container>
+      <Container id={'author'}>
         <Content>
           <Navbar/>
           {children}

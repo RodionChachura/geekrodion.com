@@ -10,7 +10,7 @@ const Author = () => {
   const isMobile = useMediaQuery(`(max-width: ${MOBILE_WIDTH}px)`)
 
   return (
-    <Container id={'author'}>
+    <Container>
       <About/>
       <Photo/>
       {isMobile && <Social/>}
