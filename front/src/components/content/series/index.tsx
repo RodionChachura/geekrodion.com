@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Series = ({}) => {
+import { Series as SeriesType } from '../../../constants/content'
+
+const Series = ({}: SeriesType) => {
   return null
 }
 

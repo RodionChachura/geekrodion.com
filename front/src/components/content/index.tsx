@@ -7,8 +7,8 @@ import Series from './series'
 const Content = () => {
   return (
     <Container id={'series'}>
-      {SERIES.map(series => (
-        <Series/>
+      {SERIES.map((series) => (
+        <Series {...series} key={series.name}/>
       ))}
     </Container>
   )
