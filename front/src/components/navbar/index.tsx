@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Placeholder, Container, Navigation } from './styles'
 import Text from '../text'
+import Option from './option'
 
 const getScrollTo = (id: string) => () => {
   const element = document.querySelector(`#${id}`)
@@ -18,9 +19,8 @@ export const Navbar = () => {
           GEEKRODION
         </Text>
         <Navigation>
-          <Text onClick={getScrollTo('projects')} bold size={16}>
-            PROJECTS
-          </Text>
+          <Option text="PROJECTS" onClick={getScrollTo('projects')} />
+          <Option text="SERIES" onClick={getScrollTo('series')} />
         </Navigation>
       </Container>
       <Placeholder/>

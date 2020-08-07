@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 import { NAVBAR_HEIGHT } from '../navbar/styles'
+import { minHeightStyle } from '../styles'
 
 const ONE_COLUMN_WIDTH = '900px'
 
 export const Container = styled.div`
-  min-height: calc(100vh - ${NAVBAR_HEIGHT}px);
+  ${minHeightStyle};
   display: flex;
 `
 
@@ -33,6 +34,6 @@ export const ProjectFrame = styled.iframe`
     }
   }
   @media(max-width: ${ONE_COLUMN_WIDTH}) {
-    min-height: calc(100vh - ${NAVBAR_HEIGHT}px);
+    ${minHeightStyle};
   }
 `
