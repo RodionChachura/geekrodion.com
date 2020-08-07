@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-import { NAVBAR_HEIGHT } from '../navbar/styles'
 import { minHeightStyle } from '../styles'
 
 const ONE_COLUMN_WIDTH = '900px'
