@@ -112,4 +112,13 @@ export const SERIES: Series[] = [
       getSource(SourceType.MEDIUM, 'course-probability-theory-and-statistics-for-programmers-353e20202620'),
     ]
   },
-]
+  {
+    finishDate: 1524776400,
+    name: 'How to Start React Project: Best Practices',
+    sources: [
+      getSource(SourceType.UDEMY, 'how-to-start-react-project-best-practices'),
+      getSource(SourceType.MEDIUM, 'redux-saga-create-react-app-b6484f704d68'),
+      getSource(SourceType.GITHUB, 'react-starter')
+    ]
+  }
+].sort((a, b) => b.finishDate - a.finishDate)
