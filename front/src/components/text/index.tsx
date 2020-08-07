@@ -1,3 +1,3 @@
-export { TEXT_COLOR } from './constants'
+export { TextColor } from './constants'
 export { default } from './component' 
 

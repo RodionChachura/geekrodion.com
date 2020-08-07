@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { TEXT_COLOR, SUPPORTED_TAGS } from './constants'
+import { TextColor, SUPPORTED_TAGS } from './constants'
 import { TextComponent } from './styles'
 
 const getTextComponent = (tag: string) => {
@@ -11,7 +11,7 @@ type Props = {
   tag?: string,
   children: any,
   size?: number,
-  color?: string,
+  color?: TextColor,
   customColor?: string,
   underline?: boolean
   bold?: boolean,
@@ -23,7 +23,7 @@ const Text = ({
   customColor,
   tag = 'p',
   size = 18,
-  color = TEXT_COLOR.DEFAULT,
+  color = TextColor.DEFAULT,
   underline = false,
   onClick,
   ...rest

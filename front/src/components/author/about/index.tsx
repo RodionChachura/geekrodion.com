@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMediaQuery } from 'beautiful-react-hooks'
 
-import Text from '../../text'
+import Text, { TextColor } from '../../text'
 import { Container, TextWrapper } from './styles'
 import Social from '../social'
 import { MOBILE_WIDTH } from '../styles'
@@ -18,7 +18,7 @@ const AuthorAbout = () => {
       {!isMobile && (
         <>
           <TextWrapper>
-            <Text>I strive to stay open-minded, so my interests change over time. Right now, I’m fascinated with the idea of bootstrapped SAAS, how to balance productivity with creativity, and being comfortable with myself.</Text>
+            <Text color={TextColor.SECONDARY}>I strive to stay open-minded, so my interests change over time. Right now, I’m fascinated with the idea of bootstrapped SAAS, how to balance productivity with creativity, and being comfortable with myself.</Text>
           </TextWrapper>
           <Social/>
         </>

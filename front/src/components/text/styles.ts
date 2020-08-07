@@ -1,18 +1,20 @@
 import styled, { css } from 'styled-components'
 
-import { TEXT_COLOR, SUPPORTED_TAGS } from './constants'
+import { TextColor, SUPPORTED_TAGS } from './constants'
 
 export const getTextColor = (theme, textColor) => {
   return {
-    [TEXT_COLOR.DEFAULT]: theme.color.text,
-    [TEXT_COLOR.PRIMARY]: theme.color.primary
+    [TextColor.DEFAULT]: theme.color.text,
+    [TextColor.SECONDARY]: theme.color.secondaryText,
+    [TextColor.PRIMARY]: theme.color.primary
   }[textColor]
 }
 
 export const getTextHoverColor = (theme: any, textColor: string) => {
   return (
     {
-      [TEXT_COLOR.DEFAULT]: theme.color.primary,
+      [TextColor.DEFAULT]: theme.color.primary,
+      [TextColor.SECONDARY]: theme.color.text,
     }[textColor] || getTextColor(theme, textColor)
   )
 }
