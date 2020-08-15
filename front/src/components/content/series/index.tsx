@@ -1,8 +1,9 @@
 import React from 'react'
 import { DateTime } from 'luxon'
+import Img, { FluidObject } from "gatsby-image"
 
 import { Series as SeriesType } from '../../../constants/content'
-import { Container } from './styles'
+import { Container, Content } from './styles'
 import Text, { TextColor } from '../../text'
 
 const getTimeText = (finishDate: number): string | null => {
@@ -25,12 +26,18 @@ const getTimeText = (finishDate: number): string | null => {
   return ['finished', ...parts, 'ago'].join(' ')
 }
 
-const Series = ({ finishDate, name, sources }: SeriesType) => {
+type Props = SeriesType & {
+  image: FluidObject;
+}
 
+const Series = ({ finishDate, name, image, sources }: Props) => {
   return (
     <Container>
-      <Text>{name}</Text>
-      <Text color={TextColor.SECONDARY}>{getTimeText(finishDate)}</Text>
+      <Img fluid={image}/>
+      <Content>
+        <Text>{name}</Text>
+        <Text color={TextColor.SECONDARY}>{getTimeText(finishDate)}</Text>
+      </Content>
     </Container>
   )
 }

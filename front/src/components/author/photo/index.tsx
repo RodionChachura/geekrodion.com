@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { useInterval } from 'beautiful-react-hooks'
@@ -17,7 +17,7 @@ const query = graphql`
         node {
           name
           childImageSharp {
-            fluid(maxWidth: 600) {
+            fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

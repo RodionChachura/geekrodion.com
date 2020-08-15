@@ -5,6 +5,10 @@ export const Container = styled.div`
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 2px 14px 20px #0C111467;
-  margin: 10px 0;
-  padding: 10px;
+  overflow: hidden;
+  width: 100%;
+`
+
+export const Content = styled.div`
+  margin: 10px;
 `
