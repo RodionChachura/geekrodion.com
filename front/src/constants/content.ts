@@ -12,9 +12,9 @@ export interface Source {
 
 const URL_BASE = {
   [SourceType.MEDIUM]: 'https://medium.com/@geekrodion/',
-  [SourceType.YOUTUBE]: 'https://www.youtube.com/',
-  [SourceType.UDEMY]: 'https://www.udemy.com/course/snake-game-with-rust-javascript-and-webassembly/',
-  [SourceType.GITHUB]: 'https://github.com/RodionChachura'
+  [SourceType.YOUTUBE]: 'https://youtu.be/',
+  [SourceType.UDEMY]: 'https://www.udemy.com/course/',
+  [SourceType.GITHUB]: 'https://github.com/RodionChachura/'
 }
 
 const getSource = (type: SourceType, uniqUrlPart: string): Source => ({
@@ -45,7 +45,7 @@ export const SERIES: Series[] = [
     name: 'Snake Game with JavaScript',
     id: 'snake-game-js',
     sources: [
-      getSource(SourceType.YOUTUBE, 'playlist?list=PLydcsPcXRjewkhbFU6wihNe6D9YfxYEoQ'),
+      getSource(SourceType.YOUTUBE, 'XmfgMWVTe5Y'),
       getSource(SourceType.MEDIUM, 'snake-game-with-javascript-10e0ad9edb52'),
       getSource(SourceType.GITHUB, 'snake-game')
     ]
@@ -55,7 +55,7 @@ export const SERIES: Series[] = [
     name: 'Breakout Game with JavaScript, React and SVG',
     id: 'breakout-game-react',
     sources: [
-      getSource(SourceType.YOUTUBE, 'playlist?list=PLydcsPcXRjewg798yVulQmoblrQlu46iM'),
+      getSource(SourceType.YOUTUBE, 'eweZqMnIABQ'),
       getSource(SourceType.MEDIUM, 'breakout-game-with-javascript-react-and-svg-c8c62a3d30c6'),
       getSource(SourceType.GITHUB, 'breakout-game')
     ]
