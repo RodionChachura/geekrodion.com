@@ -5,13 +5,16 @@ import { minHeightStyle } from '../styles'
 const ONE_COLUMN_WIDTH = '900px'
 
 export const Container = styled.div`
-  ${minHeightStyle};
   display: flex;
+  @media(min-width: ${ONE_COLUMN_WIDTH}) {
+    ${minHeightStyle};
+  }
 `
 
 export const Content = styled.div`
   flex: 1;
   display: flex;
+  align-items: center;
   @media(max-width: ${ONE_COLUMN_WIDTH}) {
     flex-direction: column;
   }
@@ -32,7 +35,8 @@ export const ProjectFrame = styled.iframe`
       margin-right: 10px;
     }
   }
-  @media(max-width: ${ONE_COLUMN_WIDTH}) {
-    ${minHeightStyle};
+  height: 800px;
+  @media(min-width: ${ONE_COLUMN_WIDTH}) and (max-height: 820px) {
+    height: 98%;
   }
 `

@@ -8,6 +8,7 @@ import { Container, SocialLink } from './styles'
 import Text, { TextColor } from '../../text'
 import { MOBILE_WIDTH } from '../styles'
 import Age from '../age'
+import { AgeContainer } from './styles'
 
 type Icon = [string, IconDefinition]
 
@@ -24,6 +25,11 @@ const Social = () => {
 
   return (
     <>
+      {isMobile && (
+        <AgeContainer>
+          <Age/>
+        </AgeContainer>
+      )}
       <Container>
         {ICONS.map(([href, icon]: Icon) => (
           <SocialLink key={href} href={href} target="_blank" rel="noopener noreferrer" >
@@ -33,7 +39,7 @@ const Social = () => {
           </SocialLink>
         ))}
       </Container>
-      <Age/>
+      {!isMobile && <Age/>}
     </>
   )
 }

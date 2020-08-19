@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-import { NAVBAR_HEIGHT } from '../navbar/styles'
 import { minHeightStyle } from '../styles'
 
 export const ONE_COLUMN_WIDTH = 800
@@ -16,5 +15,6 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: flex-start;
     width: initial;
+    height: 100vh;
   }
 `

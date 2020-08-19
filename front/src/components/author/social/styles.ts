@@ -18,3 +18,11 @@ export const SocialLink = styled(OutboundLink)`
     margin-right: 0;
   }
 `
+
+export const AgeContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+`
