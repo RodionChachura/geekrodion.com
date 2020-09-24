@@ -5,6 +5,8 @@ import Text, { TextColor } from '../../text'
 import { Container, TextWrapper } from './styles'
 import Social from '../social'
 import { MOBILE_WIDTH } from '../styles'
+import { SEARCHING_FOR_JOB } from '../../../constants/generic'
+import Job from '../job'
 
 const AuthorAbout = () => {
   const isMobile = useMediaQuery(`(max-width: ${MOBILE_WIDTH}px)`)
@@ -13,6 +15,7 @@ const AuthorAbout = () => {
     <Container>
       <TextWrapper>
         <Text>Hi, I’m Rodion 👋</Text>
+        {SEARCHING_FOR_JOB && <Job/>}
       </TextWrapper>
       <Text bold size={isMobile ? 22 : 34}>I develop software, make content, and create indie projects</Text>
       {!isMobile && (
