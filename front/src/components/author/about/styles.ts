@@ -18,4 +18,6 @@ export const Container = styled.div`
 export const TextWrapper = styled.div`
   margin: 10px 0;
   position: relative;
+  display: flex;
+  align-items: center;
 `
