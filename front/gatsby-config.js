@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,6 +14,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/blog`,
+      }
+    }
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -46,6 +54,12 @@ module.exports = {
         apiKey: "afe86075776de93239aa05c74e64baed",
       },
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: []
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
