@@ -8,7 +8,7 @@ const WIDTH = 90
 export const Container = styled.div`
   position: absolute;
   border-radius: 5px;
-  box-shadow: 2px 14px 20px #0C111467;
+  box-shadow: ${p => p.theme.shadow.default};
   background: ${p => p.theme.color.primary};
   cursor: pointer;
   right: -${WIDTH + 5}px;
