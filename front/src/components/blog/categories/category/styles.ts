@@ -8,4 +8,6 @@ export const Container = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  background: ${p => p.selected? p.theme.color.primary: p.theme.color.secondaryBackground};
+  margin-right: 20px;
 `
