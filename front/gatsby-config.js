@@ -20,7 +20,7 @@ module.exports = {
         name: `blog`,
         path: `${__dirname}/src/blog`,
       }
-    }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
