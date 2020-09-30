@@ -3,20 +3,16 @@ import React from 'react'
 import { Container } from './styles'
 import Category from './category'
 
-export interface Category {
-  slug: string,
-  text: string
-}
-
 interface Props {
-  categories: Category[]
+  categories: string[],
+  pathname: string
 }
 
-const Categories = ({ categories }: Props) => {
+const Categories = ({ categories, pathname }: Props) => {
   return (
     <Container>
       {categories.map(category => (
-        <Category {...category} selected={false} />
+        <Category category={category} selected={pathname.includes(category)} />
       ))}
     </Container>
   )

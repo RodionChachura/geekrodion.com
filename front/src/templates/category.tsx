@@ -4,14 +4,20 @@ import { Link, graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Text from '../components/text'
+import Categories from '../components/blog/categories'
 
-const Category = ({ pageContext, data }) => {
+const Category = ({ pageContext, data, location: { pathname } }) => {
   const { category } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  const { edges, totalCount } = data.postsRemark
+  const categories = data.categoriesGroup.group.map(g => g.fieldValue)
   
   return (
     <Layout>
       <SEO/>
+      <Categories
+        categories={categories}
+        pathname={pathname}
+      />
       <Text tag='h1'>
         {category} ({totalCount})
       </Text>
@@ -30,7 +36,7 @@ const Category = ({ pageContext, data }) => {
 
 export const pageQuery = graphql`
   query($category: String) {
-    allMarkdownRemark(
+    postsRemark: allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { category: { eq: $category } } }
@@ -43,6 +49,11 @@ export const pageQuery = graphql`
             path
           }
         }
+      }
+    }
+    categoriesGroup: allMarkdownRemark(limit: 2000) {
+      group(field: frontmatter___category) {
+        fieldValue
       }
     }
   }
