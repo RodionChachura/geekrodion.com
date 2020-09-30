@@ -12,7 +12,7 @@ const Category = ({ pageContext, data, location: { pathname } }) => {
   const categories = data.categoriesGroup.group.map(g => g.fieldValue)
   
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO/>
       <Categories
         categories={categories}

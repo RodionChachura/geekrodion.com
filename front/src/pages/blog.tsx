@@ -6,16 +6,16 @@ import Layout from '../components/layout'
 import Categories from '../components/blog/categories'
 import Text from '../components/text'
 
-const BlogPage = ({ data, location: { pathname } }) => {
+const BlogPage = ({ data, location }) => {
   const { edges, totalCount } = data.postsRemark
   const categories = data.categoriesGroup.group.map(({ fieldValue }) => fieldValue)
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO/>
       <Categories
         categories={categories}
-        pathname={pathname}
+        pathname={location.pathname}
       />
       <Text tag='h1'>
         All Posts ({totalCount})

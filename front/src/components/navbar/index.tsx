@@ -11,7 +11,8 @@ const getScrollTo = (id: string) => () => {
   }
 }
 
-export const Navbar = () => {
+export const Navbar = ({ location }) => {
+  console.log(location)
   return (
     <>
       <Container>

@@ -12,7 +12,7 @@ const Categories = ({ categories, pathname }: Props) => {
   return (
     <Container>
       {categories.map(category => (
-        <Category category={category} selected={pathname.includes(category)} />
+        <Category key={category} category={category} selected={pathname.includes(category)} />
       ))}
     </Container>
   )

@@ -5,11 +5,11 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Text from '../components/text'
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, location }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO/>
       <Text tag='h1'>
         {post.frontmatter.title}

@@ -6,9 +6,9 @@ import Author from '../components/author'
 import Projects from '../components/projects'
 import Content from '../components/content'
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO/>
       <Author/>
       <Projects/>
