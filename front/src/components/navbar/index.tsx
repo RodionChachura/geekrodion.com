@@ -2,26 +2,21 @@ import React from 'react'
 
 import { Placeholder, Container, Navigation } from './styles'
 import Text from '../text'
-import Option from './option'
-
-const getScrollTo = (id: string) => () => {
-  const element = document.querySelector(`#${id}`)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
-  }
-}
 
 export const Navbar = ({ location }) => {
-  console.log(location)
+  const optionStyle = {
+    marginLeft: 20
+  }
   return (
     <>
       <Container>
-        <Text onClick={getScrollTo('author')} bold size={30}>
+        <Text to={'/#author'} bold size={30}>
           GEEKRODION
         </Text>
         <Navigation>
-          <Option text="PROJECTS" onClick={getScrollTo('projects')} />
-          <Option text="SERIES" onClick={getScrollTo('series')} />
+          <Text style={optionStyle} to={'/#projects'} bold size={16}>PROJECTS</Text>
+          <Text style={optionStyle} to={'/#series'} bold size={16}>SERIES</Text>
+          <Text style={optionStyle} to={'/blog/programming'} bold size={16}>BLOG</Text>
         </Navigation>
       </Container>
       <Placeholder/>
