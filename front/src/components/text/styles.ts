@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { Link } from 'gatsby'
 
 import { TextColor, SUPPORTED_TAGS } from './constants'
 
@@ -21,6 +22,7 @@ export const getTextHoverColor = (theme: any, textColor: string) => {
 }
 
 export const style = css`
+  text-decoration: none;
   font-size: ${p => p.size}px;
   transition: ${p => p.theme.transition.default};
   color: ${p => p.customColor || getTextColor(p.theme, p.color)};
@@ -54,6 +56,10 @@ export const style = css`
     css`
       text-decoration: underline;
     `}
+`
+
+export const StyledLink = styled(Link)`
+  ${style};
 `
 
 export const TextComponent = SUPPORTED_TAGS.reduce(

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { TextColor, SUPPORTED_TAGS } from './constants'
-import { TextComponent } from './styles'
+import { StyledLink, TextComponent } from './styles'
 
 const getTextComponent = (tag: string) => {
   return TextComponent[SUPPORTED_TAGS.includes(tag) ? tag : 'p']
@@ -15,31 +15,39 @@ type Props = {
   customColor?: string,
   underline?: boolean
   bold?: boolean,
-  onClick?: () => void
+  onClick?: () => void,
+  to?: string
 }
 
-const Text = ({
-  children,
-  customColor,
-  tag = 'p',
-  size = 18,
-  color = TextColor.DEFAULT,
-  underline = false,
-  onClick,
-  ...rest
-}: Props) => {
-  const Text = getTextComponent(tag)
+const DEFAULT_PROPS = {
+  tag: 'p',
+  size: 18,
+  color: TextColor.DEFAULT
+}
+
+const Text = ({ children, ...rest }: Props) => {
+  const Text = rest.to ? StyledLink : getTextComponent(rest.tag)
+
+  const props = {
+    ...DEFAULT_PROPS,
+    ...rest,
+    clickable: !!(rest.onClick || rest.to)
+  }
+
+  const definedProps = Object.keys(props).reduce((acc, key) => {
+    const value = props[key]
+    if (value === undefined || value === false) {
+      return acc
+    }
+
+    return {
+      ...acc,
+      [key]: value === true ? 'true' : value
+    }
+  }, {})
 
   return (
-    <Text
-      onClick={onClick}
-      clickable={!!onClick}
-      underline={underline}
-      size={size}
-      customColor={customColor}
-      color={color}
-      {...rest}
-    >
+    <Text {...definedProps}>
       {children}
     </Text>
   )
