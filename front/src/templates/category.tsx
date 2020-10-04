@@ -45,6 +45,7 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
+            date
             title
             path
           }

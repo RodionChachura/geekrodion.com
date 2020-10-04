@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 export const Container = styled(Link)`
-  border-radius: 20px;
-  height: 40px;
-  width: 220px;
+  border-radius: 18px;
+  height: 36px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
