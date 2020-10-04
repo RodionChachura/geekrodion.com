@@ -1,15 +1,21 @@
-import { useStaticQuery } from 'gatsby'
 import React from 'react'
 
 import { Container } from './styles'
+import Card from './card'
 
-const PostsList = ({ query }) => {
-  const { allFile: { edges }} = useStaticQuery(query)
-  const nodes = edges.map(e => e.node)
+const PostsList = ({ edges }) => {
+  const posts = edges.map(e => e.node)
 
   return (
     <Container>
-      {nodes.length}
+      {posts.map(p => (
+        <Card
+          key={p.frontmatter.title}
+          date={p.frontmatter.date}
+          title={p.frontmatter.title}
+          keywords={p.frontmatter.keywords}
+        />
+      ))}
     </Container>
   )
 }

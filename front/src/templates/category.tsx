@@ -1,14 +1,13 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
-import Text from '../components/text'
 import Categories from '../components/blog/categories'
+import CardsList from '../components/blog/list'
 
 const Category = ({ pageContext, data, location: { pathname } }) => {
-  const { category } = pageContext
-  const { edges, totalCount } = data.postsRemark
+  const { edges } = data.postsRemark
   const categories = data.categoriesGroup.group.map(g => g.fieldValue)
   
   return (
@@ -18,18 +17,9 @@ const Category = ({ pageContext, data, location: { pathname } }) => {
         categories={categories}
         pathname={pathname}
       />
-      <Text tag='h1'>
-        {category} ({totalCount})
-      </Text>
-      <ul>
-        {edges.map(({ node: { frontmatter: { title, path }} }) => {
-          return (
-            <li key={path}>
-              <Link to={`/blog/${category}${path}`}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
+      <CardsList
+        edges={edges}
+      />
     </Layout>
   )
 }
@@ -48,6 +38,7 @@ export const pageQuery = graphql`
             date
             title
             path
+            keywords
           }
         }
       }

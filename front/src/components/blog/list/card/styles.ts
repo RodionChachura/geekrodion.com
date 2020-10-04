@@ -19,13 +19,17 @@ export const KeywordsContainer = styled.div`
   margin-top: 10px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 `
 
 export const Keyword = styled.div`
-  height: 32px;
-  padding: 0 6px;
-  border-radius: 16px;
-  box-shadow: ${p => p.theme.shadow.default};
+  height: 30px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: ${p => p.theme.shadow.small};
   background: ${p => p.theme.color.secondaryBackground};
   margin: 0 5px 5px 0;
 `
