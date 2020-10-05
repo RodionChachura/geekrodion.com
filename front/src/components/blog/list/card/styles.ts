@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
-export const Container = styled.div`
+export const Container = styled(Link)`
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -9,6 +11,12 @@ export const Container = styled.div`
   width: 100%;
   justify-content: space-between;
   background: ${p => p.theme.color.secondaryBackground};
+  cursor: pointer;
+  transition: ${p => p.theme.transition.default};
+  border: 2px solid transparent;
+  :hover {
+    border-color: ${p => p.theme.color.primary};
+  }
 `
 
 export const Content = styled.div`

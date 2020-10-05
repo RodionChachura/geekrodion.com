@@ -5,12 +5,13 @@ title: "StoryBrand BrandScript Example"
 description: "Making StoryBrand BrandScript for Increaser step by step"
 category: "product"
 keywords: [Positioning,Increaser,Marketing,Storytelling]
+featuredImage: main.png
 ---
 
 
 # Building a StoryBrand for increaser.org
 
-
+![](/main.png)
 
 ## Introduction
 
@@ -20,9 +21,9 @@ I started by reading “[Building a StoryBrand](https://www.amazon.com/Building-
 
 While reading the book, you fill the document called [BrandScript](https://www.mystorybrand.com/) by answering particular questions that will describe your brand. Then you can use this document to create or update your marketing materials and website. In this article, we will fill StoryBrand BrandScript for Increaser. In the next part, I will show you how I changed increaser.org start page by using BrandScript.
 
-![](https://cdn-images-1.medium.com/max/NaN/1*wDNPZovZrgi2qC20uVpImA.png)
+![](storybrand.png)
 
-If you forget the basics of the book, [here](https://medium.com/p/a9c0eb81cfbf) you can find the main concepts.
+If you forget the basics of the book, [here](https://booksconcepts.com/building-a-storybrand-by-donald-miller/) you can find the main concepts.
 
 ## **A Character**
 
@@ -30,7 +31,7 @@ In the first part we define our customers and what do they want as it relates to
 
 Increaser is an app for those who do deep work most of the time: students, engineers, programmers, mathematicians, and other technical workers. These peoples want to do more of deep, focused work and less of shallow one filled with distractions. This way they will find the time to do the things that matter.
 
-![](https://cdn-images-1.medium.com/max/2000/1*icnQDGxLk6n8Du_xcBQH5g.png)
+![](character.png)
 
 ## Has a Problem
 
@@ -44,7 +45,7 @@ Distraction is the main villain when we talk about Increaser. Because of distrac
 
 **Philosophical problem** is “I want to master the time and reach my goals”.
 
-![](https://cdn-images-1.medium.com/max/2000/1*3pBJsk-VGeIoOQ41aiGfjA.png)
+![](problem.png)
 
 ## And Meets a Guide
 
@@ -54,7 +55,7 @@ We understand how it feels like when there are a lot of things are going on, and
 
 Because we don’t have actual users, showing authority it is a problem, we have no testimonials, statistics, awards or logos. Therefore we will leave this field blank :(
 
-![](https://cdn-images-1.medium.com/max/2000/1*p1LDyHdJLLrg7ZG7F_IGMQ.png)
+![](guide.png)
 
 ### Who Gives Them a Plan
 
@@ -72,7 +73,7 @@ Steps:
 
 I thought carefully about fear part but didn’t find anything to write here for Increaser. If you have any ideas, let me know in the comment section.
 
-![](https://cdn-images-1.medium.com/max/2000/1*yf4gItEJmJD5MJjtxI0ffw.png)
+![](plan.png)
 
 ## And Calls Them to Action
 
@@ -82,7 +83,7 @@ In Increaser app call to action will be “Start Your Free Month” button. Simp
 
 Main transition call available that will be available in the app will be the link to “Increaser Mindset” series.
 
-![](https://cdn-images-1.medium.com/max/2000/1*m4JjMb_LO0HaRq10tW8HFQ.png)
+![](action.png)
 
 ## That Helps Them Avoid Failure
 
@@ -90,7 +91,7 @@ In the sixth part, we list the negative consequences our customers will experien
 
 In the case of Increaser I will write only one possible failure that looks for me like most important — “You may not find a time to work on your goals and ideas.”
 
-![](https://cdn-images-1.medium.com/max/2000/1*3yRNZPUExbxkNAk_2LTqMw.png)
+![](failure.png)
 
 ## And Ends in a Success
 
@@ -102,7 +103,7 @@ The most important positive changes are:
 
 * Reduce stress and live a happy life.
 
-![](https://cdn-images-1.medium.com/max/2000/1*OmU9fL-fTtt0mm8MT43XwA.png)
+![](success.png)
 
 ## People Want Your Brand to Participate in Their Transformation
 
@@ -116,8 +117,4 @@ Transformations:
 
 ## Final BrandScript
 
-![](https://cdn-images-1.medium.com/max/3094/1*55eIQjHMnMyG3eGHLm6txg.png)
-
-Reach the next level of focus and productivity with [increaser.org](http://increaser.org/).
-
-![[Increaser](https://increaser.org)](https://cdn-images-1.medium.com/max/2880/1*bqSmFw_jd2R9_f66tx-VBw.gif)*[Increaser](https://increaser.org)*
+![](final.png)

@@ -7,14 +7,15 @@ import Text, { TextColor } from '../../../text'
 interface Props {
   date: string,
   title: string,
-  // image: FluidObject,
+  image: FluidObject,
+  slug: string,
   keywords: string[]
 }
 
-const Card = ({ date, title, keywords }: Props) => {
+const Card = ({ date, title, keywords, image, slug }: Props) => {
   return (
-    <Container>
-      {/* <Img fluid={image}/> */}
+    <Container to={slug}>
+      <Img fluid={image}/>
       <Content>
         <Text>{title}</Text>
         <Text color={TextColor.SECONDARY}>{date}</Text>

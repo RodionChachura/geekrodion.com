@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import Categories from '../components/blog/categories'
 import CardsList from '../components/blog/list'
 
-const Category = ({ pageContext, data, location: { pathname } }) => {
+const Category = ({ data, location: { pathname } }) => {
   const { edges } = data.postsRemark
   const categories = data.categoriesGroup.group.map(g => g.fieldValue)
   
@@ -34,11 +34,21 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             date
             title
             path
             keywords
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
-import Text from '../components/text'
+import Post from '../components/blog/post'
 
 const BlogPost = ({ data, location }) => {
   const { markdownRemark: post } = data
@@ -11,12 +11,7 @@ const BlogPost = ({ data, location }) => {
   return (
     <Layout location={location}>
       <SEO/>
-      <Text tag='h1'>
-        {post.frontmatter.title}
-      </Text>
-      <div
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      />
+      <Post post={post}/>
     </Layout>
   )
 }
