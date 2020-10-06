@@ -6,12 +6,12 @@ import Layout from '../components/layout'
 import Categories from '../components/blog/categories'
 import Text from '../components/text'
 
-const BlogPage = ({ data, location }) => {
+const BlogPage = ({ data }) => {
   const { edges, totalCount } = data.postsRemark
   const categories = data.categoriesGroup.group.map(({ fieldValue }) => fieldValue)
 
   return (
-    <Layout location={location}>
+    <Layout>
       <SEO/>
       <Categories
         categories={categories}

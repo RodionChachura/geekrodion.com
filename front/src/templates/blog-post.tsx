@@ -1,15 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
+import { withTheme } from 'styled-components'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Post from '../components/blog/post'
 
-const BlogPost = ({ data, location }) => {
+const BlogPost = ({ data, theme }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout location={location}>
+    <Layout customBackground={theme.color.alternativeBackground}>
       <SEO/>
       <Post post={post}/>
     </Layout>
@@ -30,4 +30,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default BlogPost
+export default withTheme(BlogPost)

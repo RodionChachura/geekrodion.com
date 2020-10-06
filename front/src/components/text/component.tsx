@@ -16,7 +16,8 @@ type Props = {
   underline?: boolean
   bold?: boolean,
   onClick?: () => void,
-  to?: string
+  to?: string,
+  style?: Object
 }
 
 const DEFAULT_PROPS = {

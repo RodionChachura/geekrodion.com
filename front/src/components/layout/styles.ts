@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   }
   body {
-    background: ${p => p.theme.color.background};
+    background: ${p => p.customBackground || p.theme.color.background};
   }
 
   html, body, #___gatsby, #gatsby-focus-wrapper {
@@ -34,7 +34,8 @@ export const MAX_WIDTH = 1220
 export const Container = styled.div`
   width: 100%;
   min-height: 100%;
-  background: ${p => p.theme.color.background};
+  transition: ${p => p.theme.transition.default};
+  background: ${p => p.customBackground || p.theme.color.background};
   display: flex;
   justify-content: center;
 `

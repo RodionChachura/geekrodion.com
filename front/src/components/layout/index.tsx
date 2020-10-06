@@ -3,13 +3,18 @@ import React from 'react'
 import { Container, Content, GlobalStyle } from './styles'
 import Navbar from '../navbar'
 
-const Layout = ({ children, location }) => {
+interface Props {
+  children: any,
+  customBackground?: string
+}
+
+const Layout = ({ children, customBackground }: Props) => {
   return (
     <>
-      <GlobalStyle/>
-      <Container id={'author'}>
+      <GlobalStyle customBackground={customBackground}/>
+      <Container id={'author'} customBackground={customBackground}>
         <Content>
-          <Navbar location={location}/>
+          <Navbar customBackground={customBackground}/>
           {children}
         </Content>
       </Container>

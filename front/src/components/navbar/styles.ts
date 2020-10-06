@@ -6,7 +6,8 @@ const commonStyle = css`
   flex-shrink: 0;
   height: ${NAVBAR_HEIGHT}px;
   width: inherit;
-  background: ${p => p.theme.color.background};
+  background: ${p => p.customBackground || p.theme.color.background};
+  transition: ${p => p.theme.transition.default};
   @media(max-width: 600px) {
     display: none;
   }

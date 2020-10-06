@@ -1,8 +1,9 @@
 export default {
   color: {
     background: '#003049',
+    alternativeBackground: 'hsl(210deg, 30%, 8%)',
     secondaryBackground: '#0A405C',
-    text: 'white',
+    text: 'hsl(0deg, 0%, 100%)',
     secondaryText: 'rgba(255, 255, 255, 0.5)',
     primary: '#FCBF49'
   },
