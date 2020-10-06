@@ -41,7 +41,7 @@ export const style = css`
   ${p =>
     p.bold &&
     css`
-      font-weight: bold;
+      font-weight: 600;
     `}
   ${p =>
     p.clickable &&
