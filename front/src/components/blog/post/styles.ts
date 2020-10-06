@@ -24,9 +24,12 @@ export const Content = styled.section`
   }
 
   h4 {
-    font-weight: bold;
     margin-top: 24px;
     font-size: 24px;
+  }
+
+  strong {
+    font-weight: 600;
   }
   
   a {
