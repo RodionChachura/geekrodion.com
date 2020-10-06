@@ -1,7 +1,13 @@
 export default {
+  blog: {
+    color: {
+      link: '#d7385e',
+      headline: '#edc988',
+      background: 'hsl(210deg, 30%, 8%)'
+    }
+  },
   color: {
     background: '#003049',
-    alternativeBackground: 'hsl(210deg, 30%, 8%)',
     secondaryBackground: '#0A405C',
     text: 'hsl(0deg, 0%, 100%)',
     secondaryText: 'rgba(255, 255, 255, 0.5)',

@@ -6,6 +6,16 @@ export const Container = styled.article`
 
 export const Content = styled.section`
   color: ${p => p.theme.color.text};
+
+  h2, h3, h4 {
+    color: ${p => p.theme.blog.color.headline};
+  }
+  h2 {
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
   h3 {
     font-size: 34px;
     margin-top: 40px;
@@ -17,6 +27,17 @@ export const Content = styled.section`
     margin-top: 24px;
     font-size: 24px;
   }
+  
+  a {
+    color: ${p => p.theme.color.text};
+    font-weight: bold;
+    border-bottom-color: ${p => p.theme.blog.color.link} !important;
+    transition: ${p => p.theme.transition.default};
+    :hover {
+      color: ${p => p.theme.blog.color.link};
+    }
+  }
+
 
   p, li {
     margin-top: 18px;
@@ -58,4 +79,8 @@ export const Content = styled.section`
   .gatsby-resp-image-wrapper {
     margin-bottom: 40px;
   }
+`
+
+export const HeadlineContainer = styled.div`
+  margin: 40px 0 20px 0;
 `

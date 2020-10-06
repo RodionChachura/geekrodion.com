@@ -13,7 +13,7 @@ const PostsList = ({ edges }) => {
           image={p.frontmatter.featuredImage.childImageSharp.fluid}
           key={p.frontmatter.title}
           date={p.frontmatter.date}
-          title={p.frontmatter.title}
+          title={p.frontmatter.headline}
           keywords={p.frontmatter.keywords}
           slug={p.fields.slug}
         />

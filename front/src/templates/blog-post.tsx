@@ -9,7 +9,7 @@ const BlogPost = ({ data, theme }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout customBackground={theme.color.alternativeBackground}>
+    <Layout customBackground={theme.blog.color.background}>
       <SEO/>
       <Post post={post}/>
     </Layout>
@@ -24,6 +24,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
+        headline
         title
       }
     }
