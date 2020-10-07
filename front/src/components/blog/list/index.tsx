@@ -11,7 +11,7 @@ const PostsList = ({ edges }) => {
       {posts.map(p => (
         <Card
           image={p.frontmatter.featuredImage.childImageSharp.fluid}
-          key={p.frontmatter.title}
+          key={p.frontmatter.headline}
           date={p.frontmatter.date}
           title={p.frontmatter.headline}
           keywords={p.frontmatter.keywords}

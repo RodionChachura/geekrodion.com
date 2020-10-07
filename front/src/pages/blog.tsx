@@ -8,13 +8,11 @@ import Text from '../components/text'
 
 const BlogPage = ({ data }) => {
   const { edges, totalCount } = data.postsRemark
-  const categories = data.categoriesGroup.group.map(({ fieldValue }) => fieldValue)
 
   return (
     <Layout>
       <SEO/>
       <Categories
-        categories={categories}
         pathname={location.pathname}
       />
       <Text tag='h1'>
@@ -50,11 +48,6 @@ export const pageQuery = graphql`
             category
           }
         }
-      }
-    }
-    categoriesGroup: allMarkdownRemark(limit: 2000) {
-      group(field: frontmatter___category) {
-        fieldValue
       }
     }
   }

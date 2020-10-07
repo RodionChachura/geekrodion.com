@@ -8,13 +8,11 @@ import CardsList from '../components/blog/list'
 
 const Category = ({ data, location: { pathname } }) => {
   const { edges } = data.postsRemark
-  const categories = data.categoriesGroup.group.map(g => g.fieldValue)
   
   return (
     <Layout>
       <SEO/>
       <Categories
-        categories={categories}
         pathname={pathname}
       />
       <CardsList
@@ -51,11 +49,6 @@ export const pageQuery = graphql`
             }
           }
         }
-      }
-    }
-    categoriesGroup: allMarkdownRemark(limit: 2000) {
-      group(field: frontmatter___category) {
-        fieldValue
       }
     }
   }
