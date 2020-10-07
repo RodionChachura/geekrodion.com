@@ -11,7 +11,10 @@ const BlogPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO/>
+      <SEO
+        title="Geekrodion Writings on Programming and Product"
+        description="Here I write about programming technologies and my side-projects"
+      />
       <Categories
         pathname={location.pathname}
       />
