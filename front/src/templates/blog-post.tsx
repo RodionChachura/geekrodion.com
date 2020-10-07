@@ -10,7 +10,10 @@ const BlogPost = ({ data, theme }) => {
 
   return (
     <Layout customBackground={theme.blog.color.background}>
-      <SEO/>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+      />
       <Post post={post}/>
     </Layout>
   )
@@ -26,6 +29,7 @@ export const pageQuery = graphql`
         path
         headline
         title
+        description
       }
     }
   }

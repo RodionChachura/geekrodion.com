@@ -68,6 +68,12 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://geekrodion.com`,
+      },
+    }
   ]
 }

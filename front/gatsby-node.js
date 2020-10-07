@@ -11,7 +11,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: `/blog/${node.frontmatter.category}${slug}`, // Here we are, the path prefix
+      // value: `/blog/${node.frontmatter.category}${slug}`
+      value: `/blog${slug}`
     })
   }
 }

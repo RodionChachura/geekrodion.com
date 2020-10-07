@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.article`
   max-width: 680px;
   margin-bottom: 40px;
+  align-self: center;
 `
 
 export const Content = styled.section`
