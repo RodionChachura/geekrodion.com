@@ -1,11 +1,12 @@
 ---
 path: "/migrations-in-dynamodb"
 date: "2018-02-26"
-title: "Migrations in DynamoDB"
+title: "Migrations in DynamoDB with NodeJS"
 description: "Migrate DynamoDB items to a new format with async functions."
 category: "programming"
 keywords: [DynamoDB,Database,NodeJS,DevOps,AWS]
 featuredImage: main.png
+headline: "Migrations in DynamoDB with NodeJS"
 ---
 When you work with frameworks such as ASP.NET or Django, ORM (Entity Framework, Django ORM) magically creates migration, and with DynamoDB, it may seem strange that you need to write migrations by yourself. But it is the price of using NoSQL and rejecting ORMs, but don't worry, managing migrations by yourself isn't that scary.
 

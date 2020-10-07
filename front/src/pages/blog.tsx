@@ -1,13 +1,13 @@
 import React from "react"
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Categories from '../components/blog/categories'
-import Text from '../components/text'
+import CardsList from '../components/blog/list'
 
 const BlogPage = ({ data }) => {
-  const { edges, totalCount } = data.postsRemark
+  const { edges } = data.postsRemark
 
   return (
     <Layout>
@@ -15,18 +15,9 @@ const BlogPage = ({ data }) => {
       <Categories
         pathname={location.pathname}
       />
-      <Text tag='h1'>
-        All Posts ({totalCount})
-      </Text>
-      <ul>
-        {edges.map(({ node: { frontmatter: { title, path, category }} }) => {
-          return (
-            <li key={path}>
-              <Link to={`/blog/${category}${path}`}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
+      <CardsList
+        edges={edges}
+      />
     </Layout>
   )
 }
@@ -39,13 +30,23 @@ export const pageQuery = graphql`
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
-      totalCount
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
-            title
+            date
+            headline
             path
-            category
+            keywords
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
