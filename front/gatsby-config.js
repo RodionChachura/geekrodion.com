@@ -64,9 +64,10 @@ module.exports = {
               maxWidth: 800,
             },
           },
+          `gatsby-remark-external-links`
         ]
       }
     },
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`
   ]
 }
