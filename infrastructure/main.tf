@@ -19,15 +19,15 @@ resource "aws_route53_zone" "route_zone" {
 }
 
 resource "aws_acm_certificate" "domain_virginia" {
-  provider = "aws.virginia"
+  provider = aws.virginia
   domain_name = "${var.domain}"
   validation_method = "DNS"
 }
 
 resource "aws_route53_record" "cert_validation_virginia" {
-  name = "${aws_acm_certificate.domain_virginia.domain_validation_options.0.resource_record_name}"
-  type = "${aws_acm_certificate.domain_virginia.domain_validation_options.0.resource_record_type}"
-  records = ["${aws_acm_certificate.domain_virginia.domain_validation_options.0.resource_record_value}"]
+  name = "${tolist(aws_acm_certificate.domain_virginia.domain_validation_options)[0].resource_record_name}"
+  type = "${tolist(aws_acm_certificate.domain_virginia.domain_validation_options)[0].resource_record_type}"
+  records = ["${tolist(aws_acm_certificate.domain_virginia.domain_validation_options)[0].resource_record_value}"]
   zone_id = "${aws_route53_zone.route_zone.zone_id}"
   ttl = 60
 }
@@ -66,11 +66,17 @@ EOF
 
 resource "aws_cloudfront_distribution" "frontend" {
   depends_on = ["aws_acm_certificate_validation.cert_validation_virginia"]
-  origin {
-    domain_name = "${aws_s3_bucket.frontend.bucket_domain_name}"
-    origin_id   = "${var.bucket_name}"
-  }
+    origin {
+    domain_name = "${aws_s3_bucket.frontend.website_endpoint}"
+    origin_id = "${var.bucket_name}"
 
+    custom_origin_config {
+      http_port              = "80"
+      https_port             = "443"
+      origin_protocol_policy = "http-only"
+      origin_ssl_protocols   = ["TLSv1", "TLSv1.1", "TLSv1.2"]
+    }
+  }
   enabled             = true
   is_ipv6_enabled     = true
   default_root_object = "index.html"
@@ -102,6 +108,25 @@ resource "aws_cloudfront_distribution" "frontend" {
     geo_restriction {
       restriction_type = "none"
     }
+  }
+
+  custom_error_response {
+    error_caching_min_ttl = "0"
+    error_code = "403"
+    response_code = "200"
+    response_page_path = "/"
+  }
+  custom_error_response {
+    error_caching_min_ttl = "0"
+    error_code = "404"
+    response_code = "200"
+    response_page_path = "/"
+  }
+  custom_error_response {
+    error_caching_min_ttl = "0"
+    error_code = "400"
+    response_code = "200"
+    response_page_path = "/"
   }
 }
 
@@ -282,7 +307,7 @@ resource "aws_codepipeline" "pipeline" {
       version          = "1"
       output_artifacts = ["source"]
 
-      configuration {
+      configuration = {
         Owner      = "${var.repo_owner}"
         Repo       = "${var.repo_name}"
         Branch     = "${var.branch}"
@@ -301,7 +326,7 @@ resource "aws_codepipeline" "pipeline" {
       input_artifacts = ["source"]
       version         = "1"
 
-      configuration {
+      configuration = {
         ProjectName = "${aws_codebuild_project.codebuild.name}"
       }
     }
