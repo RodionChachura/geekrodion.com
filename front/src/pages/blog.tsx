@@ -15,9 +15,7 @@ const BlogPage = ({ data }) => {
         title="Geekrodion Writings on Programming and Product"
         description="Here I write about programming technologies and my side-projects"
       />
-      <Categories
-        pathname={location.pathname}
-      />
+      <Categories />
       <CardsList
         edges={edges}
       />

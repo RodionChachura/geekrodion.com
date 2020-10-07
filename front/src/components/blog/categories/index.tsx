@@ -5,7 +5,7 @@ import { Container } from './styles'
 import Category from './category'
 
 interface Props {
-  pathname: string
+  pathname?: string
 }
 
 const query = graphql`
@@ -18,7 +18,7 @@ const query = graphql`
   }
 `
 
-const Categories = ({ pathname }: Props) => {
+const Categories = ({ pathname = '' }: Props) => {
   const data = useStaticQuery(query)
   const categories = data.allMarkdownRemark.group.map(g => g.fieldValue)
 
