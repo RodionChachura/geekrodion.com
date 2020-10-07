@@ -32,6 +32,14 @@ export const Content = styled.section`
   strong {
     font-weight: 600;
   }
+
+  code {
+    background: ${p => p.theme.color.text};
+    color: ${p => p.theme.blog.color.background};
+    border-radius: 2px;
+    padding: 0 2px;
+    font-style: italic;
+  }
   
   a {
     color: ${p => p.theme.color.text};
