@@ -74,6 +74,7 @@ module.exports = {
       options: {
         siteUrl: `https://geekrodion.com`,
       },
-    }
+    },
+    `gatsby-transformer-json`,
   ]
 }

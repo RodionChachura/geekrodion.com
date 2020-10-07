@@ -6,12 +6,17 @@ import Layout from '../components/layout'
 import Categories from '../components/blog/categories'
 import CardsList from '../components/blog/list'
 
-const Category = ({ data, location: { pathname } }) => {
+import categories from '../blog/categories.json'
+
+const Category = ({ data, location: { pathname }, pageContext: { category } }) => {
   const { edges } = data.postsRemark
-  
+  const { title, description } = categories[category]
   return (
     <Layout>
-      <SEO/>
+      <SEO
+        title={title}
+        description={description}
+      />
       <Categories
         pathname={pathname}
       />
