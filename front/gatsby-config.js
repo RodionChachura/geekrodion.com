@@ -3,6 +3,7 @@ module.exports = {
     title: `Rodion Chachura Website`,
     description: `Hi! I'm Rodion Chachura, also known as geekrodion. You may know me as a creator of increaser.org and booksconcepts.com.`,
     author: `Rodion Chachura`,
+    siteUrl: `https://geekrodion.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -98,6 +99,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-json`,
-
+    'gatsby-plugin-sitemap'
   ]
 }
