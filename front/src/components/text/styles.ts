@@ -8,7 +8,8 @@ export const getTextColor = (theme, textColor) => {
     [TextColor.DEFAULT]: theme.color.text,
     [TextColor.SECONDARY]: theme.color.secondaryText,
     [TextColor.PRIMARY]: theme.color.primary,
-    [TextColor.REVERSED]: theme.color.background
+    [TextColor.REVERSED]: theme.color.background,
+    [TextColor.BLOG_REVERSED]: theme.blog.color.background
   }[textColor]
 }
 

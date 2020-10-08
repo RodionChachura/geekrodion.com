@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Container, Content, HeadlineContainer } from './styles'
 import Text from '../../text'
+import Resources from './resources'
 
 const Post = ({ post }) => {
   return (
@@ -9,6 +10,7 @@ const Post = ({ post }) => {
       <HeadlineContainer>
         <Text size={40} tag={'h1'} bold>{post.frontmatter.headline}</Text>
       </HeadlineContainer>
+      <Resources resources={post.frontmatter.resources} />
       <Content dangerouslySetInnerHTML={{ __html: post.html }}/>
     </Container>
   )

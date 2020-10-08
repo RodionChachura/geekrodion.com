@@ -1,12 +1,18 @@
 import styled from 'styled-components'
 
+const WIDTH = 680
+
 export const Container = styled.article`
-  max-width: 680px;
+  width: ${WIDTH}px;
   margin-bottom: 40px;
   align-self: center;
+  @media(max-width: ${WIDTH + 20}px) {
+    width: 96vw;
+  }
 `
 
 export const Content = styled.section`
+  margin-top: 20px;
   color: ${p => p.theme.color.text};
 
   h2, h3, h4 {

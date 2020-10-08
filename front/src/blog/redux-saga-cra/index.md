@@ -8,8 +8,8 @@ keywords: [Redux, Redux Saga, React, Create React App]
 featuredImage: main.png
 headline: "Redux + Saga + Create-React-App"
 resources: [
-  udemy https://www.udemy.com/course/how-to-start-react-project-best-practices,
-  github https://github.com/RodionChachura/react-starter
+  Udemy https://www.udemy.com/course/how-to-start-react-project-best-practices,
+  GitHub https://github.com/RodionChachura/react-starter
 ]
 ---
 
