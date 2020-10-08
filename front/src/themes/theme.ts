@@ -3,6 +3,7 @@ export default {
     color: {
       link: '#d7385e',
       headline: '#edc988',
+      secondary: '#f8efd4',
       background: 'hsl(210deg, 30%, 8%)'
     }
   },
