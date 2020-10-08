@@ -41,12 +41,15 @@ module.exports = {
       options: { },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-with-attributes`,
       options: {
         fonts: [
           `nunito\:400,400i,600`,
         ],
-        display: 'swap'
+        display: 'swap',
+        attributes: {
+          rel: "stylesheet preload prefetch",
+        }
       }
     },
     {
@@ -99,6 +102,14 @@ module.exports = {
       },
     },
     `gatsby-transformer-json`,
-    'gatsby-plugin-sitemap'
+    'gatsby-plugin-sitemap',
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: 'geekrodion',
+        protocol: 'https',
+        hostname: 'geekrodion.com'
+      },
+    },
   ]
 }

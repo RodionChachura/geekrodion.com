@@ -1,4 +1,4 @@
 gatsby build
-aws s3 cp public s3://$BUCKET --recursive
+npm run deploy
 aws configure set preview.cloudfront true
 aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
