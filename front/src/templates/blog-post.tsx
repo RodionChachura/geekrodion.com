@@ -8,6 +8,7 @@ import Post from '../components/blog/post'
 const BlogPost = ({ data, theme }) => {
   const { markdownRemark: post } = data
 
+  console.log(post.frontmatter.resources)
   return (
     <Layout customBackground={theme.blog.color.background}>
       <SEO
@@ -28,6 +29,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         headline
+        resources
         title
         description
       }

@@ -1,5 +1,5 @@
 ---
-path: "/test-dynamodb-nodejs"
+path: "/redux-saga-cra"
 date: "2018-04-27"
 title: "Redux + Saga + Create-React-App"
 description: "We will make a newly created react app suitable to work with redux and redux-saga."
@@ -7,6 +7,10 @@ category: "programming"
 keywords: [Redux, Redux Saga, React, Create React App]
 featuredImage: main.png
 headline: "Redux + Saga + Create-React-App"
+resources: [
+  udemy https://www.udemy.com/course/how-to-start-react-project-best-practices,
+  github https://github.com/RodionChachura/react-starter
+]
 ---
 
 ![](/main.png)
