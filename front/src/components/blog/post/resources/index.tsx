@@ -32,6 +32,9 @@ const ICON_FOR_TYPE = {
 }
 
 const Resources = ({ resources, theme }: Props) => {
+  if (!resources) {
+    return null
+  }
   return (
     <Container>
       {resources.map(resource => {
