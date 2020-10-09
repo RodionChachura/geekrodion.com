@@ -39,6 +39,10 @@ export const Content = styled.section`
     font-weight: 600;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   /* code {
     background: ${p => p.theme.color.text};
     color: ${p => p.theme.blog.color.background};

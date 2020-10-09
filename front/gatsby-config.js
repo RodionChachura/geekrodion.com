@@ -94,7 +94,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {}
-          }
+          },
+          `gatsby-remark-copy-linked-files`
         ]
       }
     },
