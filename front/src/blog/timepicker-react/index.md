@@ -186,7 +186,7 @@ export default class TimePicker extends React.Component {
 }
 ```
 
-### Timepicker Circle
+## Timepicker Circle
 
 The `Circle` component is a styled `div` tag. Here we can see how background color specified by accessing a theme.
 
