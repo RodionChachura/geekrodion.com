@@ -15,7 +15,7 @@ resources: [
 
 ![Timer by Increaser](/main.png)
 
-In this post, we are going to make a React component that will be available as an NPM module so that we could use it in different projects. You will find this post useful if you are planning to build a custom timer. Let’s dive in!
+In this post, we are going to make a React component that will be available as an NPM module so that we could use it in different projects. This component shows a timeline of the day and represents activities with a different color. Let’s dive in!
 
 ## create-react-library
 
