@@ -1,6 +1,6 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { faPlayCircle, faGamepad } from '@fortawesome/free-solid-svg-icons'
 
 import Resource from './resource'
@@ -14,25 +14,29 @@ interface Props {
 enum Type {
   GitHub = "GitHub",
   Udemy = "Udemy",
-  Demo = "Demo"
+  Demo = "Demo",
+  YouTube = "YouTube"
 }
 
 const TEXT_FOR_TYPE = {
   [Type.GitHub]: "Source Code",
   [Type.Udemy]: "On Udemy",
   [Type.Demo]: "Try It",
+  [Type.YouTube]: "On YouTube"
 }
 
 const COLOR_FOR_TYPE = {
   [Type.GitHub]: 'headline',
   [Type.Udemy]: 'link',
   [Type.Demo]: 'secondary',
+  [Type.YouTube]: 'link',
 }
 
 const ICON_FOR_TYPE = {
   [Type.GitHub]: faGithub,
   [Type.Udemy]: faPlayCircle,
-  [Type.Demo]: faGamepad
+  [Type.Demo]: faGamepad,
+  [Type.YouTube]: faYoutube
 }
 
 const Resources = ({ resources, theme }: Props) => {
