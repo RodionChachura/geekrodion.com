@@ -2,9 +2,11 @@ import React from 'react'
 import { withTheme } from 'styled-components'
 import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { faPlayCircle, faGamepad } from '@fortawesome/free-solid-svg-icons'
+import { useMediaQuery } from 'beautiful-react-hooks'
 
 import Resource from './resource'
-import { Container } from './styles'
+import { Container, SideContainer, RESOURCE_WIDTH, SIDE_RESOURCES_MARGIN } from './styles'
+import { WIDTH } from '../styles'
 
 interface Props {
   resources: string[],
@@ -21,7 +23,7 @@ enum Type {
 const TEXT_FOR_TYPE = {
   [Type.GitHub]: "Source Code",
   [Type.Udemy]: "On Udemy",
-  [Type.Demo]: "Try It",
+  [Type.Demo]: "Check It Out",
   [Type.YouTube]: "On YouTube"
 }
 
@@ -40,25 +42,34 @@ const ICON_FOR_TYPE = {
 }
 
 const Resources = ({ resources, theme }: Props) => {
-  if (!resources) {
-    return null
-  }
-  return (
-    <Container>
-      {resources.map(resource => {
-        const [type, to] = resource.split(' ')
-        return (
-          <Resource
-            key={to}
-            to={to}
-            text={TEXT_FOR_TYPE[type]}
+  const smallScreenSize = (SIDE_RESOURCES_MARGIN + RESOURCE_WIDTH) * 2 + WIDTH
+  const isSmallScreen = useMediaQuery(`(max-width: ${smallScreenSize}px)`)
 
-            color={theme.blog.color[COLOR_FOR_TYPE[type]]}
-            icon={ICON_FOR_TYPE[type]}
-          />
-        )
-      })}
-    </Container>
+  const renderContent = () => resources.map(resource => {
+    const [type, to] = resource.split(' ')
+    return (
+      <Resource
+        key={to}
+        to={to}
+        text={TEXT_FOR_TYPE[type]}
+        color={theme.blog.color[COLOR_FOR_TYPE[type]]}
+        icon={ICON_FOR_TYPE[type]}
+      />
+    )
+  })
+  
+  if (isSmallScreen) {
+    return (
+      <Container>
+        {renderContent()}
+      </Container>
+    )
+  }
+
+  return (
+    <SideContainer>
+      {renderContent()}
+    </SideContainer>
   )
 }
 

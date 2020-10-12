@@ -8,8 +8,6 @@ export const Container = styled(OutboundLink)`
   padding: 0 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
   background: ${p => p.color};
-  margin-right: 20px;
   text-decoration: none;
 `

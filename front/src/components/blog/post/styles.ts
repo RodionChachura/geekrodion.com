@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const WIDTH = 680
+export const WIDTH = 680
 
 export const Container = styled.article`
   width: ${WIDTH}px;
