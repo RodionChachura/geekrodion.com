@@ -63,6 +63,10 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-code-titles',
+            options: { },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
@@ -93,7 +97,13 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-prismjs`,
-            options: {}
+            options: {
+              prompt: {
+                user: "geekrodion",
+                host: "",
+                global: true,
+              },
+            }
           },
           `gatsby-remark-copy-linked-files`
         ]

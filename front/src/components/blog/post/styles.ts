@@ -302,6 +302,21 @@ const prismStyleVSCode = css`
   }
 
 `
+
+const codeTitleStyle = css`
+  .gatsby-code-title {
+    margin-top: 10px;
+    background-color: ${p => p.theme.blog.color.secondaryBackground};
+    margin-bottom: -0.4rem;
+    padding: 0.5em 1em;
+    border-radius: 5px 5px 0 0;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace;
+    color: #d4d4d4;
+    z-index: 0;
+    width: fit-content;
+  }
+`
+
 export const Content = styled.section`
   margin-top: 20px;
   color: ${p => p.theme.color.text};
@@ -335,6 +350,7 @@ export const Content = styled.section`
   }
 
   ${prismStyleVSCode};
+  ${codeTitleStyle};
 
   code {
     /* background: ${p => p.theme.color.text};

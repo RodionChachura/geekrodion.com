@@ -40,12 +40,12 @@ To add a new user go to Admin > View > User Management. Save the view id of a ne
 
 When we have `client_secrets.json` and view id, we are ready to write the function. Before doing this, we will create directories and install the required libraries.
 
-```shell
-$ mkdir analytics-taker
-$ cd analytics-taker
-$ mkdir src
-$ cd src
-$ pip3 install requests oauth2client
+```bash
+mkdir analytics-taker
+cd analytics-taker
+mkdir src
+cd src
+pip3 install requests oauth2client
 ```
 
 Inside of `src` we will put a file with secrets from Google and create three python files. So our directory will look like this:
@@ -54,7 +54,7 @@ Inside of `src` we will put a file with secrets from Google and create three pyt
 
 Let’s start with `active_users.py`. In this file, we will create a function that will send a request to Google Analytics and will return a number of active users.
 
-```python
+```python:title=/active_users.py
 import requests
 import json
 from oauth2client.service_account import ServiceAccountCredentials
