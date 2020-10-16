@@ -19,7 +19,7 @@ After some time, I decided that it can’t last this way any longer, and I need 
 
 With Localstack in place, I decided to write a testing pipeline. The first step is to run Localstack. You specify AWS services needed for the tests and region if not default one needed.
 
-```shell
+```shell{promptUser: geekrodion}
 export SERVICES=s3,lambda
 export DEFAULT_REGION=$AWS_DEFAULT_REGION
 localstack start
@@ -27,26 +27,26 @@ localstack start
 
 Then you run Terraform commands inside the directory with `.tf` files.
 
-```shell
+```shell{promptUser: geekrodion}
 terraform init
 terraform apply -lock=false -auto-approve
 ```
 
 Now you have your infrastructure running on Localstack. And you can run tests. For example:
 
-```shell
+```shell{promptUser: geekrodion}
 npm test
 ```
 
 Then we want to destroy our infrastructure, since we don’t want to have the DynamoDB or S3 with old data next time tests will be launched.
 
-```shell
+```shell{promptUser: geekrodion}
 terraform destroy -lock=false -auto-approve
 ```
 
 After this, you can destroy processes with Localstack services. For example, if we used in our tests AWS Lambda and DynamoDB — we will run these commands.
 
-```shell
+```shell{promptUser: geekrodion}
 # fuser -n tcp -k $DYNAMODB_PORT
 # fuser -n tcp -k $LAMBDA_PORT
 ```

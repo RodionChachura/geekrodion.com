@@ -40,7 +40,7 @@ To add a new user go to Admin > View > User Management. Save the view id of a ne
 
 When we have `client_secrets.json` and view id, we are ready to write the function. Before doing this, we will create directories and install the required libraries.
 
-```bash
+```shell{promptUser: geekrodion}
 mkdir analytics-taker
 cd analytics-taker
 mkdir src
@@ -54,7 +54,7 @@ Inside of `src` we will put a file with secrets from Google and create three pyt
 
 Let’s start with `active_users.py`. In this file, we will create a function that will send a request to Google Analytics and will return a number of active users.
 
-```python:title=/active_users.py
+```python:title=src/active_users.py
 import requests
 import json
 from oauth2client.service_account import ServiceAccountCredentials
@@ -83,9 +83,9 @@ def get_active_users_number(view_id):
   return active_users 
 ```
 
-Let’s test this function using `terminal.py`.
+Let’s test this function.
 
-```python
+```python:title=src/terminal.py
 import json
 import sys
 
@@ -95,15 +95,15 @@ active_users_number = get_active_users_number(sys.argv[1])
 print('active users number: {0}'.format(active_users_number))
 ```
 
-```shell
-$ python3 terminal.py <VIEW_ID>
+```shell{promptUser: geekrodion}
+python3 terminal.py <VIEW_ID>
 ```
 
 ## AWS Lambda
 
-Nest step is deploying our function to AWS Lambda. First, we need to create the handler function. Let’s do this in file `lambda.py`:
+Nest step is deploying our function to AWS Lambda. First, we need to create the handler function.
 
-```python
+```python:title=src/lambda.py
 import os
 from json import loads, dumps
 
@@ -144,7 +144,7 @@ Next, we are creating files for deployment automation.
 
 In `list.txt` we have libraries required for our function. Commands to create a zip file with all code for lambda are inside of `pack_up.sh`:
 
-```shell
+```shell:title=pack_up.sh
 mkdir package
 cp -a src/. package/
 
@@ -161,8 +161,8 @@ rm -rf package
 
 We won’t look at `deploy.sh` since we don’t have the infrastructure for our code yet. Before start creating infrastructure we need to zip file with the code so let’s run the command:
 
-```shell
-$ . ./pack_up.sh
+```shell{promptUser: geekrodion}
+. ./pack_up.sh
 ```
 
 ![Infrastructure directory](/infrastructure-structure.png)
@@ -234,9 +234,9 @@ In file `main.tf` we describe resources required for running our code in the clo
 
 With all files in place, we can create infrastructure by running these commands inside of infrastructure folder:
 
-```shell
-$ terraform init
-$ terraform apply
+```shell{promptUser: geekrodion}
+terraform init
+terraform apply
 ```
 
 After running `terraform apply` at the end of output you will see a green line with the URL. Using this URL we can run deployed lambda. Now you can test the lambda by opening this URL in the browser.
@@ -256,8 +256,8 @@ aws lambda update-function-code --function-name $1 --s3-bucket $2 --s3-key $3
 
 Run it by typing:
 
-```shell
-$ . ./deploy.sh tf-analytics-taker tf-analytics-taker function.zip
+```shell{promptUser: geekrodion}
+. ./deploy.sh tf-analytics-taker tf-analytics-taker function.zip
 ```
 
 ## Calling AWS Lambda from Website

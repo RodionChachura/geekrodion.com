@@ -22,21 +22,21 @@ In this post, we are going to make a React component that will be available as a
 [Create-react-app](https://github.com/facebook/create-react-app) is the best tool for bootstrapping the front-end project, and I always use it for new apps. However, since we want to make an NPM module, we need a different starter. After some research, I found a tool named [create-react-library](https://github.com/DimiMikadze/create-react-library) that using create-react-app to run demo and rollup to build the library.
 
 To start a new project, we will type these commands:
-```shell
-$ npm install -g create-react-library
-$ create-react-library increaser-timepicker
-$ cd increaser-timepicker
+```shell{promptUser: geekrodion}
+npm install -g create-react-library
+create-react-library increaser-timepicker
+cd increaser-timepicker
 ```
 
 After initializing the project, we will install the only extra library we will need.
 
-```shell
-$ npm install --save styled-components
+```shell{promptUser: geekrodion}
+npm install --save styled-components
 ```
 
 And add additional fields in the `rollup.config.js` file.
 
-```js
+```js:title=rollup.config.js
     ...
     external: ['styled-components'],
     globals: { 'styled-components': 'styled' }
@@ -46,15 +46,15 @@ And add additional fields in the `rollup.config.js` file.
 
 First, we will run rollup to watch our `src` module and automatically recompile it into `dist` whenever we make changes.
 
-```shell
-$ npm start
+```shell{promptUser: geekrodion}
+npm start
 ```
 
 The second part will be running the example create-react-app that’s linked to the local version of our module. In another tab:
 
-```shell
-$ cd example
-$ npm start
+```shell{promptUser: geekrodion}
+cd example
+npm start
 ```
 
 ## Timepicker Component
@@ -63,7 +63,7 @@ Let’s start from the top of our components hierarchy. A lot of libraries requi
 
 ![components directory](/structure.png)
 
-```js
+```js:title=src/components/index.js
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 
@@ -190,7 +190,7 @@ export default class TimePicker extends React.Component {
 
 The `Circle` component is a styled `div` tag. Here we can see how background color specified by accessing a theme.
 
-```js
+```js:title=src/components/circle.js
 import styled from 'styled-components'
 
 const Circle = styled.div`
@@ -212,7 +212,7 @@ export default Circle
 
 In Minutes components we lay text evenly inside the circle by using some trigonometry. You may find `getMinutes()` little bit confusing, yet it simply returns an array of minutes `[5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]`. Just always trying to keep immutability:)
 
-```js
+```js:title=src/components/minutes.js
 import React from 'react'
 import styled from 'styled-components'
 import { toRadians } from '../utils'

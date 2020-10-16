@@ -57,7 +57,9 @@ Now we could open a terminal in the directory with the lambda and all files ment
 
 Isn't it magic? Three commands and we have deployed function.After running `terraform apply` at the end of the output, we will see a green line with the URL. It is the URL we could use to run the function. Let’s test it by making a POST request.
 
-`$ curl --request POST --data '{"a": 3, "b": 4}' <URL_FROM_OUTPUT>/function`
+```shell{promptUser: geekrodion}
+curl --request POST --data '{"a": 3, "b": 4}' <URL_FROM_OUTPUT>/function
+```
 
 OK, but what if we make changes to the function and want to see a new version deployed? Let’s write a script for deployment.
 
@@ -65,7 +67,9 @@ OK, but what if we make changes to the function and want to see a new version de
 
 Now we could run it by typing:
 
-`$ . ./deploy.sh tf-lambda tf-lambdas function.zip`
+```{promptUser: geekrodion}
+. ./deploy.sh tf-lambda tf-lambdas function.zip
+```
 
 ## Conclusion
 

@@ -27,16 +27,16 @@ First, we are going to bootstrap the project and create the specification for ou
 [Create-react-app](https://github.com/facebook/create-react-app) is the best tool for bootstrapping the front-end project, and I always use it for new apps. However, since we want to make an NPM module, we need a different starter. After some research, I found a tool named [create-react-library](https://github.com/DimiMikadze/create-react-library) that using create-react-app to run demo and rollup to build the library.
 
 To start a new project, we will type these commands:
-```shell
-$ npm install -g create-react-library
-$ create-react-library increaser-Timer
-$ cd increaser-Timer
+```shell{promptUser: geekrodion}
+npm install -g create-react-library
+create-react-library increaser-Timer
+cd increaser-Timer
 ```
 
 After initializing the project, we will install the only extra library we will need.
 
-```shell
-$ npm install --save styled-components
+```shell{promptUser: geekrodion}
+npm install --save styled-components
 ```
 
 And add additional fields in the `rollup.config.js` file.
@@ -51,15 +51,15 @@ And add additional fields in the `rollup.config.js` file.
 
 First, we will run rollup to watch our `src` module and automatically recompile it into `dist` whenever we make changes.
 
-```shell
-$ npm start
+```shell{promptUser: geekrodion}
+npm start
 ```
 
 The second part will be running the example create-react-app that’s linked to the local version of our module. In another tab:
 
-```shell
-$ cd example
-$ npm start
+```shell{promptUser: geekrodion}
+cd example
+npm start
 ```
 
 ## Specification
@@ -123,9 +123,9 @@ When we are using create-react-library, we have two projects. One with demo page
 
 Demo page will have a container for chart and panel where we can change parameters of the library. To change them we need two components: `Switch` for boolean parameters, and Slider for parameters such as bar width and space. And since they only required for demo page, we will install [material-ui](https://material-ui.com/) in the demo project.
 
-```shell
-$ cd example
-$ npm install --save @material-ui/core @material-ui/lib
+```shell{promptUser: geekrodion}
+cd example
+npm install --save @material-ui/core @material-ui/lib
 ```
 
 ```js
@@ -868,10 +868,9 @@ Check [this commit](https://github.com/RodionChachura/increaser-charts/commit/3c
 
 Now we can deploy our library to NPM and demo to GitHub pages by typing these commands:
 
-```shell
-
-$ npm publish --access-public
-$ npm run deploy
+```shell{promptUser: geekrodion}
+npm publish --access-public
+npm run deploy
 ```
 
 I already integrated this chart in my app — [increaser.org](https://increaser.org). Check it out!

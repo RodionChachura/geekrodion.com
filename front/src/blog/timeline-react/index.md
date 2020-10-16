@@ -22,16 +22,16 @@ In this post, we are going to make a React component that will be available as a
 [Create-react-app](https://github.com/facebook/create-react-app) is the best tool for bootstrapping the front-end project, and I always use it for new apps. However, since we want to make an NPM module, we need a different starter. After some research, I found a tool named [create-react-library](https://github.com/DimiMikadze/create-react-library) that using create-react-app to run demo and rollup to build the library.
 
 To start a new project, we will type these commands:
-```shell
-$ npm install -g create-react-library
-$ create-react-library increaser-Timer
-$ cd increaser-Timer
+```shell{promptUser: geekrodion}
+npm install -g create-react-library
+create-react-library increaser-Timer
+cd increaser-Timer
 ```
 
 After initializing the project, we will install the only extra library we will need.
 
-```shell
-$ npm install --save styled-components
+```shell{promptUser: geekrodion}
+npm install --save styled-components
 ```
 
 And add additional fields in the `rollup.config.js` file.
@@ -46,15 +46,15 @@ And add additional fields in the `rollup.config.js` file.
 
 First, we will run rollup to watch our `src` module and automatically recompile it into `dist` whenever we make changes.
 
-```shell
-$ npm start
+```shell{promptUser: geekrodion}
+npm start
 ```
 
 The second part will be running the example create-react-app that’s linked to the local version of our module. In another tab:
 
-```shell
-$ cd example
-$ npm start
+```shell{promptUser: geekrodion}
+cd example
+npm start
 ```
 
 ## Timeline Component
