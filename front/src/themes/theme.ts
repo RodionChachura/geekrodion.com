@@ -13,7 +13,9 @@ export default {
     secondaryBackground: '#0A405C',
     text: 'hsl(0deg, 0%, 100%)',
     secondaryText: 'rgba(255, 255, 255, 0.5)',
-    primary: '#FCBF49'
+    primary: '#FCBF49',
+    halfTransparent: 'rgba(255, 255, 255, 0.5)',
+    almostTransparent: 'rgba(255, 255, 255, 0.15)',
   },
   transition: {
     default: '0.35s ease-in-out',
