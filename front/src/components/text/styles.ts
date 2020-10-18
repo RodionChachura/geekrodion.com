@@ -50,12 +50,17 @@ export const style = css`
       cursor: pointer;
       :hover {
         color: ${p => getTextHoverColor(p.theme, p.color)};
+        ${p =>
+          p.underline &&
+          css`
+            border-color: ${p => getTextHoverColor(p.theme, p.color)};
+          `}
       }
     `}
   ${p =>
     p.underline &&
     css`
-      text-decoration: underline;
+      border-bottom: 2px solid ${p => getTextColor(p.theme, p.color)};
     `}
 `
 

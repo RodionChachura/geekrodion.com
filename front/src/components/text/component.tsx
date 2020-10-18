@@ -17,6 +17,7 @@ type Props = {
   bold?: boolean,
   onClick?: () => void,
   to?: string,
+  openInNewTab?: boolean,
   style?: Object
 }
 
@@ -35,7 +36,7 @@ const Text = ({ children, ...rest }: Props) => {
     clickable: !!(rest.onClick || rest.to)
   }
 
-  const definedProps = Object.keys(props).reduce((acc, key) => {
+  let definedProps = Object.keys(props).reduce((acc, key) => {
     const value = props[key]
     if (value === undefined || value === false) {
       return acc
@@ -46,6 +47,14 @@ const Text = ({ children, ...rest }: Props) => {
       [key]: value === true ? 'true' : value
     }
   }, {})
+
+  if (rest.to && rest.openInNewTab) {
+    definedProps = {
+      ...definedProps,
+      target: "_blank",
+      rel: "noopener noreferrer"
+    }
+  }
 
   return (
     <Text {...definedProps}>
