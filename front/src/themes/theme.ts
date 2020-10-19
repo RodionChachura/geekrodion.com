@@ -6,6 +6,7 @@ export default {
       secondary: '#f8efd4',
       background: 'hsl(210deg, 30%, 8%)',
       secondaryBackground: 'hsl(210deg, 30%, 12%)',
+      secondaryText: 'hsl(210deg, 14%, 66%)'
     }
   },
   color: {

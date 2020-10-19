@@ -411,6 +411,11 @@ export const Content = styled.section`
   .gatsby-resp-image-wrapper {
     margin-bottom: 40px;
   }
+
+  .gatsby-resp-image-figcaption {
+    text-align: center;
+    color: ${p => p.theme.blog.color.secondaryText} !important;
+  }
 `
 
 export const HeadlineContainer = styled.div`
