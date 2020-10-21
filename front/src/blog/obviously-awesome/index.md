@@ -1,5 +1,4 @@
 ---
-path: "/obviously-awesome"
 date: "2020-05-12"
 title: "Improving Positioning With “Obviously Awesome” Book"
 description: "I would apply knowledge from this book to my a web app"

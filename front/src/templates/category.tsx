@@ -42,7 +42,6 @@ export const pageQuery = graphql`
           frontmatter {
             date
             headline
-            path
             keywords
             parts
             featuredImage {

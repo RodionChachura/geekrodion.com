@@ -1,5 +1,4 @@
 ---
-path: "/ses-bounces"
 date: "2019-11-05"
 title: "Handle AWS SES Bounces and Complaints with AWS Lambda and Terraform"
 description: "To not get paused, stop sending emails to recipients that cause bounces or already marked one of the previous newsletters as spam"

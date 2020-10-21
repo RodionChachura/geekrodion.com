@@ -1,5 +1,4 @@
 ---
-path: "/no-immutablejs"
 date: "2018-02-25"
 title: "Why You Don’t Need ImmutableJS"
 description: "It is easier than ever to write immutable JavaScript code without libraries"

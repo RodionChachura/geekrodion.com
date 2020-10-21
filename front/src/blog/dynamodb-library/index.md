@@ -1,5 +1,4 @@
 ---
-path: "/dynamodb-library"
 date: "2019-09-06"
 title: "DynamoDB Library with NodeJS"
 description: "The goal of this story is to show useful functions that can help you to solve common problems arising when dealing with DynamoDB"

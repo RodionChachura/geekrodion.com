@@ -1,5 +1,4 @@
 ---
-path: "/react-linkedin-authorization"
 date: "2019-09-29"
 title: "React and LinkedIn Authorization"
 description: "Adding LinkedIn authorization to React app with NodeJS backsend"

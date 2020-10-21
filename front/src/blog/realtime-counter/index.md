@@ -1,5 +1,4 @@
 ---
-path: "/realtime-counter"
 date: "2019-01-06"
 title: "Realtime Counter of Active Users on Your Website"
 description: "Use Google Analytics and Python to show how many active users are using your website"

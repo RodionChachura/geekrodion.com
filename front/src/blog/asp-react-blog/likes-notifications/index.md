@@ -1,5 +1,4 @@
 ---
-path: "/likes-notifications"
 date: "2018-11-05"
 title: "SignalR for Notifications in ASP.NET Core + React/Redux App"
 description: "Showing notification when somebody likes a post"

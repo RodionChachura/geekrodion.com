@@ -1,5 +1,4 @@
 ---
-path: "/timeline-react"
 date: "2018-12-06"
 title: "Timeline with React"
 description: "Making timeline component with React and publish it on NPM"

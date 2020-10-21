@@ -1,5 +1,4 @@
 ---
-path: "/voronoi-on-map"
 date: "2018-06-04"
 title: "Voronoi Diagram of Google Map Places"
 description: "Building a React app with Voronoi diagram of places in a city"

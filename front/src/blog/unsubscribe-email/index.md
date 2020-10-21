@@ -1,5 +1,4 @@
 ---
-path: "/unsubscribe-email"
 date: "2019-10-13"
 title: "Unsubscribe Link in Email with AWS Lambda"
 description: "We will add a link in the newsletter that will lead to the page triggering AWS lambda responsible for unsubscribing the user"

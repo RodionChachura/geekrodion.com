@@ -1,5 +1,4 @@
 ---
-path: "/timer-react"
 date: "2018-12-03"
 title: "Timer with React"
 description: "Making timer component with React and publish it on NPM"

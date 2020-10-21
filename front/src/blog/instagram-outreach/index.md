@@ -1,5 +1,4 @@
 ---
-path: "/instagram-outreach"
 date: "2019-02-01"
 title: "Instagram Outreach with Python"
 description: "Half-Automated Instagram Marketing: What I learned after writing 1000 DMs"

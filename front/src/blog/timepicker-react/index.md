@@ -1,5 +1,4 @@
 ---
-path: "/timepicker-react"
 date: "2018-11-29"
 title: "Time picker with React"
 description: "Making time picker component with React and publish it on NPM"

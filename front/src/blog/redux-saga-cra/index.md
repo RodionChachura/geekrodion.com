@@ -1,5 +1,4 @@
 ---
-path: "/redux-saga-cra"
 date: "2018-04-27"
 title: "Redux + Saga + Create-React-App"
 description: "We will make a newly created react app suitable to work with redux and redux-saga."

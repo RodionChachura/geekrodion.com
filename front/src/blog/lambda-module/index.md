@@ -1,5 +1,4 @@
 ---
-path: "/lambda-module"
 date: "2019-11-03"
 title: "AWS Lambda, CI/CD and API Gateway with Terraform Module"
 description: "This module creates AWS Lambda function, make it accessible on a given domain and provides CI/CD"

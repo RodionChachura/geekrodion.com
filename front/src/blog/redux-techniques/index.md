@@ -1,5 +1,4 @@
 ---
-path: "/redux-techniques"
 date: "2019-10-26"
 title: "Redux State Management Techniques"
 description: "Simplify the management of the redux state by using techniques from Increaser"

@@ -1,5 +1,4 @@
 ---
-path: "/pwa-button"
 date: "2019-06-10"
 title: "Install Button in PWA React+Redux"
 description: "Make a React app installable on desktop and mobile phone"

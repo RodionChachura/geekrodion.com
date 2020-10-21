@@ -1,5 +1,4 @@
 ---
-path: "/react-social-authorization"
 date: "2019-03-02"
 title: "Google+Facebook Authorization in React+Redux+NodeJS App"
 description: "Add social authorization to your React app with NodeJS backend in a few minutes"

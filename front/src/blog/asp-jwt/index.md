@@ -1,5 +1,4 @@
 ---
-path: "/asp-jwt"
 date: "2017-07-12"
 title: "ASP.NET Core + JWT"
 description: "How to setup JWT token authorization for ASP.NET Core"

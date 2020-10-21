@@ -1,5 +1,4 @@
 ---
-path: "/documentdb-terraform"
 date: "2019-04-27"
 title: "Amazon DocumentDB + AWS Lambda with Terraform"
 description: "Our final goal is to have running Amazon DocumentDB that we can access from local computer and AWS Lambda"

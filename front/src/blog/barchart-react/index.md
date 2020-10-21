@@ -1,5 +1,4 @@
 ---
-path: "/barchart-react"
 date: "2019-01-02"
 title: "Making Bar Chart with React"
 description: "Making reusable bar chart component with React and publish it on NPM"

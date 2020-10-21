@@ -1,5 +1,4 @@
 ---
-path: "/test-dynamodb-nodejs"
 date: "2018-01-27"
 title: "Testing DynamoDB + NodeJS App"
 description: "Set up continuous integration and deployment for Express application with the DynamoDB database."

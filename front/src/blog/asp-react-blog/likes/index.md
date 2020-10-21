@@ -1,5 +1,4 @@
 ---
-path: "/likes"
 date: "2018-10-28"
 title: "Adding Likes to ASP.NET Core + React/Redux Blog"
 description: "See recent posts and like them"

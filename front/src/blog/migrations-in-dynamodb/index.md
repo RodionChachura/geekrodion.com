@@ -1,5 +1,4 @@
 ---
-path: "/migrations-in-dynamodb"
 date: "2018-02-26"
 title: "Migrations in DynamoDB with NodeJS"
 description: "Migrate DynamoDB items to a new format with async functions."

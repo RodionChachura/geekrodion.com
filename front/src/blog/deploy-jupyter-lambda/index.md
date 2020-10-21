@@ -1,5 +1,4 @@
 ---
-path: "/deploy-jupyter-lambda"
 date: "2018-05-22"
 title: "Deploy Jupyter Notebook to AWS Lambda"
 description: "These days it is possible to deploy a function from Jupiter Notebook in less than a minute."

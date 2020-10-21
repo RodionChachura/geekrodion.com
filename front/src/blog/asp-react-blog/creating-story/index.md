@@ -1,5 +1,4 @@
 ---
-path: "/creating-story"
 date: "2018-09-28"
 title: "Create and Edit Posts in ASP.NET Core + React/Redux Blog"
 description: "Adding simple blog functionality to ASP.NET Core + React app"

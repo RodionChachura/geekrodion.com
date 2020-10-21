@@ -1,5 +1,4 @@
 ---
-path: "/asp-react-blog"
 date: "2018-10-05"
 title: "Blog with ASP.NET Core and React/Redux"
 description: "Step by step tutorial on how to build Medium clone with ASP.NET Core and React"

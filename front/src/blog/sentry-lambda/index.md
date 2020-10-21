@@ -1,5 +1,4 @@
 ---
-path: "/test-dynamodb-nodejs"
 date: "2019-09-19"
 title: "Sentry with AWS Lambda running Apollo Server"
 description: "Do you have AWS Lambda running GraphQL Apollo Server and want to add Sentry for errors reporting?"

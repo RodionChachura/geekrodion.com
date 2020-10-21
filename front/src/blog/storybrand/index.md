@@ -1,5 +1,4 @@
 ---
-path: "/storybrand"
 date: "2018-11-22"
 title: "StoryBrand BrandScript Example"
 description: "Making StoryBrand BrandScript for Increaser step by step"
