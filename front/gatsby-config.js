@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://geekrodion.com`
   },
   plugins: [
+    `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
     {
