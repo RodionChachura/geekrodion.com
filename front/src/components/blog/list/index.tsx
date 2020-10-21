@@ -10,6 +10,7 @@ const PostsList = ({ edges }) => {
     <Container>
       {posts.map(p => (
         <Card
+          parts={p.frontmatter.parts}
           image={p.frontmatter.featuredImage.childImageSharp.fluid}
           key={p.frontmatter.headline}
           date={p.frontmatter.date}

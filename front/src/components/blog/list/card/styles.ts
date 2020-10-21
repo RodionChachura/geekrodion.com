@@ -41,3 +41,12 @@ export const Keyword = styled.div`
   background: ${p => p.theme.color.secondaryBackground};
   margin: 0 5px 5px 0;
 `
+
+export const PartsBadgeContainer = styled.div`
+  width: 100%;
+  height: 40px;
+  background: ${p => p.theme.color.primary};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`

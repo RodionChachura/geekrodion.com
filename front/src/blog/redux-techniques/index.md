@@ -4,7 +4,7 @@ date: "2019-10-26"
 title: "Redux State Management Techniques"
 description: "Simplify the management of the redux state by using techniques from Increaser"
 category: "programming"
-keywords: [Redux, React JavaScript]
+keywords: [Redux, React, JavaScript]
 featuredImage: main.png
 headline: "Redux State Management Techniques"
 ---

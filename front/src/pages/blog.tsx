@@ -41,6 +41,7 @@ export const pageQuery = graphql`
             headline
             path
             keywords
+            parts
             featuredImage {
               childImageSharp {
                 fluid(maxWidth: 800) {
