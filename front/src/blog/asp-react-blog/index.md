@@ -22,9 +22,9 @@ For the back-end part, we will use ASP.NET Core 2. And for the front-end part â€
 
 ## Table of Content
 
-1. [Authentication](https://medium.com/@geekrodion/blog-with-asp-net-core-and-react-redux-part-1-authentication-94b11b1a1bc4)
-2. [Creating a story](https://medium.com/p/62c49bfa82ff)
-3. [Mock data](https://medium.com/@geekrodion/blog-with-asp-net-core-and-react-redux-part-3-mock-data-83194383fb9e)
-4. [Likes](https://medium.com/@geekrodion/blog-with-asp-net-core-and-react-redux-part-4-likes-3dcf44d9c3af)
-5. [Likes notifications](https://medium.com/@geekrodion/blog-with-asp-net-core-and-react-redux-part-5-likes-notifications-9588b678c34e)
-6. [Collaborative editing](https://medium.com/@geekrodion/blog-with-asp-net-core-and-react-redux-part-6-collaborative-editing-abf6729b5de0)
+1. [Authentication](/blog/asp-react-blog/authentication)
+2. [Creating a story](/blog/asp-react-blog/creating-story)
+3. [Mock data](/blog/asp-react-blog/mock-data/)
+4. [Likes](/blog/asp-react-blog/likes/)
+5. [Likes notifications](/blog/asp-react-blog/likes-notifications/)
+6. [Collaborative editing](/blog/asp-react-blog/collaborative-editing)
