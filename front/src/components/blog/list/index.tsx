@@ -6,9 +6,11 @@ import Card from './card'
 const PostsList = ({ edges }) => {
   const posts = edges.map(e => e.node)
 
+  const onlyRootPosts = posts.filter(p => p.fields.slug.split('/').length === 3)
+
   return (
     <Container>
-      {posts.map(p => (
+      {onlyRootPosts.map(p => (
         <Card
           parts={p.frontmatter.parts}
           image={p.frontmatter.featuredImage.childImageSharp.fluid}
