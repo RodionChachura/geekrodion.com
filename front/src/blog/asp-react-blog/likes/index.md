@@ -485,5 +485,5 @@ export default connectTo(
 )
 ```
 
-In the [next part](https://medium.com/@geekrodion/blog-with-asp-net-core-and-react-redux-part-5-likes-notifications-9588b678c34e), we will add real-time notifications for likes.
+In the [next part](/blog/asp-react-blog/likes-notifications), we will add real-time notifications for likes.
 

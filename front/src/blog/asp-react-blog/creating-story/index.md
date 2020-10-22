@@ -596,7 +596,7 @@ export const receiveStory = createAction()
 It doesn’t have saga and reducer is reducer handles only one action.
 To render content we will use, previously mentioned Mark, Node components and `slate.js` library.
 
-```js:title=index.js
+```jsx:title=index.js
 import React from 'react'
 import { Editor } from 'slate-react'
 import { Typography } from '@material-ui/core'
