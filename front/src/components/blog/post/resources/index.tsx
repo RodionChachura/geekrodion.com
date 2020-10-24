@@ -46,12 +46,14 @@ const Resources = ({ resources, theme }: Props) => {
   const isSmallScreen = useMediaQuery(`(max-width: ${smallScreenSize}px)`)
 
   const renderContent = () => resources.map(resource => {
-    const [type, to] = resource.split(' ')
+    const [type, to, ...rest] = resource.split(' ')
+    const text = rest.length ? rest.join(' ') : TEXT_FOR_TYPE[type]
+    
     return (
       <Resource
         key={to}
         to={to}
-        text={TEXT_FOR_TYPE[type]}
+        text={text}
         color={theme.blog.color[COLOR_FOR_TYPE[type]]}
         icon={ICON_FOR_TYPE[type]}
       />

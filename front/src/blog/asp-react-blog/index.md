@@ -8,7 +8,8 @@ featuredImage: main.png
 headline: "Blog with ASP.NET Core and React/Redux"
 parts: 6
 resources: [
-  GitHub https://github.com/RodionChachura/simple-blog-back
+  GitHub https://github.com/RodionChachura/simple-blog-back Back-end Code,
+  GitHub https://github.com/RodionChachura/simple-blog-front Front-end Code
 ]
 ---
 
