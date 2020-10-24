@@ -11,7 +11,6 @@ export const postForListFields = graphql`
           date
           title
           keywords
-          parts
           featuredImage {
             childImageSharp {
               fluid(maxWidth: 800) {
