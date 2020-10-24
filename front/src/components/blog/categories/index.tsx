@@ -9,7 +9,7 @@ interface Props {
 }
 
 const query = graphql`
-  query Categories {
+  query {
     allMarkdownRemark(limit: 2000) {
       group(field: frontmatter___category) {
         fieldValue

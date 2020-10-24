@@ -34,26 +34,7 @@ export const pageQuery = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { category: { eq: $category } } }
     ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            date
-            title
-            keywords
-            parts
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
+      ...PostForListFields
     }
   }
 `

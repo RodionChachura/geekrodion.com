@@ -1,13 +1,24 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Categories from '../components/blog/categories'
 import CardsList from '../components/blog/list'
 
-const BlogPage = ({ data }) => {
-  const { edges } = data.postsRemark
+const query = graphql`
+  query {
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      ...PostForListFields
+    }
+  }
+`
+
+const BlogPage = () => {
+  const { allMarkdownRemark: { edges } } = useStaticQuery(query)
 
   return (
     <Layout>
@@ -24,33 +35,3 @@ const BlogPage = ({ data }) => {
 }
 
 export default BlogPage
-
-export const pageQuery = graphql`
-  query BlogPage {
-    postsRemark: allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            date
-            title
-            keywords
-            parts
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`

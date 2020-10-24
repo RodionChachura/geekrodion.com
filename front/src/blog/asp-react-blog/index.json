@@ -1,0 +1,8 @@
+{
+  "name": "Blog with ASP.NET Core and React/Redux",
+  "parts": [
+    {
+      "shortName": "Authentication" 
+    }
+  ]
+}
