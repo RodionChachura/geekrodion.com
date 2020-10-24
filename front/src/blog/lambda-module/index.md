@@ -5,7 +5,6 @@ description: "This module creates AWS Lambda function, make it accessible on a g
 category: "programming"
 keywords: [DocumentDB, AWS Lambda, Terraform, DevOps, MongoDB]
 featuredImage: main.png
-headline: "AWS Lambda, CI/CD and API Gateway with Terraform Module"
 resources: [
   GitHub https://github.com/RodionChachura/terraform-pomodoro-lambda
 ]

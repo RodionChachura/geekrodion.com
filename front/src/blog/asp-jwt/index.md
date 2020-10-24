@@ -5,7 +5,6 @@ description: "How to setup JWT token authorization for ASP.NET Core"
 category: "programming"
 keywords: [Asp.NET Core, JWT, REST API, .NET]
 featuredImage: main.png
-headline: "ASP.NET Core + JWT"
 ---
 
 ![](/main.png)

@@ -5,7 +5,6 @@ description: "I would apply knowledge from this book to my a web app"
 category: "product"
 keywords: [Positioning, Productt, Productivity]
 featuredImage: main.png
-headline: "Improving Positioning With “Obviously Awesome” Book"
 ---
 
 ![](/main.png)

@@ -5,7 +5,6 @@ description: "These days it is possible to deploy a function from Jupiter Notebo
 category: "programming"
 keywords: [AWS Lambda, Jupyter Notebook, Python, DevOps, Terraform]
 featuredImage: main.png
-headline: "Deploy Jupyter Notebook to AWS Lambda"
 resources: [
   GitHub https://github.com/RodionChachura/deploy-notebook
 ]

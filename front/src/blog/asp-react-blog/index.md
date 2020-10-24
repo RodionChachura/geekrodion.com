@@ -5,7 +5,6 @@ description: "Step by step tutorial on how to build Medium clone with ASP.NET Co
 category: "programming"
 keywords: [ASP.NET Core, React, Redux, Tutorial, Blog]
 featuredImage: main.png
-headline: "Blog with ASP.NET Core and React/Redux"
 parts: 6
 resources: [
   GitHub https://github.com/RodionChachura/simple-blog-back Back-end Code,

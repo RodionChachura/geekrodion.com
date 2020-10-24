@@ -5,7 +5,6 @@ description: "Making time picker component with React and publish it on NPM"
 category: "programming"
 keywords: [React, NPM, Tutorial, Front End Development, Increaser]
 featuredImage: main.png
-headline: "Time picker with React"
 resources: [
   Demo https://rodionchachura.github.io/increaser-timepicker/,
   GitHub https://github.com/RodionChachura/increaser-timepicker

@@ -5,7 +5,6 @@ description: "We will add a link in the newsletter that will lead to the page tr
 category: "programming"
 keywords: [AWS, Terraform, AWS Lambda, NodeJS, Email Marketing]
 featuredImage: main.png
-headline: "Unsubscribe Link in Email with AWS Lambda"
 resources: [
   GitHub https://github.com/RodionChachura/email-unsubscribe-lambda
 ]

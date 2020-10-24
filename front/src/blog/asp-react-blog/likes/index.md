@@ -5,7 +5,6 @@ description: "See recent posts and like them"
 category: "programming"
 keywords: [ASP.NET Core, React, Redux, Tutorial, Blog]
 featuredImage: main.png
-headline: "Adding Likes to ASP.NET Core + React/Redux Blog"
 resources: [
   GitHub https://github.com/RodionChachura/simple-blog-back/tree/part-4 Back-end Code,
   GitHub https://github.com/RodionChachura/simple-blog-front/tree/part-4 Front-end Code

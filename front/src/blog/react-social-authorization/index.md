@@ -5,7 +5,6 @@ description: "Add social authorization to your React app with NodeJS backend in 
 category: "programming"
 keywords: [JavaScript, React, Redux, NodeJS, Tutorial]
 featuredImage: main.png
-headline: "Google+Facebook Authorization in React+Redux+NodeJS App"
 resources: [
   Demo https://increaser.org
 ]

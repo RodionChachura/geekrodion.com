@@ -5,7 +5,6 @@ description: "Our final goal is to have running Amazon DocumentDB that we can ac
 category: "programming"
 keywords: [DocumentDB, AWS Lambda, Terraform, DevOps, MongoDB]
 featuredImage: main.jpg
-headline: "Amazon DocumentDB + AWS Lambda with Terraform"
 resources: [
   GitHub https://github.com/RodionChachura/terraform-aws-documentdb-lambda
 ]

@@ -5,7 +5,6 @@ description: "Building a React app with Voronoi diagram of places in a city"
 category: "programming"
 keywords: [React, Voronoi Diagram, Data Visualization, Mapbox]
 featuredImage: main.png
-headline: "Voronoi Diagram of Google Map Places"
 resources: [
   Demo https://rodionchachura.github.io/voronoi-on-map/,
   GitHub https://github.com/RodionChachura/voronoi-on-map

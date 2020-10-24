@@ -5,7 +5,6 @@ description: "Make a React app installable on desktop and mobile phone"
 category: "programming"
 keywords: [React, Redux, PWA, Web Development]
 featuredImage: main.png
-headline: "Install Button in PWA React+Redux"
 resources: [
   Demo https://increaser.org
 ]

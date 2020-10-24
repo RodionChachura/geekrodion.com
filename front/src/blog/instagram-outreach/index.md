@@ -5,7 +5,6 @@ description: "Half-Automated Instagram Marketing: What I learned after writing 1
 category: "programming"
 keywords: [Instagram, Python, Automation, Outreach]
 featuredImage: main.jpeg
-headline: "Instagram Outreach with Python"
 resources: [
   GitHub https://github.com/RodionChachura/instagram-promotino
 ]

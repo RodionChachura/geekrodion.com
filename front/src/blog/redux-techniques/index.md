@@ -5,7 +5,6 @@ description: "Simplify the management of the redux state by using techniques fro
 category: "programming"
 keywords: [Redux, React, JavaScript]
 featuredImage: main.png
-headline: "Redux State Management Techniques"
 ---
 
 ![](/main.png)

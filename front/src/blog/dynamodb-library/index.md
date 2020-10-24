@@ -5,7 +5,6 @@ description: "The goal of this story is to show useful functions that can help y
 category: "programming"
 keywords: [DynamoDB, NodeJS, Tutorial]
 featuredImage: main.png
-headline: "DynamoDB Library with NodeJS"
 resources: [
   GitHub https://github.com/RodionChachura/awsdynamoutils
 ]

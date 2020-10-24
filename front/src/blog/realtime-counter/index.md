@@ -5,7 +5,6 @@ description: "Use Google Analytics and Python to show how many active users are 
 category: "programming"
 keywords: [Google Analytics, Python, Terraform, AWS Lambda]
 featuredImage: main.png
-headline: "Realtime Counter of Active Users on Your Website"
 resources: [
   GitHub https://github.com/RodionChachura/analytics-taker
 ]

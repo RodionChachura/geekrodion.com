@@ -5,7 +5,6 @@ description: "Adding JWT authentication to ASP.NET Core + React blog"
 category: "programming"
 keywords: [ASP.NET Core, React, Redux, Tutorial, Blog]
 featuredImage: main.png
-headline: "JWT Authentication for ASP.NET Core + React/Redux App"
 resources: [
   GitHub https://github.com/RodionChachura/simple-blog-back/tree/part-1 Back-end Code,
   GitHub https://github.com/RodionChachura/simple-blog-front/tree/part-1 Front-end Code

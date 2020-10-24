@@ -5,7 +5,6 @@ description: "Making reusable bar chart component with React and publish it on N
 category: "programming"
 keywords: [React, Data Vizualization, Tutorial, JavaScript, Increaser]
 featuredImage: main.png
-headline: "Making Bar Chart with React"
 resources: [
   YouTube https://www.youtube.com/watch?v=mfSwozL1-OM&list=PLydcsPcXRjeyJuYLRzFzSXZp-tOG98vBF&index=1,
   Demo https://rodionchachura.github.io/increaser-charts/,

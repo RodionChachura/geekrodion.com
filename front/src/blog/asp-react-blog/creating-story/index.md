@@ -5,7 +5,6 @@ description: "Adding simple blog functionality to ASP.NET Core + React app"
 category: "programming"
 keywords: [ASP.NET Core, React, Redux, Tutorial, Blog]
 featuredImage: main.png
-headline: "Create and Edit Posts in ASP.NET Core + React/Redux App"
 resources: [
   GitHub https://github.com/RodionChachura/simple-blog-back/tree/part-2 Back-end Code,
   GitHub https://github.com/RodionChachura/simple-blog-front/tree/part-2 Front-end Code

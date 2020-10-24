@@ -5,7 +5,6 @@ description: "Making StoryBrand BrandScript for Increaser step by step"
 category: "product"
 keywords: [Positioning,Increaser,Marketing,Storytelling]
 featuredImage: main.png
-headline: "Making StoryBrand BrandScript for Increaser"
 ---
 
 ![](/main.png)

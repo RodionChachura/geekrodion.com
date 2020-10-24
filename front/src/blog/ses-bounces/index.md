@@ -5,7 +5,6 @@ description: "To not get paused, stop sending emails to recipients that cause bo
 category: "programming"
 keywords: [AWS, Terraform, NodeJS, AWS SES, AWS Lambda]
 featuredImage: main.png
-headline: "Handle AWS SES Bounces and Complaints with AWS Lambda and Terraform"
 resources: [
   GitHub https://github.com/RodionChachura/pomodoro-emails-sns-handler
 ]

@@ -6,7 +6,6 @@ description: "Using Terraform and Localstack to test services"
 category: "programming"
 keywords: [AWS, Terraform, Localstack, DevOps, Testing]
 featuredImage: main.png
-headline: "System Testing: Localstack + Terraform"
 ---
 
 ![](/main.png)

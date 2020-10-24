@@ -38,7 +38,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             date
-            headline
+            title
             keywords
             parts
             featuredImage {

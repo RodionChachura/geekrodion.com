@@ -5,7 +5,6 @@ description: "Adding LinkedIn authorization to React app with NodeJS backsend"
 category: "programming"
 keywords: [JavaScript, React, Authorization, LinkedIn]
 featuredImage: main.png
-headline: "React and LinkedIn Authorization"
 resources: [
   Demo https://increaser.org
 ]

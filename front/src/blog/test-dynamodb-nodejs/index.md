@@ -5,7 +5,6 @@ description: "Set up continuous integration and deployment for Express applicati
 category: "programming"
 keywords: [CI/CD, NodeJS, DynamoDB, Bitbucket]
 featuredImage: main.png
-headline: "Testing DynamoDB + NodeJS App"
 ---
 
 ![](/main.png)

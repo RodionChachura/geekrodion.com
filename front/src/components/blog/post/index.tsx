@@ -9,7 +9,7 @@ const Post = ({ post }) => {
   return (
     <Container>
       <HeadlineContainer>
-        <Text size={40} tag={'h1'} bold>{post.frontmatter.headline}</Text>
+        <Text size={40} tag={'h1'} bold>{post.frontmatter.title}</Text>
       </HeadlineContainer>
       {resources && <Resources resources={resources} />}
       <Content dangerouslySetInnerHTML={{ __html: post.html }}/>

@@ -14,9 +14,9 @@ const PostsList = ({ edges }) => {
         <Card
           parts={p.frontmatter.parts}
           image={p.frontmatter.featuredImage.childImageSharp.fluid}
-          key={p.frontmatter.headline}
+          key={p.frontmatter.title}
           date={p.frontmatter.date}
-          title={p.frontmatter.headline}
+          title={p.frontmatter.title}
           keywords={p.frontmatter.keywords}
           slug={p.fields.slug}
         />

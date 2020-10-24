@@ -5,7 +5,6 @@ description: "Migrate DynamoDB items to a new format with async functions."
 category: "programming"
 keywords: [DynamoDB,Database,NodeJS,DevOps,AWS]
 featuredImage: main.png
-headline: "Migrations in DynamoDB with NodeJS"
 ---
 
 ![](/main.png)

@@ -5,7 +5,6 @@ description: "We will make a newly created react app suitable to work with redux
 category: "programming"
 keywords: [Redux, Redux Saga, React, Create React App]
 featuredImage: main.png
-headline: "Redux + Saga + Create-React-App"
 resources: [
   Udemy https://www.udemy.com/course/how-to-start-react-project-best-practices,
   GitHub https://github.com/RodionChachura/react-starter

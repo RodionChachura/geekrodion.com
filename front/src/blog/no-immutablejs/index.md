@@ -5,7 +5,6 @@ description: "It is easier than ever to write immutable JavaScript code without 
 category: "programming"
 keywords: [JavaScript, Immutability, Redux, React]
 featuredImage: main.png
-headline: "Why You Don’t Need ImmutableJS"
 ---
 
 ![](/main.png)

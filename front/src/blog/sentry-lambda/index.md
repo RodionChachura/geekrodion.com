@@ -5,7 +5,6 @@ description: "Do you have AWS Lambda running GraphQL Apollo Server and want to a
 category: "programming"
 keywords: [Sentry, Error Handling, AWS Lambda, Apollo, GraphQL]
 featuredImage: main.png
-headline: "Sentry with AWS Lambda running Apollo Server"
 ---
 
 ![](/main.png)
