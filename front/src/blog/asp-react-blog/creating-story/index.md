@@ -1,6 +1,7 @@
 ---
 date: "2018-09-28"
 title: "Create and Edit Posts in ASP.NET Core + React/Redux Blog"
+shortTitle: "Creating a Story"
 description: "Adding simple blog functionality to ASP.NET Core + React app"
 category: "programming"
 keywords: [ASP.NET Core, React, Redux, Tutorial, Blog]

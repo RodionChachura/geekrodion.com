@@ -1,6 +1,7 @@
 ---
 date: "2018-10-28"
 title: "Adding Likes to ASP.NET Core + React/Redux Blog"
+shortTitle: "Likes"
 description: "See recent posts and like them"
 category: "programming"
 keywords: [ASP.NET Core, React, Redux, Tutorial, Blog]

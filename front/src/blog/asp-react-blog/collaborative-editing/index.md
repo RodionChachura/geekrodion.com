@@ -1,6 +1,7 @@
 ---
 date: "2018-11-12"
 title: "SignalR for Collaborative Online Editing in ASP.NET Core + React/Redux App"
+shortTitle: "Collaborative Editing"
 description: "Showing notification when somebody changes blog post"
 category: "programming"
 keywords: [ASP.NET Core, React, Redux, Tutorial, Blog]

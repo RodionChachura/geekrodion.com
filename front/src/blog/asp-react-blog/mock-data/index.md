@@ -1,6 +1,7 @@
 ---
 date: "2018-10-05"
 title: "Populating Database with Blog Posts from Medium"
+shortTitle: "Mock Data"
 description: "the goal for this part is to write a script that will populate PostgreSQL with mock data"
 category: "programming"
 keywords: [ASP.NET Core, React, Redux, Tutorial, Blog]

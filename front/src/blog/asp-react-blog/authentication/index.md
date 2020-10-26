@@ -1,6 +1,7 @@
 ---
 date: "2018-09-28"
 title: "JWT Authentication for ASP.NET Core + React/Redux App"
+shortTitle: "Authentication"
 description: "Adding JWT authentication to ASP.NET Core + React blog"
 category: "programming"
 keywords: [ASP.NET Core, React, Redux, Tutorial, Blog]

@@ -1,6 +1,7 @@
 ---
 date: "2018-11-05"
 title: "SignalR for Notifications in ASP.NET Core + React/Redux App"
+shortTitle: "Likes Notifications"
 description: "Showing notification when somebody likes a post"
 category: "programming"
 keywords: [ASP.NET Core, React, Redux, Tutorial, Blog]
