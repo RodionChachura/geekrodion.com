@@ -5,6 +5,7 @@ description: "the goal for this part is to write a script that will populate Pos
 category: "programming"
 keywords: [ASP.NET Core, React, Redux, Tutorial, Blog]
 featuredImage: main.png
+partNumber: 3
 resources: [
   GitHub https://github.com/RodionChachura/simple-blog-back/tree/part-3 Back-end Code,
   GitHub https://github.com/RodionChachura/simple-blog-front/tree/part-2 Front-end Code

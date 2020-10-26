@@ -25,15 +25,27 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     {
       postsRemark: allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
+        filter: {
+          fields: { slug: { regex: "/^\/[^/]+\/[^/]+$/" }}
+        }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+      seriesPartsRemark: allMarkdownRemark(
+        filter: {
+          fields: { slug: { regex: "/\/.+\/.+\/.+/" }}
+        }
       ) {
         edges {
           node {
             frontmatter {
-              category
-              path
-              category
+              partNumber
             }
             fields {
               slug
@@ -62,6 +74,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: blogPostTemplate,
       context: {
         slug
+      }
+    })
+  })
+
+  const seriesParts = result.data.seriesPartsRemark.edges
+  seriesParts.forEach(({ node }) => {
+    const { slug } = node.fields
+    const { partNumber } = node.frontmatter
+    createPage({
+      path: slug,
+      component: blogPostTemplate,
+      context: {
+        slug,
+        partNumber
       }
     })
   })

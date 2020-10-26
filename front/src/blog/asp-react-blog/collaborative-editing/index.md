@@ -5,6 +5,7 @@ description: "Showing notification when somebody changes blog post"
 category: "programming"
 keywords: [ASP.NET Core, React, Redux, Tutorial, Blog]
 featuredImage: main.png
+partNumber: 6
 resources: [
   GitHub https://github.com/RodionChachura/simple-blog-back/tree/part-6 Back-end Code,
   GitHub https://github.com/RodionChachura/simple-blog-front/tree/part-6 Front-end Code

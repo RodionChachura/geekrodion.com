@@ -5,9 +5,9 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Post from '../components/blog/post'
 
-const BlogPost = ({ data, theme }) => {
+const BlogPost = ({ data, theme, pageContext }) => {
   const { markdownRemark: post } = data
-
+  console.log(pageContext)
   return (
     <Layout customBackground={theme.blog.color.background}>
       <SEO

@@ -5,6 +5,7 @@ description: "Showing notification when somebody likes a post"
 category: "programming"
 keywords: [ASP.NET Core, React, Redux, Tutorial, Blog]
 featuredImage: main.png
+partNumber: 5
 resources: [
   GitHub https://github.com/RodionChachura/simple-blog-back/tree/part-5 Back-end Code,
   GitHub https://github.com/RodionChachura/simple-blog-front/tree/part-5 Front-end Code
