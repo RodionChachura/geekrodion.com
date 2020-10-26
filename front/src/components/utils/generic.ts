@@ -15,3 +15,11 @@ export const registerListener = (...args: Parameters<typeof window.addEventListe
   window.addEventListener(...args)
   return () => window.removeEventListener(...args)
 }
+
+export const getFlatObject = (object: Object): any =>
+  Object
+    .values(object)
+    .flat()
+    .map(obj => Object.entries(obj))
+    .flat()
+    .reduce((acc: Object, [key, value]) => ({ ...acc, [key]: value }), {})
