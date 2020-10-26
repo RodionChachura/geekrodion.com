@@ -44,9 +44,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ) {
         edges {
           node {
-            frontmatter {
-              partNumber
-            }
             fields {
               slug
             }
@@ -73,6 +70,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: slug,
       component: blogPostTemplate,
       context: {
+        isSeriesPart: false,
         slug
       }
     })
@@ -81,13 +79,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const seriesParts = result.data.seriesPartsRemark.edges
   seriesParts.forEach(({ node }) => {
     const { slug } = node.fields
-    const { partNumber } = node.frontmatter
+
+    const seriesIndexSlug = slug.substring(0, slug.lastIndexOf('/'))
     createPage({
       path: slug,
       component: blogPostTemplate,
       context: {
         slug,
-        partNumber
+        isSeriesPart: true,
+        otherPartsSlugsRegex: `/${seriesIndexSlug.replace(/\//g, '\\/')}\/.+/`,
+        seriesIndexSlug
       }
     })
   })

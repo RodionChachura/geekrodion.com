@@ -4,8 +4,16 @@ import { Container, Content, HeadlineContainer } from './styles'
 import Text from '../../text'
 import Resources from './resources'
 
-const Post = ({ post }) => {
+interface Props {
+  post: any,
+  seriesParts: any,
+  seriesIndex: any
+  slug: string
+}
+
+const Post = ({ post, seriesParts, slug, seriesIndex }: Props) => {
   const { resources } = post.frontmatter
+  console.log(slug, seriesParts, seriesIndex)
   return (
     <Container>
       <HeadlineContainer>
