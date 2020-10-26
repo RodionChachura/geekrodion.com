@@ -9,7 +9,6 @@ import CardsList from '../components/blog/list'
 import categories from '../blog/categories.json'
 
 const Category = ({ data, location: { pathname }, pageContext: { category } }) => {
-  const { edges } = data.postsRemark
   const { title, description } = categories[category]
   return (
     <Layout>
@@ -20,9 +19,7 @@ const Category = ({ data, location: { pathname }, pageContext: { category } }) =
       <Categories
         pathname={pathname}
       />
-      <CardsList
-        edges={edges}
-      />
+      <CardsList {...data} />
     </Layout>
   )
 }
@@ -30,11 +27,21 @@ const Category = ({ data, location: { pathname }, pageContext: { category } }) =
 export const pageQuery = graphql`
   query($category: String) {
     postsRemark: allMarkdownRemark(
-      limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { eq: $category } } }
+      filter: {
+        frontmatter: { category: { eq: $category } },
+        fields: { slug: { regex: "/^\/[^/]+\/[^/]+$/" }}
+      }
     ) {
       ...PostForListFields
+    },
+    seriesPartsRemark: allMarkdownRemark(
+      filter: {
+        frontmatter: { category: { eq: $category } }
+        fields: { slug: { regex: "/\/.+\/.+\/.+/" }}
+      }
+    ) {
+      ...SeriesPartForListFields
     }
   }
 `

@@ -23,3 +23,15 @@ export const postForListFields = graphql`
     }
   }
 `
+
+export const seriesPartForListFields = graphql`
+  fragment SeriesPartForListFields on MarkdownRemarkConnection {
+    edges {
+      node {
+        fields {
+          slug
+        }
+      }
+    }
+  }
+`

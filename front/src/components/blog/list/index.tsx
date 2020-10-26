@@ -2,17 +2,16 @@ import React from 'react'
 
 import { Container } from './styles'
 import Card from './card'
-import { splitArrayBy } from '../../../utils/generic'
 
-const PostsList = ({ edges }) => {
-  const posts = edges.map(e => e.node)
+const PostsList = ({ postsRemark, seriesPartsRemark }) => {
+  const posts = postsRemark.edges.map(e => e.node)
+  const seriesPartsSlugs = seriesPartsRemark.edges.map(e => e.node.fields.slug)
 
-  const [rootPosts, partsOfRootPosts] = splitArrayBy(posts, post => post.fields.slug.split('/').length === 3)
   return (
     <Container>
-      {rootPosts.map(p => {
+      {posts.map(p => {
         const [path] = p.fields.slug.split('/').reverse()
-        const parts = partsOfRootPosts.filter(p => p.fields.slug.includes(path)).length
+        const parts = seriesPartsSlugs.filter(s => s.includes(path)).length
 
         return (
           <Card
