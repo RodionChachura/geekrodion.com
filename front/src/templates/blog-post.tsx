@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Post from '../components/blog/post'
 
-const BlogPost = ({ data, theme, pageContext: { slug, seriesIndexSlug } }) => {
+const BlogPost = ({ data, theme, pageContext: { slug } }) => {
   const { markdownRemark: post, seriesParts, seriesIndex } = data
 
   return (
