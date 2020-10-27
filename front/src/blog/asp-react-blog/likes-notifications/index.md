@@ -271,5 +271,3 @@ export function* startApp() {
   ...
 }
 ```
-
-The rest on the front-end part is quite simple:) In the [next part](/blog/asp-react-blog/collaborative-editing), we will add collaborative editing for stories.

@@ -225,5 +225,3 @@ namespace Blog.Mocker
     }
 }
 ```
-
-In the [next part](/blog/asp-react-blog/likes), we will allow a user to like stories.

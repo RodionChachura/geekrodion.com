@@ -487,5 +487,3 @@ export default connectTo(
 )
 ```
 
-In the [next part](/blog/asp-react-blog/likes-notifications), we will add real-time notifications for likes.
-

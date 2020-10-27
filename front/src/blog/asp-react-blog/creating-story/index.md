@@ -664,5 +664,3 @@ export default connectTo(
   }
 )
 ```
-
-In the [next part](/blog/asp-react-blog/mock-data), we will populate our database with mock data.

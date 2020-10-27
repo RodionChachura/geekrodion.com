@@ -763,5 +763,3 @@ Now, if you have the running back-end, you can start front-end and register!
 ```shell{ promptUser: geekrodion }
 npm start
 ```
-
-In the [next part](/blog/asp-react-blog/creating-story), we will allow user to create articles.
