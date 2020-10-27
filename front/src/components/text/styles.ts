@@ -9,7 +9,8 @@ export const getTextColor = (theme, textColor) => {
     [TextColor.SECONDARY]: theme.color.secondaryText,
     [TextColor.PRIMARY]: theme.color.primary,
     [TextColor.REVERSED]: theme.color.background,
-    [TextColor.BLOG_REVERSED]: theme.blog.color.background
+    [TextColor.BLOG_REVERSED]: theme.blog.color.background,
+    [TextColor.BLOG_SECONDARY]: theme.blog.color.secondaryText
   }[textColor]
 }
 
@@ -18,6 +19,7 @@ export const getTextHoverColor = (theme: any, textColor: string) => {
     {
       [TextColor.DEFAULT]: theme.color.primary,
       [TextColor.SECONDARY]: theme.color.text,
+      [TextColor.BLOG_SECONDARY]: theme.color.text
     }[textColor] || getTextColor(theme, textColor)
   )
 }

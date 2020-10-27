@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Text from '../../../../text'
+import Text, { TextColor } from '../../../../text'
 import { getFlatObject } from '../../../../utils/generic'
 import { PartNumberContainer } from './styles'
 
@@ -21,7 +21,7 @@ const SeriesPart = ({ seriesParts, seriesIndex, slug, children }: Props) => {
   return (
     <>
       <PartNumberContainer>
-        <Text>Part {partNumber} of the series <Text underline to={seriesSlug}>"{seriesTitle}"</Text></Text>
+        <Text color={TextColor.BLOG_SECONDARY}>Part {partNumber} of the series <Text color={TextColor.BLOG_SECONDARY} underline to={seriesSlug}>"{seriesTitle}"</Text></Text>
       </PartNumberContainer>
       {children}
       <Text>Next Part</Text>

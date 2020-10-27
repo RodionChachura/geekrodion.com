@@ -28,13 +28,14 @@ const DEFAULT_PROPS = {
 }
 
 const Text = ({ children, ...rest }: Props) => {
-  const Text = rest.to ? StyledLink : getTextComponent(rest.tag)
-
   const props = {
     ...DEFAULT_PROPS,
     ...rest,
     clickable: !!(rest.onClick || rest.to)
   }
+
+  const Text = rest.to ? StyledLink : getTextComponent(props.tag)
+
 
   let definedProps = Object.keys(props).reduce((acc, key) => {
     const value = props[key]
