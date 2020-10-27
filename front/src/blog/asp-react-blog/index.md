@@ -20,10 +20,3 @@ When I just started programming, I liked to read blogs and watch videos showing 
 For the back-end part, we will use ASP.NET Core 2. And for the front-end part — React and Redux. I will use VS Code as a code editor and Ubuntu 18.04 as O.S. If you are using other code editor or operation systems — it is not a problem. Since both nodeJS and .NET Core are cross-platform technologies.
 
 ## Table of Content
-
-1. [Authentication](/blog/asp-react-blog/authentication)
-2. [Creating a story](/blog/asp-react-blog/creating-story)
-3. [Mock data](/blog/asp-react-blog/mock-data/)
-4. [Likes](/blog/asp-react-blog/likes/)
-5. [Likes notifications](/blog/asp-react-blog/likes-notifications/)
-6. [Collaborative editing](/blog/asp-react-blog/collaborative-editing)

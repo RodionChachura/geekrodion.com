@@ -64,31 +64,40 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   const posts = result.data.postsRemark.edges
+  const seriesParts = result.data.seriesPartsRemark.edges
+
+  const getSeriesPartsSlugRegex = slug => `/${slug.replace(/\//g, '\\/')}\/.+/`
+
   posts.forEach(({ node }) => {
     const { slug } = node.fields
+    const isSeriesRoot = seriesParts.some(e => e.node.fields.slug.includes(slug))
+
     createPage({
       path: slug,
       component: blogPostTemplate,
       context: {
+        isSeries: isSeriesRoot,
+        isSeriesRoot,
         isSeriesPart: false,
+        seriesPartsSlugRegex: getSeriesPartsSlugRegex(slug),
         slug
       }
     })
   })
 
-  const seriesParts = result.data.seriesPartsRemark.edges
   seriesParts.forEach(({ node }) => {
     const { slug } = node.fields
 
-    const seriesIndexSlug = slug.substring(0, slug.lastIndexOf('/'))
+    const seriesRootSlug = slug.substring(0, slug.lastIndexOf('/'))
     createPage({
       path: slug,
       component: blogPostTemplate,
       context: {
         slug,
+        isSeries: true,
         isSeriesPart: true,
-        otherPartsSlugsRegex: `/${seriesIndexSlug.replace(/\//g, '\\/')}\/.+/`,
-        seriesIndexSlug
+        seriesPartsSlugRegex: getSeriesPartsSlugRegex(seriesRootSlug),
+        seriesRootSlug
       }
     })
   })

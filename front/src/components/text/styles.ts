@@ -19,6 +19,9 @@ export const getTextHoverColor = (theme: any, textColor: string) => {
     {
       [TextColor.DEFAULT]: theme.color.primary,
       [TextColor.SECONDARY]: theme.color.text,
+      [TextColor.PRIMARY]: theme.color.primary,
+      [TextColor.REVERSED]: theme.color.background,
+      [TextColor.BLOG_REVERSED]: theme.blog.color.background,
       [TextColor.BLOG_SECONDARY]: theme.color.text
     }[textColor] || getTextColor(theme, textColor)
   )
@@ -62,7 +65,7 @@ export const style = css`
   ${p =>
     p.underline &&
     css`
-      border-bottom: 2px solid ${p => getTextColor(p.theme, p.color)};
+      border-bottom: 2px solid ${p => getTextHoverColor(p.theme, p.color)};
     `}
 `
 

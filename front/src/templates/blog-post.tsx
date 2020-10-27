@@ -5,9 +5,9 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Post from '../components/blog/post'
 
-const BlogPost = ({ data, theme, pageContext: { slug } }) => {
-  const { markdownRemark: post, seriesParts, seriesIndex } = data
-
+const BlogPost = ({ data, theme, pageContext: { slug, isSeriesRoot } }) => {
+  const { markdownRemark: post, seriesParts, seriesRoot } = data
+  console.log(isSeriesRoot, seriesParts)
   return (
     <Layout customBackground={theme.blog.color.background}>
       <SEO
@@ -17,8 +17,9 @@ const BlogPost = ({ data, theme, pageContext: { slug } }) => {
       <Post
         slug={slug}
         post={post}
+        isSeriesRoot={isSeriesRoot}
         seriesParts={seriesParts}
-        seriesIndex={seriesIndex}
+        seriesRoot={seriesRoot}
       />
     </Layout>
   )
@@ -26,7 +27,7 @@ const BlogPost = ({ data, theme, pageContext: { slug } }) => {
 
 
 export const pageQuery = graphql`
-  query BlogPostByPath($slug: String!, $isSeriesPart: Boolean!, $otherPartsSlugsRegex: String, $seriesIndexSlug: String) {
+  query BlogPostByPath($slug: String!, $isSeries: Boolean!, $isSeriesPart: Boolean!, $seriesPartsSlugRegex: String, $seriesRootSlug: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -39,9 +40,9 @@ export const pageQuery = graphql`
     }
     seriesParts: allMarkdownRemark(
       filter: {
-        fields: { slug: { regex: $otherPartsSlugsRegex } }
+        fields: { slug: { regex: $seriesPartsSlugRegex } }
       }
-    ) @include(if:$isSeriesPart) {
+    ) @include(if:$isSeries) {
       edges {
         node {
           fields {
@@ -54,7 +55,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    seriesIndex: markdownRemark(fields: { slug: { eq: $seriesIndexSlug } }) @include(if:$isSeriesPart) {
+    seriesRoot: markdownRemark(fields: { slug: { eq: $seriesRootSlug } }) @include(if:$isSeriesPart) {
       fields {
         slug
       }
