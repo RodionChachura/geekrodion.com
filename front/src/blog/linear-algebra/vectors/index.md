@@ -3,7 +3,7 @@ date: "2019-05-03"
 title: "Vectors and Vectors Operations With JavaScript"
 shortTitle: "Vectors and Vectors Operations"
 partNumber: 2
-description: "Vectors are the precise way to describe directions in space."
+description: "Vectors are the precise way to describe directions in space"
 category: "programming"
 keywords: [JavaScript, Linear Algebra, Vector]
 featuredImage: ../main.png
