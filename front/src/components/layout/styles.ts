@@ -30,6 +30,8 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const MAX_WIDTH = 1220
+export const FULL_WIDTH_BREAKPOINT = MAX_WIDTH + 40
+export const FULL_WIDTH = '94vw'
 
 export const Container = styled.div`
   width: 100%;
@@ -45,7 +47,7 @@ export const Content = styled.div`
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  @media(max-width: ${MAX_WIDTH + 40}px) {
-    width: 94vw;
+  @media(max-width: ${FULL_WIDTH_BREAKPOINT}px) {
+    width: ${FULL_WIDTH};
   }
 `
