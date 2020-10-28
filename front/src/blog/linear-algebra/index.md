@@ -1,5 +1,5 @@
 ---
-date: "2019-05-08"
+date: "2019-05-27"
 title: "Linear Algebra with JavaScript"
 description: "We are going to explore linear algebra by building a JS library"
 category: "programming"
