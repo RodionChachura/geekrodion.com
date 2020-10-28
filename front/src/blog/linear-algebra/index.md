@@ -14,3 +14,5 @@ resources: [
 ![](/main.png)
 
 In this series, we are going to explore linear algebra by building a JS library and at the same time designing interactive examples.
+
+## Table of Content
