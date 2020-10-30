@@ -1,7 +1,7 @@
 ---
 date: "2018-11-15"
 title: "CI/CD for Static Website with AWS + Terraform"
-shortTitle: "Hosting"
+shortTitle: "CI/CD"
 description: "Using Terraform and AWS Best Practices for Web Site Hosting"
 partNumber: 2
 category: "programming"
