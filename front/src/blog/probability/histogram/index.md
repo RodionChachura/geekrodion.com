@@ -11,13 +11,7 @@ featuredImage: ../main.jpeg
 
 ![](../main.jpeg)
 
-# Statistics: Histogram
-
-This is part of the course “Probability Theory and Statistics for Programmers”.
-
-![Probability Theory and Statistics For Programmers](https://cdn-images-1.medium.com/max/2560/1*4EAYaiP3FCGhjtD2cK_Wmg.jpeg)*Probability Theory and Statistics For Programmers*
-
-In [the previous article](https://medium.com/p/2fd7935efccb), we have seen one form of data representation — empirical distribution function. This time we will see more convenient representation for a large amount of data — **histogram**.
+In [the previous article](/blog/probability/empirical), we have seen one form of data representation — empirical distribution function. This time we will see more convenient representation for a large amount of data — **histogram**.
 
 Suppose that we have the results of observation of a random variable *X*. In our example, we assume that a variable can take any value in the interval from *0* to *10*. The sorted result of our observations:
 ```

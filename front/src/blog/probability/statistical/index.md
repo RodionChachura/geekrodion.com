@@ -19,7 +19,7 @@ As you can see the expected value(or statistical mean) is simply average of obse
 
 ![](y.png)
 
-In order to calculate **variance **we applying the same formula as for random variable variance, the only change is that now will be used 
+In order to calculate **variance** we applying the same formula as for random variable variance, the only change is that now will be used 
  the different formula for calculating expected value.
 
 ![](d.png)

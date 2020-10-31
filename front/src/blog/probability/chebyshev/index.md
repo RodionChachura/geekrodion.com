@@ -13,7 +13,7 @@ featuredImage: ../main.jpeg
 
 Before introducing the law of large number it is better to understand Chebyshev’s inequality first.
 
-**Chebyshev’s inequality** shows that for any positive number a probability of random variable *X *to deviate from an expected value not less than by a is equal to:
+**Chebyshev’s inequality** shows that for any positive number a probability of random variable *X* to deviate from an expected value not less than by a is equal to:
 
 ![Chebyshev’s inequality](inequality.png)
 
@@ -34,7 +34,7 @@ It is equal to *3.5*. Now we can draw all possible values and interval *(m-a, m+
 
 ![](interval.jpeg)
 
-For our example, we need to find the probability of getting values out of the range — the probability of getting *1 *or *6*.
+For our example, we need to find the probability of getting values out of the range — the probability of getting *1* or *6*.
 
 ```py
 def expected_value(values, probabilities):
@@ -69,7 +69,7 @@ Let’s find the expected value and variance of an obtained random variable.
 
 ![expected value and variance of random variable Y](chars.png)
 
-As you can see expected value is independent of a number of experiments and equal to an expected value of X. Variance decrease as a number of experiments growth. Because variance becomes very small random variable *Y *becomes not random. Since there is no randomness when you have variance almost equals to zero. Now we came to this inequality.
+As you can see expected value is independent of a number of experiments and equal to an expected value of X. Variance decrease as a number of experiments growth. Because variance becomes very small random variable *Y* becomes not random. Since there is no randomness when you have variance almost equals to zero. Now we came to this inequality.
 
 ![](small.png)
 
