@@ -1,7 +1,7 @@
 ---
 date: "2018-03-25"
 title: "Multivariate Random Variable - Numerical Characteristics with Python"
-shortTitle: "Multivariate Random Variable - DNumerical Characteristics"
+shortTitle: "Multivariate Random Variable - Numerical Characteristics"
 partNumber: 21
 description: "Complete 35 Parts Course for Programmers With Python Examples in Jupiter"
 category: "programming"

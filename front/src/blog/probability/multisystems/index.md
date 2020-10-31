@@ -1,7 +1,7 @@
 ---
 date: "2018-03-25"
 title: "Multivariate Random Variable - Dependent and Independent Systems of Random Variables with Python"
-shortTitle: "Multivariate Random Variable - Dependent and Independent Systems of Random Variables"
+shortTitle: "Multivariate Random Variable - Systems of Random Variables"
 partNumber: 20
 description: "Complete 35 Parts Course for Programmers With Python Examples in Jupiter"
 category: "programming"
