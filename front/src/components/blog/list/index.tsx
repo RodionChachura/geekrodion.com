@@ -11,8 +11,8 @@ const PostsList = ({ postsRemark, seriesPartsRemark }) => {
     <Container>
       {posts.map(p => {
         const [path] = p.fields.slug.split('/').reverse()
-        const parts = seriesPartsSlugs.filter(s => s.includes(path)).length
-
+        const partsRegex = new RegExp(`.+\/${path}\/.+`)
+        const parts = seriesPartsSlugs.filter(s => s.match(partsRegex)).length
         return (
           <Card
             parts={parts > 0 && parts}

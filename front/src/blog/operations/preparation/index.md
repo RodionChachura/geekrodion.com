@@ -13,6 +13,7 @@ resources: [
 ---
 
 ![](../main.png)
+
 Before we go to the simplex method, we need to learn how to represent the linear program in an **equational form **and** **what are **basic feasible solutions**.
 
 ## Equational Form

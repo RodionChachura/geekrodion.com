@@ -14,7 +14,7 @@ const SeriesRoot = ({ parts, children }: Props) => {
       {children}
       {parts.sort((a, b) => a.partNumber - b.partNumber).map(({ partNumber, slug, shortTitle }) => {
         return (
-          <Text style={{ marginBottom: 10 }} bold>
+          <Text key={slug} style={{ marginBottom: 10 }} bold>
             {partNumber}.{" "}
             <Text color={TextColor.BLOG_SECONDARY} bold to={slug} underline>
               {shortTitle}
