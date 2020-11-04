@@ -9,7 +9,8 @@ keywords: [JavaScript, Game Development, Functional Programming]
 featuredImage: main.png
 resources: [
   GitHub https://github.com/RodionChachura/snake-game,
-  Demo https://rodionchachura.github.io/snake-game/
+  Demo https://rodionchachura.github.io/snake-game/,
+  YouTube https://youtu.be/XmfgMWVTe5Y
 ]
 ---
 

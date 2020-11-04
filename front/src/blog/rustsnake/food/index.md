@@ -9,7 +9,8 @@ keywords: [JavaScript, Rust, Web Assembly, Game Development]
 featuredImage: main.png
 resources: [
   GitHub https://github.com/RodionChachura/rust-js-snake-game/commit/58c1149f937229851fda80ff5f9fb836cdb92c78 Code Changes,
-  Demo https://rodionchachura.github.io/rust-js-snake-game/
+  Demo https://rodionchachura.github.io/rust-js-snake-game/,
+  Udemy https://www.udemy.com/course/snake-game-with-rust-javascript-and-webassembly
 ]
 ---
 
