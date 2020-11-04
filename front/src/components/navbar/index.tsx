@@ -19,7 +19,6 @@ export const Navbar = ({ customBackground }: Props) => {
         </Text>
         <Navigation>
           <Text style={optionStyle} to={'/#projects'} bold size={16}>PROJECTS</Text>
-          <Text style={optionStyle} to={'/#series'} bold size={16}>SERIES</Text>
           <Text style={optionStyle} to={'/blog/programming'} bold size={16}>BLOG</Text>
         </Navigation>
       </Container>
