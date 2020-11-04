@@ -359,7 +359,7 @@ export default class App extends React.Component {
         </Container>
         <TimeWaitsForNoOne
           target="_blank"
-          href="https://medium.com/@geekrodion/increaser-mindset-dc828a2bcd4d"
+          href="https://increaser.org/blog/mindset"
         >
           {"Time Waits For No One, and It Won't Wait For Me"}
         </TimeWaitsForNoOne>

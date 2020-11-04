@@ -48,7 +48,7 @@ Now, when we have Chi-square statistic it is the right time to accept or reject 
 
 ![](draw.jpeg)
 
-As you might guess we will use [Chi-squared distribution function](https://medium.com/@geekrodion/probability-theory-chi-square-distribution-53e2a9fbe446). The degree of freedom for distribution in Pearson test equal to *n-1*, where *n* is the number of categories. In our example, there are *5* categories, therefore the degree of freedom equal to *4*.
+As you might guess we will use [Chi-squared distribution function](https://geekrodion.com/blog/probability/chi). The degree of freedom for distribution in Pearson test equal to *n-1*, where *n* is the number of categories. In our example, there are *5* categories, therefore the degree of freedom equal to *4*.
 
 `gist:f5dae383c970464489e167c3b2a1a705`
 

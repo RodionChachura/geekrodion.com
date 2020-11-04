@@ -321,7 +321,7 @@ export default class App extends React.Component {
 
 ## Generating Mock Data
 
-In the constructor of the demo page and on change of some parameters we will create mock data. The function will receive the number of bars we want to generate and should they include a label or not. To define the height of the bar we will use a function, that will return [normally distributed](https://medium.com/@geekrodion/16-normal-distribution-816ca2e9ce3d) random number.
+In the constructor of the demo page and on change of some parameters we will create mock data. The function will receive the number of bars we want to generate and should they include a label or not. To define the height of the bar we will use a function, that will return [normally distributed](https://geekrodion.com/blog/probability/normal) random number.
 
 ```js
 const MIN_TOTAL_HEIGHT = 0

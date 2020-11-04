@@ -78,7 +78,7 @@ export default class Vector {
 }
 ```
 
-If you are not comfortable with basic vector operations, you can check [this story](https://medium.com/@geekrodion/linear-algebra-vectors-f7610e9a0f23) covering basics with JS examples. In the examples below, you can see what other methods are doing.
+If you are not comfortable with basic vector operations, you can check [this story](https://geekrodion.com/blog/linear-algebra/vectors) covering basics with JS examples. In the examples below, you can see what other methods are doing.
 
 ![few vectors methods](operations.png)
 ## Core

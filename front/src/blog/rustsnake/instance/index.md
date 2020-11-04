@@ -169,4 +169,4 @@ gameManager.run()
 
 To test that everything works, we go to the web page and open console in developer tools.
 
-![localhost:8080](https://cdn-images-1.medium.com/max/2000/1*CbZw-w_exkOTvrg_L7-88w.png)
+![localhost:8080](result.png)

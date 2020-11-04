@@ -86,7 +86,7 @@ Implementation of the handler function we can find [here](https://github.com/Rod
 
 ## Infrastructure
 
-You can find everything related to the infrastructure in the repository [here](https://github.com/RodionChachura/email-unsubscribe-lambda/tree/master/infrastructure). Very similar infrastructure has already covered in other stories — [AWS for Website CI/CD with Terraforms](https://medium.com/@geekrodion/deploying-spa-on-aws-with-terraform-codepipeline-6290529c24df) and [Amazon DocumentDB and AWS Lambda with Terraform](https://medium.com/@geekrodion/amazon-documentdb-and-aws-lambda-with-terraform-34a5d1061c15). Therefore we will only cover variables here.
+You can find everything related to the infrastructure in the repository [here](https://github.com/RodionChachura/email-unsubscribe-lambda/tree/master/infrastructure). Very similar infrastructure has already covered in other stories — [AWS for Website CI/CD with Terraforms](https://geekrodion.com/blog/aws-website/ci-cd) and [Amazon DocumentDB and AWS Lambda with Terraform](https://geekrodion.com/blog/documentdb-terraform). Therefore we will only cover variables here.
 
 To create the infrastructure, we need to set environment variables(AWS credentials) first.
 
@@ -133,7 +133,7 @@ If you like an idea of using AWS CodePipeline for CI/CD and have your code in th
 export GITHUB_TOKEN=<YOUR_GITHUB_TOKEN>
 ```
 
-To find more information about the CD part, you can check [this story](https://medium.com/@geekrodion/deploying-spa-on-aws-with-terraform-codepipeline-6290529c24df).
+To find more information about the CD part, you can check [this story](https://geekrodion.com/blog/aws-website/ci-cd).
 
 We can specify variables by editing a file or by setting environment variables like this.
 

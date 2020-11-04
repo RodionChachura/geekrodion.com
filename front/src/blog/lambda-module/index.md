@@ -42,7 +42,7 @@ To access lambda by HTTP, we need to create AWS API Gateway resources. If we set
 
 To enable CORS, we are copying the configuration from this repository. We can’t use it as a module, because at the moment of writing, terraform doesn’t support count for modules.
 
-[with_domain.tf (source code)](https://medium.com/@geekrodion/aws-lambda-ci-cd-and-api-gateway-with-terraform-module-18d92162f33)
+[with_domain.tf (source code)](https://geekrodion.com/blog/lambda-module)
 
 If we have a domain and certificate on AWS, we can make the lambda accessible at `https://${var.name}.${var.main_domain}`.
 
@@ -52,7 +52,7 @@ This part is pretty custom because two of these requirements must be met to make
 1. GitHub is being used as a code repository.
 2. Container for the pipeline in the ECR registry.
 
-If you have GitHub repository, but don’t have a container in the registry you can check [this story](https://medium.com/@geekrodion/deploying-spa-on-aws-with-terraform-codepipeline-6290529c24dfs).
+If you have GitHub repository, but don’t have a container in the registry you can check [this story](https://geekrodion.com/blog/aws-website/ci-cd).
 
 Also, we need to set a token as an environment variable. It is quite simple to get you can find steps [there](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token).
 
