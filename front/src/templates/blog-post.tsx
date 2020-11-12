@@ -11,6 +11,7 @@ const BlogPost = ({ data, theme, pageContext: { slug, isSeriesRoot } }) => {
   return (
     <Layout customBackground={theme.blog.color.background}>
       <SEO
+        image={post.frontmatter.featuredImage.childImageSharp.resize}
         title={post.frontmatter.title}
         description={post.frontmatter.description}
       />
@@ -31,6 +32,15 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
+        featuredImage {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+              height
+              width
+            }
+          }
+        }
         date(formatString: "MMMM DD, YYYY")
         title
         resources

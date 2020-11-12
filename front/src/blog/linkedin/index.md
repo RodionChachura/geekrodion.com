@@ -6,7 +6,8 @@ category: "programming"
 keywords: [Automation, Puppeteer, JavaScript]
 featuredImage: main.png
 resources: [
-  GitHub https://github.com/RodionChachura/linkedin-connector
+  GitHub https://github.com/RodionChachura/linkedin-connector,
+  YouTube https://youtu.be/8PcqBphVpWA
 ]
 ---
 

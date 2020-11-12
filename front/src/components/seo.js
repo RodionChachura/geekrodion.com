@@ -14,11 +14,15 @@ const query = graphql`
   }
 `
 
-const SEO = ({ description = '', lang = 'en', meta = [], title = undefined }) => {
+const SEO = ({ description = '', lang = 'en', meta = [], title = undefined, image: metaImage }) => {
   const { site } = useStaticQuery(query)
 
   const metaDescription = description || site.siteMetadata.description
   const metaTitle = title || site.siteMetadata.title
+  const image =
+    metaImage && metaImage.src
+      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
+      : null
 
   return (
     <Helmet
@@ -59,7 +63,35 @@ const SEO = ({ description = '', lang = 'en', meta = [], title = undefined }) =>
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ]
+      .concat(
+        metaImage
+          ? [
+              {
+                property: "og:image",
+                content: image,
+              },
+              {
+                property: "og:image:width",
+                content: metaImage.width,
+              },
+              {
+                property: "og:image:height",
+                content: metaImage.height,
+              },
+              {
+                name: "twitter:card",
+                content: "summary_large_image",
+              },
+            ]
+          : [
+              {
+                name: "twitter:card",
+                content: "summary",
+              },
+            ]
+      )
+      .concat(meta)}
     />
   )
 }
