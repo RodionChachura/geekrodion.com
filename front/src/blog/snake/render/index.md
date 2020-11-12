@@ -6,7 +6,7 @@ partNumber: 4
 description: "Learn the basics of game development by making a JS game step by step"
 category: "programming"
 keywords: [JavaScript, Game Development, Functional Programming]
-featuredImage: main.png
+featuredImage: ../main.png
 resources: [
   GitHub https://github.com/RodionChachura/snake-game,
   Demo https://rodionchachura.github.io/snake-game/,

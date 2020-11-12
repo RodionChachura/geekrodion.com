@@ -6,7 +6,7 @@ partNumber: 6
 description: "We will learn how to export API implemented with Rust to JavaScript app"
 category: "programming"
 keywords: [JavaScript, Rust, Web Assembly, Game Development]
-featuredImage: main.png
+featuredImage: ../main.png
 resources: [
   GitHub https://github.com/RodionChachura/rust-js-snake-game/commit/ab12cef511d51ec01d9b3c3f2931b885c8cd8eb3 Code Changes,
   Demo https://rodionchachura.github.io/rust-js-snake-game/,
