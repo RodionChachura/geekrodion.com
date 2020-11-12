@@ -7,7 +7,6 @@ import Post from '../components/blog/post'
 
 const BlogPost = ({ data, theme, pageContext: { slug, isSeriesRoot } }) => {
   const { markdownRemark: post, seriesParts, seriesRoot } = data
-
   return (
     <Layout customBackground={theme.blog.color.background}>
       <SEO

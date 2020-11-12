@@ -9,6 +9,7 @@ const query = graphql`
         title
         description
         author
+        siteUrl
       }
     }
   }
@@ -16,13 +17,12 @@ const query = graphql`
 
 const SEO = ({ description = '', lang = 'en', meta = [], title = undefined, image: metaImage }) => {
   const { site } = useStaticQuery(query)
-
   const metaDescription = description || site.siteMetadata.description
   const metaTitle = title || site.siteMetadata.title
   const image =
-    metaImage && metaImage.src
-      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
-      : null
+  metaImage && metaImage.src
+  ? `${site.siteMetadata.siteUrl}${metaImage.src}`
+  : null
 
   return (
     <Helmet
