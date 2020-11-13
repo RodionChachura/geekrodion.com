@@ -1,9 +1,9 @@
 import React from 'react'
-import { faInstagram, faLinkedin, faYoutube, faMedium, faGithub, IconDefinition } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram, faLinkedin, faYoutube, faMedium, faGithub, faTwitter, IconDefinition } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useMediaQuery } from 'beautiful-react-hooks'
 
-import { INSTAGRAM, LINKEDIN, YOUTUBE, MEDIUM, GITHUB } from './constants'
+import { INSTAGRAM, LINKEDIN, YOUTUBE, MEDIUM, GITHUB, TWITTER } from './constants'
 import { Container, SocialLink } from './styles'
 import Text, { TextColor } from '../../text'
 import { MOBILE_WIDTH } from '../styles'
@@ -17,7 +17,8 @@ const ICONS = [
   [LINKEDIN, faLinkedin],
   [YOUTUBE, faYoutube],
   [MEDIUM, faMedium],
-  [GITHUB, faGithub]
+  [GITHUB, faGithub],
+  [TWITTER, faTwitter]
 ]
 
 const Social = () => {
