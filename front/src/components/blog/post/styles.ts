@@ -370,6 +370,11 @@ export const Content = styled.section`
     }
   }
 
+  blockquote {
+    margin: 36px 0 18px 0;
+    color: ${p => p.theme.color.secondaryText};
+    font-size: 22px;
+  }
 
   p, li {
     margin-top: 18px;

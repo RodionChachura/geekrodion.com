@@ -6,5 +6,9 @@
   "programming": {
     "title": "GeekRodion Exploring Programming Technologies",
     "description": "Here I write programming tutorials and explore new technology"
+  },
+  "self-development": {
+    "title": "GeekRodion on Self-Development",
+    "description": "Tools and practices to improve productivity, focus, and creativity"
   }
 }
