@@ -1,7 +1,7 @@
 ---
-date: "2018-07-08"
-title: "Perseverance Is the Key to Successe"
-description: "Be ready to pay the price for future success"
+date: "2018-11-08"
+title: "How to Stop Procrastinating"
+description: "How to Stop Procrastinating"
 category: "self-development"
 keywords: [Mindset, Productivity]
 featuredImage: main.png
