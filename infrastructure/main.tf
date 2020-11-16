@@ -287,48 +287,51 @@ resource "aws_codebuild_project" "codebuild" {
   }
 }
 
-resource "aws_codepipeline" "pipeline" {
-  name     = "tf-${var.bucket_name}-pipeline"
-  role_arn = "${aws_iam_role.codepipeline_role.arn}"
+# Since I'm the only person working on the project
+# I don't need AWS CodePipeline
 
-  artifact_store {
-    location = "${aws_s3_bucket.artifacts.bucket}"
-    type     = "S3"
-  }
+# resource "aws_codepipeline" "pipeline" {
+#   name     = "tf-${var.bucket_name}-pipeline"
+#   role_arn = "${aws_iam_role.codepipeline_role.arn}"
 
-  stage {
-    name = "Source"
+#   artifact_store {
+#     location = "${aws_s3_bucket.artifacts.bucket}"
+#     type     = "S3"
+#   }
 
-    action {
-      name             = "Source"
-      category         = "Source"
-      owner            = "ThirdParty"
-      provider         = "GitHub"
-      version          = "1"
-      output_artifacts = ["source"]
+#   stage {
+#     name = "Source"
 
-      configuration = {
-        Owner      = "${var.repo_owner}"
-        Repo       = "${var.repo_name}"
-        Branch     = "${var.branch}"
-      }
-    }
-  }
+#     action {
+#       name             = "Source"
+#       category         = "Source"
+#       owner            = "ThirdParty"
+#       provider         = "GitHub"
+#       version          = "1"
+#       output_artifacts = ["source"]
 
-  stage {
-    name = "Build"
+#       configuration = {
+#         Owner      = "${var.repo_owner}"
+#         Repo       = "${var.repo_name}"
+#         Branch     = "${var.branch}"
+#       }
+#     }
+#   }
 
-    action {
-      name            = "Build"
-      category        = "Build"
-      owner           = "AWS"
-      provider        = "CodeBuild"
-      input_artifacts = ["source"]
-      version         = "1"
+#   stage {
+#     name = "Build"
 
-      configuration = {
-        ProjectName = "${aws_codebuild_project.codebuild.name}"
-      }
-    }
-  }
-}
+#     action {
+#       name            = "Build"
+#       category        = "Build"
+#       owner           = "AWS"
+#       provider        = "CodeBuild"
+#       input_artifacts = ["source"]
+#       version         = "1"
+
+#       configuration = {
+#         ProjectName = "${aws_codebuild_project.codebuild.name}"
+#       }
+#     }
+#   }
+# }
