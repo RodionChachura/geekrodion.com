@@ -7,7 +7,8 @@ keywords: [Gatsby, React, Medium, Blogging]
 featuredImage: main.png
 resources: [
   GitHub https://github.com/RodionChachura/booksconcepts.com BooksConcepts,
-  GitHub https://github.com/RodionChachura/geekrodion.com GeekRodion
+  GitHub https://github.com/RodionChachura/geekrodion.com GeekRodion,
+  YouTube https://youtu.be/10LhEZBXp_4
 ]
 ---
 
