@@ -6,7 +6,9 @@ category: "programming"
 keywords: [React, DynamoDB, AWS]
 featuredImage: main.png
 resources: [
-  GitHub https://github.com/RodionChachura/pomodoro-features-watcher
+  GitHub https://github.com/RodionChachura/pomodoro-features-watcher,
+  Demo https://increaser.org/community,
+  YouTube https://youtu.be/cge0JKlmuWQ
 ]
 ---
 
