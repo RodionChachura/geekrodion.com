@@ -57,6 +57,10 @@ module.exports = {
       resolve: `gatsby-plugin-amplitude-analytics`,
       options: {
         apiKey: "afe86075776de93239aa05c74e64baed",
+        amplitudeConfig: {
+          includeReferrer: true
+        },
+        environments: ["production"],
       },
     },
     {
