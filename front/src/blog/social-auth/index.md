@@ -6,7 +6,8 @@ category: "programming"
 keywords: [React, NodeJS, GraphQL, OAuth]
 featuredImage: main.png
 resources: [
-  Demo https://increaser.org
+  Demo https://increaser.org,
+  YouTube https://youtu.be/lLq9eXL8er4
 ]
 ---
 
