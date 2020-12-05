@@ -14,10 +14,11 @@ export enum Resource {
   Twitter = 'twitter.com/geekrodion',
 }
 
-export const EMBEDDED_INCREASER = getEmbeddedLanding(Resource.Increaser)
-export const EMBEDDED_BOOKSCONCEPTS = getEmbeddedLanding(Resource.BooksConcepts)
-
 export const ResourceUrl: Partial<Record<keyof typeof Resource, string>> = Object.fromEntries(
   Object.entries(Resource).map(([key, value]) => [key, getUrl(value)])
 )
+
 export const EMAIL = 'geekrodion@gmail.com'
+
+export const EMBEDDED_INCREASER = getEmbeddedLanding(ResourceUrl.Increaser)
+export const EMBEDDED_BOOKSCONCEPTS = getEmbeddedLanding(ResourceUrl.BooksConcepts)
