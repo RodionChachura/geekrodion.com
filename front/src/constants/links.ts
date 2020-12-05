@@ -1,8 +1,23 @@
 const getUrl = (domain: string) => `https://${domain}`
 const getEmbeddedLanding = (url: string) => `${url}/embedded-landing`
 
-export const INCREASER = getUrl('increaser.org')
-export const BOOKSCONCEPTS = getUrl('booksconcepts.com')
+export enum Resource {
+  Increaser = 'increaser.org',
+  BooksConcepts = 'booksconcepts.com',
+  WebSite = 'geekrodion.com',
 
-export const EMBEDDED_INCREASER = getEmbeddedLanding(INCREASER)
-export const EMBEDDED_BOOKSCONCEPTS = getEmbeddedLanding(BOOKSCONCEPTS)
+  Instagram = 'instagram.com/geekrodion',
+  LinkedIn = 'linkedin.com/in/geekrodion',
+  YouTube = 'youtube.com/channel/UC15iv69GgcJWa8GoohNQzpw',
+  Medium = 'geekrodion.medium.com',
+  GitHub = 'github.com/RodionChachura',
+  Twitter = 'twitter.com/geekrodion',
+}
+
+export const EMBEDDED_INCREASER = getEmbeddedLanding(Resource.Increaser)
+export const EMBEDDED_BOOKSCONCEPTS = getEmbeddedLanding(Resource.BooksConcepts)
+
+export const ResourceUrl: Partial<Record<keyof typeof Resource, string>> = Object.fromEntries(
+  Object.entries(Resource).map(([key, value]) => [key, getUrl(value)])
+)
+export const EMAIL = 'geekrodion@gmail.com'

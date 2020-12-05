@@ -34,7 +34,12 @@ const Text = ({ children, ...rest }: Props) => {
     clickable: !!(rest.onClick || rest.to)
   }
 
-  const Text = rest.to ? StyledLink : getTextComponent(props.tag)
+  let Component
+  if (rest.to) {
+    Component = rest.openInNewTab ? getTextComponent('a') : StyledLink
+  } else {
+    Component = getTextComponent(props.tag)
+  } 
 
 
   let definedProps = Object.keys(props).reduce((acc, key) => {
@@ -52,15 +57,16 @@ const Text = ({ children, ...rest }: Props) => {
   if (rest.to && rest.openInNewTab) {
     definedProps = {
       ...definedProps,
+      href: rest.to,
       target: "_blank",
       rel: "noopener noreferrer"
     }
   }
 
   return (
-    <Text {...definedProps}>
+    <Component {...definedProps}>
       {children}
-    </Text>
+    </Component>
   )
 }
 

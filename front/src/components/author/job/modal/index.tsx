@@ -3,7 +3,7 @@ import React from 'react'
 import Modal, { ExitType } from '../../../modal'
 import Text, { TextColor } from '../../../text'
 import { Container, TextWrapper } from './styles'
-import { LINKEDIN } from '../../social/constants'
+import { EMAIL, ResourceUrl } from '../../../../constants/links'
 
 interface Props {
   onExit: (exitType: ExitType) => void
@@ -29,7 +29,7 @@ const JobModal = ({ onExit }: Props) => {
           </Text>
         </TextWrapper>
         <Text size={textSize} color={TextColor.SECONDARY}>
-          Connect with me on <Text openInNewTab underline size={textSize} to={LINKEDIN}>LinkedIn</Text> or email me at <Text size={textSize}>geekrodion@gmail.com</Text>
+          Connect with me on <Text openInNewTab underline size={textSize} to={ResourceUrl.LinkedIn}>LinkedIn</Text> or email me at <Text size={textSize}>{EMAIL}</Text>
         </Text>
       </Container>
     </Modal>

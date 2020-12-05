@@ -3,7 +3,7 @@ import { faInstagram, faLinkedin, faYoutube, faMedium, faGithub, faTwitter, Icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useMediaQuery } from 'beautiful-react-hooks'
 
-import { INSTAGRAM, LINKEDIN, YOUTUBE, MEDIUM, GITHUB, TWITTER } from './constants'
+import { ResourceUrl } from '../../../constants/links'
 import { Container, SocialLink } from './styles'
 import Text, { TextColor } from '../../text'
 import { MOBILE_WIDTH } from '../styles'
@@ -12,13 +12,13 @@ import { AgeContainer } from './styles'
 
 type Icon = [string, IconDefinition]
 
-const ICONS = [
-  [INSTAGRAM, faInstagram],
-  [LINKEDIN, faLinkedin],
-  [YOUTUBE, faYoutube],
-  [MEDIUM, faMedium],
-  [GITHUB, faGithub],
-  [TWITTER, faTwitter]
+const ICONS: Icon[] = [
+  [ResourceUrl.Instagram, faInstagram],
+  [ResourceUrl.LinkedIn, faLinkedin],
+  [ResourceUrl.YouTube, faYoutube],
+  [ResourceUrl.Medium, faMedium],
+  [ResourceUrl.GitHub, faGithub],
+  [ResourceUrl.Twitter, faTwitter]
 ]
 
 const Social = () => {
