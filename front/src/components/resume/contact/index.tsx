@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Text, { TextColor } from '../../text'
-
 interface Props {
   to: string,
   text: string

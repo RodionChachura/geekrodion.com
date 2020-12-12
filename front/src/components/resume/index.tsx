@@ -1,10 +1,11 @@
 import React from 'react'
 
-import { Wrapper, Container, Header, Contacts } from './styles'
-
+import { Wrapper, Container, Header, Contacts, Content, Side } from './styles'
 import Text from '../text'
 import { EMAIL, ResourceUrl, Resource } from '../../constants/links'
 import Contact from './contact'
+import Section from './section'
+import Experience from './experience'
 
 const Resume = () => {
   return (
@@ -19,6 +20,31 @@ const Resume = () => {
             <Contact to={ResourceUrl.WebSite} text={Resource.WebSite}/>
           </Contacts>
         </Header>
+        <Content>
+          <Side>
+            <Section name={"WORK EXPERIENCE"}>
+              <Experience
+                company={"Kontist"}
+                position={"Senior Software Developer"}
+                website={"https://kontist.com/"}
+                remote
+              />
+              <Experience
+                company={"Kreo"}
+                position={"Software Developer"}
+                website={"https://design.kreo.net/product"}
+              />
+            </Section>
+          </Side>
+          <Side>
+            <Section name={"PROJECTS"}>
+
+            </Section>
+            <Section name={"EDUCATION"}>
+
+            </Section>
+          </Side>
+        </Content>
       </Container>
     </Wrapper>
   )

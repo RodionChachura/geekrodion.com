@@ -15,6 +15,8 @@ export const Container = styled.div`
   background: ${p => p.theme.blog.color.background};
   box-shadow: ${p => p.theme.shadow.default};
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 `
 
 export const Header = styled.div`
@@ -31,4 +33,15 @@ export const Contacts = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
+`
+
+export const Content = styled.div`
+  margin-top: 20px;
+  display: flex;
+  gap: 40px;
+  flex: 1;
+`
+
+export const Side = styled.div`
+  flex: 1;
 `
