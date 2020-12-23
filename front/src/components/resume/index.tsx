@@ -28,11 +28,27 @@ const Resume = () => {
                 position={"Senior Software Developer"}
                 website={"https://kontist.com/"}
                 remote
+                start={new Date(2019, 6)}
+                end={new Date(2020, 9)}
+                responsibilities={[
+                  'Technical planning & code reviews',
+                  'Adding features to the native app',
+                  'Developing new web app',
+                  'Improving sign up conversion'
+                ]}
               />
               <Experience
                 company={"Kreo"}
                 position={"Software Developer"}
                 website={"https://design.kreo.net/product"}
+                start={new Date(2017, 4)}
+                end={new Date(2019, 6)}
+                responsibilities={[
+                  'Implementing complex interfaces',
+                  'Frontend Architecture',
+                  'Managing infrastructure',
+                  'Developing microservices'
+                ]}
               />
             </Section>
           </Side>
