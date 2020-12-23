@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 import { Wrapper, Container, Header, Contacts, Content, Side } from './styles'
 import Text from '../text'
@@ -7,11 +7,14 @@ import Contact from './contact'
 import Section from './section'
 import Experience from './experience'
 import Skills from './skills'
+import Print from './print'
 
 const Resume = () => {
+  const contentRef = useRef()
   return (
-    <Wrapper>
+    <Wrapper ref={contentRef}>
       <Container>
+        <Print contentRef={contentRef}/>
         <Header>
           <Text size={24} bold tag="h1">RODION CHACHURA</Text>
           <Contacts>

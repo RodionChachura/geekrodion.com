@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
 `
 
 export const Container = styled.div`
+  position: relative;
   width: 100%;
   border-radius: 20px;
   width: 1000px;

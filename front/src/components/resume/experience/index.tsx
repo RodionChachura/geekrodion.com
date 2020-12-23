@@ -28,7 +28,7 @@ const Experience = ({ company, position, website, remote, start, end, responsibi
       </Header>
       <Responsibilities>
         {responsibilities.map(text => (
-          <Text color={TextColor.SECONDARY}>- {text}</Text>
+          <Text key={text} color={TextColor.SECONDARY}>- {text}</Text>
         ))}
       </Responsibilities>
       {children}

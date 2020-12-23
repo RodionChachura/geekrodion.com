@@ -11,8 +11,8 @@ interface Props {
 const Skills = ({ primary = [], secondary = [] }: Props) => {
   return (
     <Container>
-      {primary.map(skill => <Skill significance={Significance.Primary} text={skill} />)}
-      {secondary.map(skill => <Skill significance={Significance.Secondary} text={skill} />)}
+      {primary.map(skill => <Skill key={skill} significance={Significance.Primary} text={skill} />)}
+      {secondary.map(skill => <Skill key={skill} significance={Significance.Secondary} text={skill} />)}
     </Container>
   )
 }
