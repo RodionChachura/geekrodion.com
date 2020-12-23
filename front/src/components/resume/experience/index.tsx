@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Text, { TextColor } from '../../text'
-import { Container, Header } from './styles'
+import { Container, Header, Responsibilities } from './styles'
 
 interface Props {
   company: string,
@@ -11,9 +11,10 @@ interface Props {
   start: Date,
   end?: Date,
   responsibilities: string[],
+  children?: React.ReactNode
 }
 
-const Experience = ({ company, position, website, remote, start, end, responsibilities }: Props) => {
+const Experience = ({ company, position, website, remote, start, end, responsibilities, children }: Props) => {
   const formatDate = new Intl.DateTimeFormat('en-US', {month: 'long', year: 'numeric'}).format
   return (
     <Container>
@@ -25,9 +26,12 @@ const Experience = ({ company, position, website, remote, start, end, responsibi
         {remote && <Text>Remote</Text>}
         <Text color={TextColor.SECONDARY}>{formatDate(start)} - {end ? formatDate(end) : 'Present'}</Text>
       </Header>
-      {responsibilities.map(text => (
-        <Text color={TextColor.SECONDARY}>- {text}</Text>
-      ))}
+      <Responsibilities>
+        {responsibilities.map(text => (
+          <Text color={TextColor.SECONDARY}>- {text}</Text>
+        ))}
+      </Responsibilities>
+      {children}
     </Container>
   )
 }

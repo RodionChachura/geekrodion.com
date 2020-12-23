@@ -10,3 +10,7 @@ export const Header = styled.div`
   display: flex;
   gap: 10px;
 `
+
+export const Responsibilities = styled.div`
+  margin-bottom: 10px;
+`

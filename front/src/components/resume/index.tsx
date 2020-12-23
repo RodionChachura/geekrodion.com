@@ -6,6 +6,7 @@ import { EMAIL, ResourceUrl, Resource } from '../../constants/links'
 import Contact from './contact'
 import Section from './section'
 import Experience from './experience'
+import Skills from './skills'
 
 const Resume = () => {
   return (
@@ -36,7 +37,12 @@ const Resume = () => {
                   'Developing new web app',
                   'Improving sign up conversion'
                 ]}
-              />
+              >
+                <Skills
+                  primary={['React Native', 'React', 'Redux', 'Agile', 'NodeJS', 'Technical Planning']}
+                  secondary={['PostgreSQL', 'Prismic', 'Svelte']}
+                />
+              </Experience>
               <Experience
                 company={"Kreo"}
                 position={"Software Developer"}
@@ -49,7 +55,12 @@ const Resume = () => {
                   'Managing infrastructure',
                   'Developing microservices'
                 ]}
-              />
+              >
+                <Skills
+                  primary={['React', 'Redux', 'Terraform', 'AWS', 'NodeJS', 'Algorithms']}
+                  secondary={['ASP.NET', '.NET Orleans', 'Python']}
+                />
+              </Experience>
             </Section>
           </Side>
           <Side>
