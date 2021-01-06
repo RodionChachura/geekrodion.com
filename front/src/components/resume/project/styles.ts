@@ -5,9 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
 `
 
-export const Content = styled.div`
+export const Header = styled.div`
   display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  gap: 20px;
+  gap: 10px;
 `

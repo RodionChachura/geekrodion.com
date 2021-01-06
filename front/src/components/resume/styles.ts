@@ -45,4 +45,7 @@ export const Content = styled.div`
 
 export const Side = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `
