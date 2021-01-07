@@ -82,6 +82,7 @@ const Resume = () => {
                     "AWS",
                     "NodeJS",
                     "Algorithms",
+                    "DynamoDB",
                   ]}
                   secondary={["ASP.NET", ".NET Orleans", "Python"]}
                 />
@@ -99,6 +100,17 @@ const Resume = () => {
                     "Managing infrastructure",
                   ]}
                 />
+                <Skills
+                  primary={[
+                    "Product",
+                    "UX/UI",
+                    "React",
+                    "AWS",
+                    "NodeJS",
+                    "DynamoDB",
+                  ]}
+                  secondary={["Terraform", "Microservices"]}
+                />
               </Project>
               <Project name="GeekRodion" website={ResourceUrl.WebSite}>
                 <Responsibilities
@@ -108,6 +120,16 @@ const Resume = () => {
                     "Implementing a blogging platform",
                   ]}
                 />
+                <Skills
+                  primary={[
+                    "Writing",
+                    "Recording",
+                    "Programming Languages",
+                    "Frameworks",
+                    "Algorithms",
+                  ]}
+                  secondary={["Math", "AWS"]}
+                />
               </Project>
               <Project name="BooksConcepts" website={ResourceUrl.BooksConcepts}>
                 <Responsibilities
@@ -115,6 +137,13 @@ const Resume = () => {
                     "Highlighting books key takeaways",
                     "Designing and developing a content website",
                   ]}
+                />
+                <Skills
+                  primary={[
+                    "Gatsby",
+                    "Summarizing",
+                  ]}
+                  secondary={["UX/UI"]}
                 />
               </Project>
             </Section>
