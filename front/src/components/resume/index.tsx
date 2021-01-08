@@ -1,11 +1,12 @@
 import React, { useRef } from "react"
 
 import { Wrapper, Container, Header, Contacts, Content, Side } from "./styles"
-import Text from "../text"
+import Text, { TextColor } from "../text"
 import { EMAIL, ResourceUrl, Resource } from "../../constants/links"
 import Contact from "./contact"
 import Section from "./section"
 import Experience from "./experience"
+import { Container as ExperienceContainer, Header as ExperienceHeader } from './experience/styles'
 import Skills from "./skills"
 import Print from "./print"
 import Project from "./project"
@@ -147,7 +148,33 @@ const Resume = () => {
                 />
               </Project>
             </Section>
-            <Section name={"EDUCATION"}></Section>
+            <Section name={"EDUCATION"}>
+              <ExperienceContainer>
+                <ExperienceHeader>
+                  <Text>Bachelor of Computer Science</Text>
+                  <Text color={TextColor.SECONDARY}>BSUIR</Text>
+                </ExperienceHeader>
+                <Text color={TextColor.SECONDARY}>
+                  2015-2020
+                </Text>
+                <Responsibilities
+                  responsibilities={[
+                    "Studying math & algorithms",
+                    "Programming with low-level languages",
+                    "Developing with high-level languages"
+                  ]}
+                />
+                <Skills
+                  primary={[
+                    "C#",
+                    "Math",
+                    "Algorithms",
+                    "Python"
+                  ]}
+                  secondary={["C/C++", "Algorithms"]}
+                />
+              </ExperienceContainer>
+            </Section>
           </Side>
         </Content>
       </Container>
