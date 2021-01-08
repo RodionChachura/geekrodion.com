@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Text, { TextColor } from '../../text'
-import { Container, Header } from './styles'
+import { SectionPartContainer, InlineText } from '../styles'
 
 interface Props {
   name: string,
@@ -11,12 +11,12 @@ interface Props {
 
 const Project = ({ website, name, children }: Props) => {
   return (
-    <Container>
-      <Header>
+    <SectionPartContainer>
+      <InlineText>
         <Text openInNewTab underline to={website} color={TextColor.SECONDARY}>{name}</Text>
-      </Header>
+      </InlineText>
       {children}
-    </Container>
+    </SectionPartContainer>
   )
 }
 

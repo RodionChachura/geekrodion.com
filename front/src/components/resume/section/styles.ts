@@ -8,6 +8,6 @@ export const Container = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 20px;
   gap: 20px;
 `

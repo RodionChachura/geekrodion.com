@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Text, { TextColor } from '../../text'
-import { Container, Header } from './styles'
+import { InlineText, SectionPartContainer } from '../styles'
 
 interface Props {
   company: string,
@@ -16,17 +16,19 @@ interface Props {
 const Experience = ({ company, position, website, remote, start, end, children }: Props) => {
   const formatDate = new Intl.DateTimeFormat('en-US', {month: 'long', year: 'numeric'}).format
   return (
-    <Container>
-      <Header>
-        <Text>{position}</Text>
-        <Text openInNewTab underline to={website} color={TextColor.SECONDARY}>{company}</Text>
-      </Header>
-      <Header>
-        {remote && <Text>Remote</Text>}
-        <Text color={TextColor.SECONDARY}>{formatDate(start)} - {end ? formatDate(end) : 'Present'}</Text>
-      </Header>
+    <SectionPartContainer>
+      <div>
+        <InlineText>
+          <Text>{position}</Text>
+          <Text openInNewTab underline to={website} color={TextColor.SECONDARY}>{company}</Text>
+        </InlineText>
+        <InlineText>
+          <Text color={TextColor.SECONDARY}>{formatDate(start)} - {end ? formatDate(end) : 'Present'}</Text>
+          {remote && <Text>Remote</Text>}
+        </InlineText>
+      </div>
       {children}
-    </Container>
+    </SectionPartContainer>
   )
 }
 

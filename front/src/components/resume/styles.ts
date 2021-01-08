@@ -24,6 +24,10 @@ export const Container = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
   @media print {
     width: 100%;
     height: 100%;
@@ -48,7 +52,6 @@ export const Contacts = styled.div`
 `
 
 export const Content = styled.div`
-  margin-top: 20px;
   display: flex;
   gap: 40px;
   flex: 1;
@@ -59,4 +62,15 @@ export const Side = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+`
+
+export const InlineText = styled.div`
+  display: flex;
+  gap: 10px;
+`
+
+export const SectionPartContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 `
