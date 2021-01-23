@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Text from '../../text'
+import Text, { TextColor } from '../../text'
 import { Container, Content } from './styles'
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 const Section = ({ name, children }: Props) => {
   return (
     <Container>
-      <Text bold>{name}</Text>
+      <Text color={TextColor.PRIMARY} bold>{name}</Text>
       <Content>
         {children}
       </Content>
