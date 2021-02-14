@@ -8,7 +8,7 @@ export const Container = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${p => p.selected? p.theme.color.primary: p.theme.color.secondaryBackground};
+  background: ${p => p.selected? 'var(--primary-color)': 'var(--background-light-color)'};
   margin-right: 20px;
   text-decoration: none;
 `

@@ -5,17 +5,16 @@ import Navbar from '../navbar'
 
 interface Props {
   children: any,
-  customBackground?: string,
   withoutNavbar?: boolean
 }
 
-const Layout = ({ children, customBackground, withoutNavbar = false }: Props) => {
+const Layout = ({ children, withoutNavbar = false }: Props) => {
   return (
     <>
-      <GlobalStyle customBackground={customBackground}/>
-      <Container id={'author'} customBackground={customBackground}>
+      <GlobalStyle />
+      <Container id={'author'} >
         <Content>
-          {!withoutNavbar && <Navbar customBackground={customBackground}/>}
+          {!withoutNavbar && <Navbar />}
           {children}
         </Content>
       </Container>

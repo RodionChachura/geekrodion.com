@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   align-items: center;
   height: 100%;
   padding: 20px 0;
+  background: var(--background-light-color);
   @media print {
     padding: 0;
   }
@@ -19,8 +20,8 @@ export const Container = styled.div`
   position: relative;
   border-radius: 20px;
   width: ${WIDTH}px;
-  background: ${p => p.theme.blog.color.background};
-  box-shadow: ${p => p.theme.shadow.default};
+  background: var(--background-color);
+  box-shadow: var(--default-shadow);
   padding: 20px;
   display: flex;
   flex-direction: column;

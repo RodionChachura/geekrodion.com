@@ -26,7 +26,7 @@ const SeriesPart = ({ parts, slug, children, rootSlug, seriesTitle }: Props) => 
     )
 
     return (
-      <Text to={slug} underline color={TextColor.BLOG_SECONDARY}>
+      <Text to={slug} underline color={TextColor.SECONDARY}>
         Part {nextPartNumber}: "{shortTitle}"
       </Text>
     )
@@ -35,9 +35,9 @@ const SeriesPart = ({ parts, slug, children, rootSlug, seriesTitle }: Props) => 
   return (
     <>
       <PartNumberContainer>
-        <Text color={TextColor.BLOG_SECONDARY}>
+        <Text color={TextColor.SECONDARY}>
           Part {partNumber} of the series{" "}
-          <Text color={TextColor.BLOG_SECONDARY} underline to={rootSlug}>
+          <Text color={TextColor.SECONDARY} underline to={rootSlug}>
             "{seriesTitle}"
           </Text>
         </Text>

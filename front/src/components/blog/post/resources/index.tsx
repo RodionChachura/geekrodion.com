@@ -1,5 +1,4 @@
 import React from 'react'
-import { withTheme } from 'styled-components'
 import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { faPlayCircle, faGamepad } from '@fortawesome/free-solid-svg-icons'
 import { useMediaQuery } from 'beautiful-react-hooks'
@@ -10,7 +9,6 @@ import { WIDTH } from '../styles'
 
 interface Props {
   resources: string[],
-  theme: any
 }
 
 enum Type {
@@ -28,10 +26,10 @@ const TEXT_FOR_TYPE = {
 }
 
 const COLOR_FOR_TYPE = {
-  [Type.GitHub]: 'headline',
-  [Type.Udemy]: 'link',
-  [Type.Demo]: 'secondary',
-  [Type.YouTube]: 'link',
+  [Type.GitHub]: 'var(--primary-color)',
+  [Type.Udemy]: 'var(--primary-third-color)',
+  [Type.Demo]: 'var(--primary-second-color)',
+  [Type.YouTube]: 'var(--primary-third-color)',
 }
 
 const ICON_FOR_TYPE = {
@@ -41,7 +39,7 @@ const ICON_FOR_TYPE = {
   [Type.YouTube]: faYoutube
 }
 
-const Resources = ({ resources, theme }: Props) => {
+const Resources = ({ resources }: Props) => {
   const smallScreenSize = (SIDE_RESOURCES_MARGIN + RESOURCE_WIDTH) * 2 + WIDTH
   const isSmallScreen = useMediaQuery(`(max-width: ${smallScreenSize}px)`)
 
@@ -54,7 +52,7 @@ const Resources = ({ resources, theme }: Props) => {
         key={to}
         to={to}
         text={text}
-        color={theme.blog.color[COLOR_FOR_TYPE[type]]}
+        color={COLOR_FOR_TYPE[type]}
         icon={ICON_FOR_TYPE[type]}
       />
     )
@@ -75,4 +73,4 @@ const Resources = ({ resources, theme }: Props) => {
   )
 }
 
-export default withTheme(Resources)
+export default Resources

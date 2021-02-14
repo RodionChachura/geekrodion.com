@@ -53,7 +53,7 @@ const prismStyleVSCode = css`
     padding: 1em;
     margin: .5em 0;
     overflow: auto;
-    background: ${p => p.theme.blog.color.secondaryBackground};
+    background: var(--background-light-color);
   }
 
   :not(pre) > code[class*="language-"] {
@@ -306,7 +306,7 @@ const prismStyleVSCode = css`
 const codeTitleStyle = css`
   .gatsby-code-title {
     margin-top: 10px;
-    background-color: ${p => p.theme.blog.color.secondaryBackground};
+    background-color: var(--background-light-color);
     margin-bottom: -0.4rem;
     padding: 0.5em 1em;
     border-radius: 5px 5px 0 0;
@@ -319,10 +319,10 @@ const codeTitleStyle = css`
 
 export const Content = styled.section`
   margin-top: 20px;
-  color: ${p => p.theme.color.text};
+  color: var(--text-color);
 
   h2, h3, h4 {
-    color: ${p => p.theme.blog.color.headline};
+    color: var(--primary-color);
   }
   h2 {
     font-size: 34px;
@@ -352,27 +352,19 @@ export const Content = styled.section`
   ${prismStyleVSCode};
   ${codeTitleStyle};
 
-  code {
-    /* background: ${p => p.theme.color.text};
-    color: ${p => p.theme.blog.color.background};
-    border-radius: 2px;
-    padding: 0 2px;
-    font-style: italic; */
-  }
-  
   a {
-    color: ${p => p.theme.color.text};
+    color: var(--text-color);
     font-weight: bold;
-    border-bottom-color: ${p => p.theme.blog.color.link} !important;
-    transition: ${p => p.theme.transition.default};
+    border-bottom-color: var(--primary-second-color) !important;
+    transition: var(--default-transition);
     :hover {
-      color: ${p => p.theme.blog.color.link};
+      color: var(--primary-second-color);
     }
   }
 
   blockquote {
     margin: 36px 0 18px 0;
-    color: ${p => p.theme.color.secondaryText};
+    color: var(--text-light-color);
     font-size: 22px;
   }
 
@@ -404,12 +396,12 @@ export const Content = styled.section`
 
   a {
     text-decoration: none;
-    color: ${p => p.theme.color.primaryFont};
-    transition: ${p => p.theme.transition.default};
-    border-bottom: 2px solid ${p => p.theme.color.primaryFont};
+    color: var(--text-color);
+    transition: var(--default-transition);
+    border-bottom: var(--text-color);
     :hover {
-      color: ${p => p.theme.color.actionFont};
-      border-color: ${p => p.theme.color.actionFont};
+      color: var(--primary-color);
+      border-color: var(--primary-color);
     }
   }
 
@@ -419,7 +411,7 @@ export const Content = styled.section`
 
   .gatsby-resp-image-figcaption {
     text-align: center;
-    color: ${p => p.theme.blog.color.secondaryText} !important;
+    color: var(--text-light-color) !important;
   }
 `
 

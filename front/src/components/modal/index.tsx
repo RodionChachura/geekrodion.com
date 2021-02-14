@@ -28,7 +28,7 @@ interface Props {
   submitOnEnter?: boolean
 }
 
-const FullPageModal = ({
+const ModalComponent = ({
   onExit,
   children,
   onSubmit,
@@ -49,7 +49,7 @@ const FullPageModal = ({
         ({ code }: KeyboardEvent) => code === 'Escape' && onExit(ExitType.Escape)
       )
     }
-  })
+  }, [])
 
   useEffect(() => {
     return registerListener('keyup', ({ code }: KeyboardEvent) => {
@@ -57,7 +57,7 @@ const FullPageModal = ({
         onSubmit()
       }
     })
-  })
+  }, [])
 
   useEffect(() => {
     window.history.pushState(null, 'modal')
@@ -123,4 +123,4 @@ const FullPageModal = ({
   )
 }
 
-export default FullPageModal
+export default ModalComponent

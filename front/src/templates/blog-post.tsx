@@ -1,14 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { withTheme } from 'styled-components'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Post from '../components/blog/post'
 
-const BlogPost = ({ data, theme, pageContext: { slug, isSeriesRoot } }) => {
+const BlogPost = ({ data, pageContext: { slug, isSeriesRoot } }) => {
   const { markdownRemark: post, seriesParts, seriesRoot } = data
   return (
-    <Layout customBackground={theme.blog.color.background}>
+    <Layout >
       <SEO
         image={post.frontmatter.featuredImage.childImageSharp.resize}
         title={post.frontmatter.title}
@@ -75,4 +74,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default withTheme(BlogPost)
+export default BlogPost

@@ -3,17 +3,13 @@ import React from 'react'
 import { Placeholder, Container, Navigation } from './styles'
 import Text from '../text'
 
-interface Props {
-  customBackground?: string;
-}
-
-export const Navbar = ({ customBackground }: Props) => {
+export const Navbar = () => {
   const optionStyle = {
     marginLeft: 20
   }
   return (
     <>
-      <Container customBackground={customBackground}>
+      <Container >
         <Text to={'/#author'} bold size={30}>
           GEEKRODION
         </Text>

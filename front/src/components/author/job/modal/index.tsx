@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFileAlt } from '@fortawesome/free-solid-svg-icons'
 import Modal, { ExitType } from '../../../modal'
 import Text, { TextColor } from '../../../text'
 import { Container, TextWrapper } from './styles'
@@ -28,9 +29,16 @@ const JobModal = ({ onExit }: Props) => {
             I open to a <Text size={textSize} tag="span">full-time remote job</Text> and <Text size={textSize} tag="span">consulting</Text> offers.
           </Text>
         </TextWrapper>
-        <Text size={textSize} color={TextColor.SECONDARY}>
-          Connect with me on <Text openInNewTab underline size={textSize} to={ResourceUrl.LinkedIn}>LinkedIn</Text> or email me at <Text size={textSize}>{EMAIL}</Text>
-        </Text>
+        <TextWrapper>
+          <Text size={textSize} color={TextColor.SECONDARY}>
+            Connect with me on <Text openInNewTab underline size={textSize} to={ResourceUrl.LinkedIn}>LinkedIn</Text> or email me at <Text size={textSize}>{EMAIL}</Text>
+          </Text>
+        </TextWrapper>
+        <TextWrapper>
+          <Text openInNewTab underline size={textSize} to="/resume">
+            <FontAwesomeIcon icon={faFileAlt}/> Resume
+          </Text>
+        </TextWrapper>
       </Container>
     </Modal>
   )

@@ -10,7 +10,7 @@ export const Container = styled.div`
   height: ${MAX_SIDE}px;
   overflow: hidden;
   border-radius: 40px;
-  box-shadow: ${p => p.theme.shadow.default};
+  box-shadow: var(--default-shadow);
   margin: 20px 0;
   @media(max-width: ${MAX_WIDTH}px) {
     width: 40vw;

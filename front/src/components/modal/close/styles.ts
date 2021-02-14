@@ -7,16 +7,16 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${p => p.theme.color.halfTransparent};
+  color: var(--half-transparent-color);
   cursor: pointer;
-  transition: ${p => p.theme.transition.default};
+  transition: var(--default-transition);
   position: relative;
   :hover {
-    color: ${p => p.theme.color.text};
+    color: var(--text-color);
     ${p =>
       !p.withoutCircle &&
       css`
-        background: ${p => p.theme.color.almostTransparent};
+        background: var(--almost-transparent-color);
       `}
   }
 `

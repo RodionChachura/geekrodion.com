@@ -23,7 +23,7 @@ const modalStyle = css`
   align-items: center;
   position: relative;
 
-  background: ${p => p.theme.color.background};
+  background: var(--background-light-color);
   ${p =>
     p.withPadding &&
     css`
@@ -39,7 +39,7 @@ const modalStyle = css`
           padding-top: 0;
         `
       : css`
-          box-shadow: ${p => p.theme.shadow.default};
+          box-shadow: var(--default-shadow);
           border-radius: 10px;
         `}
   ${p =>
@@ -72,7 +72,7 @@ export const Container = styled.div`
   ${p =>
     p.solid
       ? css`
-          background: ${p => p.theme.color.background};
+          background: var(--background-color);
         `
       : css`
           background: rgba(0, 0, 0, 0.5);

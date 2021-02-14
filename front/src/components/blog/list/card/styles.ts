@@ -6,16 +6,16 @@ export const Container = styled(Link)`
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  box-shadow: ${p => p.theme.shadow.default};
+  box-shadow: var(--default-shadow);
   overflow: hidden;
   width: 100%;
   justify-content: space-between;
-  background: ${p => p.theme.color.secondaryBackground};
+  background: var(--background-light-color);
   cursor: pointer;
-  transition: ${p => p.theme.transition.default};
+  transition: var(--default-transition);
   border: 2px solid transparent;
   :hover {
-    border-color: ${p => p.theme.color.primary};
+    border-color: var(--primary-color);
   }
 `
 
@@ -37,15 +37,15 @@ export const Keyword = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  box-shadow: ${p => p.theme.shadow.small};
-  background: ${p => p.theme.color.secondaryBackground};
+  box-shadow: var(--small-shadow);
+  background: var(--background-light-color);
   margin: 0 5px 5px 0;
 `
 
 export const PartsBadgeContainer = styled.div`
   width: 100%;
   height: 40px;
-  background: ${p => p.theme.color.primary};
+  background: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;

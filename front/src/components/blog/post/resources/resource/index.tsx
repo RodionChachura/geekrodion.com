@@ -14,7 +14,7 @@ interface Props {
 export const Resource = ({ color, to, icon, text }: Props) => {
   return (
     <Container color={color} href={to} target="_blank" rel="noopener noreferrer">
-      <Text bold size={16} color={TextColor.BLOG_REVERSED}>
+      <Text bold size={16} color={TextColor.REVERSED}>
         <FontAwesomeIcon style={{ marginRight: 10}} icon={icon} />
         {text}
       </Text>

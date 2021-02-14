@@ -16,7 +16,7 @@ interface Props {
 const Skill = ({ text, significance }: Props) => {
   return (
     <Container primary={significance === Significance.Primary}>
-      <Text size={16} color={TextColor.BLOG_REVERSED}>{text}</Text>
+      <Text size={16} color={TextColor.REVERSED}>{text}</Text>
     </Container>
   )
 }

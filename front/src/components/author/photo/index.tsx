@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { useInterval } from 'beautiful-react-hooks'
 import _ from "lodash"
-import { withTheme } from 'styled-components'
 
 import { Container } from './styles'
 
@@ -48,4 +47,4 @@ const AuthorPhoto = () => {
   )
 }
 
-export default withTheme(AuthorPhoto)
+export default AuthorPhoto

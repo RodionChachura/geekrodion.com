@@ -25,7 +25,7 @@ export const ProjectFrame = styled.iframe`
   flex: 1;
   border: none;
   border-radius: 20px;
-  box-shadow: ${p => p.theme.shadow.default};
+  box-shadow: var(--default-shadow);
   margin: 10px 0;
   @media(min-width: ${ONE_COLUMN_WIDTH}) {
     :nth-child(even) {

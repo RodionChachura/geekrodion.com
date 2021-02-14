@@ -16,7 +16,7 @@ const SeriesRoot = ({ parts, children }: Props) => {
         return (
           <Text key={slug} style={{ marginBottom: 10 }} bold>
             {partNumber}.{" "}
-            <Text color={TextColor.BLOG_SECONDARY} bold to={slug} underline>
+            <Text color={TextColor.SECONDARY} bold to={slug} underline>
               {shortTitle}
             </Text>
           </Text>

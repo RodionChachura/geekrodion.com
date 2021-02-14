@@ -1,6 +1,5 @@
 // @ts-nocheck
 import React from 'react'
-import { withTheme } from 'styled-components'
 
 import { getNow } from '../utils/time'
 
@@ -262,9 +261,7 @@ class Waves extends React.PureComponent {
     }
 
     let { top, bottom, left, right } = el.getBoundingClientRect()
-    let color = this.props.color
-      ? this.props.theme.color[this.props.color] || this.props.theme.color.text
-      : 'white'
+    let color = this.props.color || 'white'
 
     let ctx = this.state.ctx || el.getContext('2d')
     let density = pixelRatio(ctx)
@@ -326,6 +323,6 @@ class Waves extends React.PureComponent {
   }
 }
 
-export default withTheme(Waves)
+export default Waves
 
 Waves.defaultProps = defaultProps
