@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "geekrodion",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "GeekRodion website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "GeekRodion <geekrodion@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
     "@fortawesome/free-brands-svg-icons": "^5.13.1",
