@@ -156,10 +156,7 @@ const Resume = () => {
             <Section name={"EDUCATION"}>
               <SectionPartContainer>
                 <div>
-                  <InlineText>
-                    <Text size={22}>Bachelor of Computer Science</Text>
-                    <Text color={TextColor.SECONDARY} size={22}>BSUIR</Text>
-                  </InlineText>
+                  <Text size={22}>Bachelor of Computer Science <Text tag="span" color={TextColor.SECONDARY} size={22}>BSUIR</Text></Text>
                   <Text color={TextColor.SECONDARY}>
                     2015-2020
                   </Text>
