@@ -1,17 +1,19 @@
 import React from 'react'
 
-import Text, { TextColor } from '../../text'
-import { Container, Content } from './styles'
+import Text from '../../text'
+import { Container, Content, Background } from './styles'
 
 interface Props {
   name: string,
-  children: any
+  children: any,
+  color: string
 }
 
-const Section = ({ name, children }: Props) => {
+const Section = ({ name, children, color }: Props) => {
   return (
     <Container>
-      <Text color={TextColor.PRIMARY} bold>{name}</Text>
+      <Background style={{ background: color }}/> 
+      <Text style={{ color }} bold>{name}</Text>
       <Content>
         {children}
       </Content>

@@ -36,25 +36,9 @@ export const Container = styled.div`
   }
 `
 
-export const Header = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-`
-
-export const Contacts = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-`
-
 export const Content = styled.div`
   display: flex;
-  gap: 40px;
+  gap: 20px;
   flex: 1;
 `
 

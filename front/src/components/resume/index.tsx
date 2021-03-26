@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
 
-import { Wrapper, Container, Header, Contacts, Content, Side, InlineText, SectionPartContainer } from "./styles"
+import { Wrapper, Container, Content, Side, InlineText, SectionPartContainer } from "./styles"
 import Text, { TextColor } from "../text"
 import { EMAIL, ResourceUrl, Resource } from "../../constants/links"
 import Contact from "./contact"
@@ -10,27 +10,33 @@ import Skills from "./skills"
 import Print from "./print"
 import Project from "./project"
 import Responsibilities from "./responsibilities"
+import { HStack, VStack } from "../common/stack"
 
 const Resume = () => {
   const contentRef = useRef()
   return (
     <Wrapper ref={contentRef}>
       <Container>
-        <Print contentRef={contentRef} />
-        <Header>
-          <Text size={24} bold tag="h1">
-            RODION CHACHURA
-          </Text>
-          <Contacts>
+        <VStack>
+          <HStack justifyContent="start" gap={10}>
+            <Text size={24} bold tag="h1">
+              RODION CHACHURA
+            </Text>
+            <Text color={TextColor.SECONDARY}>
+              Georgia 🇬🇪
+            </Text>
+          </HStack>
+          <HStack gap={8}>
             <Contact to={`mailto:${EMAIL}`} text={EMAIL} />
             <Contact to={ResourceUrl.LinkedIn} text={Resource.LinkedIn} />
             <Contact to={ResourceUrl.GitHub} text={Resource.GitHub} />
             <Contact to={ResourceUrl.WebSite} text={Resource.WebSite} />
-          </Contacts>
-        </Header>
+          </HStack>
+        </VStack>
+        <Print contentRef={contentRef} />
         <Content>
           <Side>
-            <Section name={"WORK EXPERIENCE"}>
+            <Section color="hsla(216,60%,48%,1)" name={"WORK EXPERIENCE"}>
               <Experience
                 company={"Kontist"}
                 position={"Senior Software Developer"}
@@ -90,7 +96,7 @@ const Resume = () => {
             </Section>
           </Side>
           <Side>
-            <Section name={"PROJECTS"}>
+            <Section color="hsla(108,60%,48%,1)" name={"PROJECTS"}>
               <Project name="Increaser" website={ResourceUrl.Increaser}>
                 <Responsibilities
                   responsibilities={[
@@ -147,7 +153,7 @@ const Resume = () => {
                 />
               </Project>
             </Section>
-            <Section name={"EDUCATION"}>
+            <Section color="hsla(288,60%,48%,1)" name={"EDUCATION"}>
               <SectionPartContainer>
                 <div>
                   <InlineText>

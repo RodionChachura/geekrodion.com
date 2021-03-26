@@ -18,13 +18,13 @@ type Props = {
   onClick?: () => void,
   to?: string,
   openInNewTab?: boolean,
-  style?: Object
+  style?: Object,
 }
 
 const DEFAULT_PROPS = {
   tag: 'p',
   size: 18,
-  color: TextColor.DEFAULT
+  color: TextColor.DEFAULT,
 }
 
 const Text = ({ children, ...rest }: Props) => {
