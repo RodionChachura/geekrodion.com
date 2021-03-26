@@ -19,8 +19,8 @@ const Experience = ({ company, position, website, remote, start, end, children }
     <SectionPartContainer>
       <div>
         <InlineText>
-          <Text>{position}</Text>
-          <Text openInNewTab underline to={website} color={TextColor.SECONDARY}>{company}</Text>
+          <Text size={22}>{position}</Text>
+          <Text size={22} openInNewTab underline to={website} color={TextColor.SECONDARY}>{company}</Text>
         </InlineText>
         <InlineText>
           <Text color={TextColor.SECONDARY}>{formatDate(start)} - {end ? formatDate(end) : 'Present'}</Text>

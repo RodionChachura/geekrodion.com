@@ -6,16 +6,8 @@ export const Container = styled.div`
   border-radius: 8px;
   padding: 12px;
   position: relative;
+  background: var(--background-light-color);
   overflow: hidden;
-`
-
-export const Background = styled.div`
-  left: 0;
-  top: 0;
-  position: absolute;
-  opacity: 0.1;
-  width: 100%;
-  height: 100%;
 `
 
 export const Content = styled.div`

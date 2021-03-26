@@ -19,7 +19,7 @@ const Resume = () => {
       <Container>
         <VStack>
           <HStack justifyContent="start" gap={10}>
-            <Text size={24} bold tag="h1">
+            <Text size={22} bold tag="h1">
               RODION CHACHURA
             </Text>
             <Text color={TextColor.SECONDARY}>
@@ -36,7 +36,7 @@ const Resume = () => {
         <Print contentRef={contentRef} />
         <Content>
           <Side>
-            <Section color="hsla(216,60%,48%,1)" name={"WORK EXPERIENCE"}>
+            <Section name={"WORK EXPERIENCE"}>
               <Experience
                 company={"Kontist"}
                 position={"Senior Software Developer"}
@@ -96,7 +96,7 @@ const Resume = () => {
             </Section>
           </Side>
           <Side>
-            <Section color="hsla(108,60%,48%,1)" name={"PROJECTS"}>
+            <Section name={"PROJECTS"}>
               <Project name="Increaser" website={ResourceUrl.Increaser}>
                 <Responsibilities
                   responsibilities={[
@@ -153,12 +153,12 @@ const Resume = () => {
                 />
               </Project>
             </Section>
-            <Section color="hsla(288,60%,48%,1)" name={"EDUCATION"}>
+            <Section name={"EDUCATION"}>
               <SectionPartContainer>
                 <div>
                   <InlineText>
-                    <Text>Bachelor of Computer Science</Text>
-                    <Text color={TextColor.SECONDARY}>BSUIR</Text>
+                    <Text size={22}>Bachelor of Computer Science</Text>
+                    <Text color={TextColor.SECONDARY} size={22}>BSUIR</Text>
                   </InlineText>
                   <Text color={TextColor.SECONDARY}>
                     2015-2020

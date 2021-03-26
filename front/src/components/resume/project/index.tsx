@@ -13,7 +13,7 @@ const Project = ({ website, name, children }: Props) => {
   return (
     <SectionPartContainer>
       <InlineText>
-        <Text openInNewTab underline to={website} color={TextColor.SECONDARY}>{name}</Text>
+        <Text size={22} openInNewTab underline to={website}>{name}</Text>
       </InlineText>
       {children}
     </SectionPartContainer>

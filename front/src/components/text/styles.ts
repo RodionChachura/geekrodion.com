@@ -61,7 +61,9 @@ export const style = css`
   ${p =>
     p.underline &&
     css`
-      border-bottom: 2px solid ${p => getTextHoverColor(p.color)};
+      text-decoration: underline;
+      text-text-decoration-thickness: 2px;
+      /* border-bottom: 2px solid ${p => getTextHoverColor(p.color)}; */
     `}
 `
 

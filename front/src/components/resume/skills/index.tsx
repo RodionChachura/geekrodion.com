@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Container } from './styles'
-import Skill, { Significance} from './skill'
+import Text, { TextColor } from '../../text'
 
 interface Props {
   primary?: string[],
@@ -11,8 +11,7 @@ interface Props {
 const Skills = ({ primary = [], secondary = [] }: Props) => {
   return (
     <Container>
-      {primary.map(skill => <Skill key={skill} significance={Significance.Primary} text={skill} />)}
-      {secondary.map(skill => <Skill key={skill} significance={Significance.Secondary} text={skill} />)}
+      <Text size={16}>Skills: <Text color={TextColor.SECONDARY} size={16} tag="span">{[...primary, ...secondary].join(', ')}</Text></Text>
     </Container>
   )
 }
