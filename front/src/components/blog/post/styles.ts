@@ -395,7 +395,7 @@ export const Content = styled.section`
   }
 
   a {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: var(--text-color);
     transition: var(--default-transition);
     border-bottom: var(--text-color);
