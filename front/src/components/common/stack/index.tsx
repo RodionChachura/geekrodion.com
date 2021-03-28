@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 interface Props {
   direction: 'row' | 'column',
+  style?: React.CSSProperties,
   gap?: number
   alignItems?: 'center' | 'start' | 'end'
   justifyContent?: 'start' | 'end' | 'center' | 'space-between' | 'space-around',
@@ -11,14 +12,14 @@ interface Props {
 
 const alignItemsFlexbox = {
   center: 'center',
-  start: 'flexbox-start',
-  end: 'flexbox-end'
+  start: 'flex-start',
+  end: 'flex-end'
 }
 
 const justifyContentFlexbox = {
   center: 'center',
-  start: 'flexbox-start',
-  end: 'flexbox-end',
+  start: 'flex-start',
+  end: 'flex-end',
   'space-between': 'space-between',
   'space-around': 'space-around'
 }

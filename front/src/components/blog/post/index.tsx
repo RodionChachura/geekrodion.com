@@ -6,7 +6,8 @@ import Resources from './resources'
 import SeriesPart from './series/part'
 import SeriesRoot from './series/root'
 import { getFlatObject } from '../../utils/generic'
-import Promotion from './promotion'
+import { Promotion } from 'src/components/promotion'
+import BigPromotion from './promotion'
 
 interface Props {
   post: any,
@@ -61,13 +62,16 @@ const Post = ({ post, seriesParts, slug, seriesRoot, isSeriesRoot }: Props) => {
   }
 
   return (
-    <Container>
-      <HeadlineContainer>
-        <Text size={40} tag={'h1'} bold>{post.frontmatter.title}</Text>
-      </HeadlineContainer>
-      {renderPost()}
+    <>
+      <Container>
+        <HeadlineContainer>
+          <Text size={40} tag={'h1'} bold>{post.frontmatter.title}</Text>
+        </HeadlineContainer>
+        {renderPost()}
+        <BigPromotion/>
+      </Container>
       <Promotion/>
-    </Container>
+    </>
   )
 }
 
