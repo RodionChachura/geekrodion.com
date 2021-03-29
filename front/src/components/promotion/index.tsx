@@ -17,6 +17,7 @@ const storage = {
 
 export const Promotion = ({}: Props) => {
   const [isShown, setIsShown] = useState(() => storage.get())
+  const [isAuthorAnimationFinished, setIsAuthorAnimationFinished] = useState(false)
 
   useEffect(() => {
     if (!isShown) {
@@ -36,8 +37,10 @@ export const Promotion = ({}: Props) => {
 
   return (
     <>
-      <Author/>
-      <Message onSelect={() => setIsShown(true)}/>
+      <Author onAnimationFinish={() => setIsAuthorAnimationFinished(true)} />
+      {isAuthorAnimationFinished && (
+        <Message onSelect={() => setIsShown(true)}/>
+      )}
     </>
   )
 }

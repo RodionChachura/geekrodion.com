@@ -5,8 +5,9 @@ import Text, { TextColor } from 'src/components/text'
 import { HStack, VStack } from "../common/stack"
 import { getAnalytics } from "src/utils/analytics"
 import { ResourceUrl } from "src/constants/links"
+import { useSpring, animated, config } from 'react-spring'
 
-const Container = styled.div`
+const Container = styled(animated.div)`
   position: fixed;
   z-index: 7;
   left: 110px;
@@ -62,6 +63,14 @@ interface Props {
 }
 
 export const Message = ({ onSelect }: Props) => {
+  const props = useSpring({
+    from: {
+      opacity: 0,
+    },
+    to: {
+      opacity: 1,
+    }
+  })
   const onYes = useCallback(() => {
     getAnalytics().increaserPromotionYes()
     onSelect()
@@ -72,7 +81,7 @@ export const Message = ({ onSelect }: Props) => {
     onSelect()
   }, [onSelect])
   return (
-    <Container>
+    <Container style={props}>
       <ContentWr>
         <Content>
           <Connector>

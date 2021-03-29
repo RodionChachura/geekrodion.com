@@ -2,17 +2,17 @@ import React from 'react'
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from 'styled-components'
+import { useSpring, animated, config } from 'react-spring'
 
-const Container = styled.div`
+const Container = styled(animated.div)`
   position: fixed;
   z-index: 6;
-  left: -40px;
   bottom: 240px;
   transform: rotate(30deg);
 `
 
 interface Props {
-  
+  onAnimationFinish: () => void
 }
 
 export const query = graphql`
@@ -27,10 +27,26 @@ export const query = graphql`
   }
 `
 
-export const Author = ({}: Props) => {
+export const Author = ({ onAnimationFinish }: Props) => {
   const { helloImg } = useStaticQuery(query)
+  const props = useSpring({
+    config: {
+      ...config.slow,
+      friction: 40,
+      clamp: true
+    },
+    from: {
+      left: -200,
+      transform: 'rotate(0deg)'
+    },
+    to: {
+      left: - 40,
+      transform: 'rotate(30deg)'
+    },
+    onRest: () => onAnimationFinish()
+  })
   return (
-    <Container>
+    <Container style={props}>
       <Img fixed={helloImg.childImageSharp.fixed} />
     </Container>
   )
