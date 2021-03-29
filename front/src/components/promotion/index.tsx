@@ -16,6 +16,8 @@ const storage = {
 }
 
 export const Promotion = ({}: Props) => {
+  const [noHovered, setNoHovered] = useState(false)
+  const [yesHoverd, setYesHovered] = useState(false)
   const [isShown, setIsShown] = useState(() => storage.get())
   const [isAuthorAnimationFinished, setIsAuthorAnimationFinished] = useState(false)
 
@@ -37,9 +39,15 @@ export const Promotion = ({}: Props) => {
 
   return (
     <>
-      <Author onAnimationFinish={() => setIsAuthorAnimationFinished(true)} />
+      <Author mood={noHovered ? 'sad' : yesHoverd ? 'smile' : 'hello'} onAnimationFinish={() => setIsAuthorAnimationFinished(true)} />
       {isAuthorAnimationFinished && (
-        <Message onSelect={() => setIsShown(true)}/>
+        <Message
+          onSelect={() => setIsShown(true)}
+          onNoHover={() => setNoHovered(true)}
+          onNoLeave={() => setNoHovered(false)}
+          onYesHover={() => setYesHovered(true)}
+          onYesLeave={() => setYesHovered(false)}
+        />
       )}
     </>
   )

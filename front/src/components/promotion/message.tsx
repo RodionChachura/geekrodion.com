@@ -59,10 +59,14 @@ const Button = styled.button`
 `
 
 interface Props {
-  onSelect: () => void
+  onSelect: () => void,
+  onNoHover?: () => void,
+  onNoLeave?: () => void,
+  onYesHover?: () => void,
+  onYesLeave?: () => void
 }
 
-export const Message = ({ onSelect }: Props) => {
+export const Message = ({ onSelect, onNoHover, onNoLeave, onYesHover, onYesLeave }: Props) => {
   const props = useSpring({
     from: {
       opacity: 0,
@@ -103,8 +107,24 @@ export const Message = ({ onSelect }: Props) => {
               Hi there! Can I share a cool thing I'm working on with you?
             </Text>
             <HStack justifyContent="start" style={{ marginLeft: -16, marginBottom: - 8 }}>
-              <Button as="a" href={ResourceUrl.Increaser} target="_blank" rel="noopener noreferrer" onClick={onYes} style={{ color: 'rgb(230, 0, 103)' }}>Sure!</Button>
-              <Button onClick={onNo}>Nah, I'm good</Button>
+              <Button
+                onMouseEnter={onYesHover}
+                onMouseLeave={onYesLeave}
+                as="a"
+                href={ResourceUrl.Increaser}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={onYes}
+                style={{ color: 'rgb(230, 0, 103)' }}
+              >
+                Sure!
+              </Button>
+              <Button
+                onMouseEnter={onNoHover}
+                onMouseLeave={onNoLeave}
+                onClick={onNo}>
+                  Nah, I'm good
+              </Button>
             </HStack>
           </VStack>
         </Content>

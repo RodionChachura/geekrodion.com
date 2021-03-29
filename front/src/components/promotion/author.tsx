@@ -7,19 +7,35 @@ import { useSpring, animated, config } from 'react-spring'
 const Container = styled(animated.div)`
   position: fixed;
   z-index: 6;
-  bottom: 240px;
+  /* bottom: 240px; */
+  bottom: 230px;
   transform: rotate(30deg);
 `
 
 interface Props {
+  mood?: 'hello' | 'sad' | 'smile'
   onAnimationFinish: () => void
 }
 
 export const query = graphql`
   query {
-    helloImg: file(relativePath: { eq: "author-emoji/hello.png" }) {
+    hello: file(relativePath: { eq: "author-emoji/regular.png" }) {
       childImageSharp {
         fixed(width: 160, height: 160) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    sad: file(relativePath: { eq: "author-emoji/cry.png" }) {
+      childImageSharp {
+        fixed(width: 170, height: 170) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    smile: file(relativePath: { eq: "author-emoji/smile.png" }) {
+      childImageSharp {
+        fixed(width: 170, height: 170) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -27,8 +43,9 @@ export const query = graphql`
   }
 `
 
-export const Author = ({ onAnimationFinish }: Props) => {
-  const { helloImg } = useStaticQuery(query)
+export const Author = ({ onAnimationFinish, mood = 'hello' }: Props) => {
+  const imgs = useStaticQuery(query)
+  const img = imgs[mood]
   const props = useSpring({
     config: {
       ...config.slow,
@@ -47,7 +64,7 @@ export const Author = ({ onAnimationFinish }: Props) => {
   })
   return (
     <Container style={props}>
-      <Img fixed={helloImg.childImageSharp.fixed} />
+      <Img fixed={img.childImageSharp.fixed} />
     </Container>
   )
 }
