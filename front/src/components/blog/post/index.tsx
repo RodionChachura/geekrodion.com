@@ -8,6 +8,7 @@ import SeriesRoot from './series/root'
 import { getFlatObject } from '../../utils/generic'
 import { Promotion } from 'src/components/promotion'
 import BigPromotion from './promotion'
+import { AfterDelay } from 'src/components/common/after-delay'
 
 interface Props {
   post: any,
@@ -70,7 +71,9 @@ const Post = ({ post, seriesParts, slug, seriesRoot, isSeriesRoot }: Props) => {
         {renderPost()}
         <BigPromotion/>
       </Container>
-      <Promotion/>
+      <AfterDelay>
+        <Promotion/>
+      </AfterDelay>
     </>
   )
 }

@@ -11,12 +11,8 @@ interface Props {
 const key = 'gr-increaser-promotion-28-3-2021'
 
 const storage = {
-  get: () => Boolean(window?.localStorage?.getItem('key')),
-  set: () => window?.localStorage?.setItem(key, Date.now().toString())
-}
-
-const getIsShownFromStorage = () => {
-  return Boolean(window?.localStorage?.getItem('key'))
+  get: () => Boolean(typeof window !== `undefined` && window?.localStorage?.getItem('key')),
+  set: () => typeof window !== `undefined` && window?.localStorage?.setItem(key, Date.now().toString())
 }
 
 export const Promotion = ({}: Props) => {
@@ -29,7 +25,7 @@ export const Promotion = ({}: Props) => {
   }, [])
 
   useEffect(() => {
-    if (isShown && !getIsShownFromStorage()) {
+    if (isShown && !storage.get()) {
       storage.set()
     } 
   }, [isShown])
