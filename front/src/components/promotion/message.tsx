@@ -5,7 +5,7 @@ import Text, { TextColor } from 'src/components/text'
 import { HStack, VStack } from "../common/stack"
 import { getAnalytics } from "src/utils/analytics"
 import { ResourceUrl } from "src/constants/links"
-import { useSpring, animated, config } from 'react-spring'
+import { useSpring, animated } from 'react-spring'
 
 const Container = styled(animated.div)`
   position: fixed;
@@ -16,7 +16,6 @@ const Container = styled(animated.div)`
 
 const ContentWr = styled.div`
   position: relative;
-  width: 350px;
   min-height: 87px;
 `
 
@@ -63,10 +62,17 @@ interface Props {
   onNoHover?: () => void,
   onNoLeave?: () => void,
   onYesHover?: () => void,
-  onYesLeave?: () => void
+  onYesLeave?: () => void,
+  text?: string,
+  yesText?: string,
+  width?: number
 }
 
-export const Message = ({ onSelect, onNoHover, onNoLeave, onYesHover, onYesLeave }: Props) => {
+const DEFAULT_TEXT = `Hi 👋 I'm building an app that makes programmers more productive.`
+const DEFAULT_YES_TEXT = 'Show me!'
+const DEFAULT_WIDTH = 350
+
+export const Message = ({ onSelect, onNoHover, onNoLeave, onYesHover, onYesLeave, text = DEFAULT_TEXT, yesText = DEFAULT_YES_TEXT, width = DEFAULT_WIDTH }: Props) => {
   const props = useSpring({
     from: {
       opacity: 0,
@@ -86,7 +92,7 @@ export const Message = ({ onSelect, onNoHover, onNoLeave, onYesHover, onYesLeave
   }, [onSelect])
   return (
     <Container style={props}>
-      <ContentWr>
+      <ContentWr style={{ width }}>
         <Content>
           <Connector>
             <svg
@@ -104,7 +110,7 @@ export const Message = ({ onSelect, onNoHover, onNoLeave, onYesHover, onYesLeave
           </Connector>
           <VStack alignItems="start" gap={16}>
             <Text size={17} color={TextColor.REVERSED}>
-              Hi there! Can I share a cool thing I'm working on with you?
+              {text}
             </Text>
             <HStack justifyContent="start" style={{ marginLeft: -16, marginBottom: - 8 }}>
               <Button
@@ -117,7 +123,7 @@ export const Message = ({ onSelect, onNoHover, onNoLeave, onYesHover, onYesLeave
                 onClick={onYes}
                 style={{ color: 'rgb(230, 0, 103)' }}
               >
-                Sure!
+                {yesText}
               </Button>
               <Button
                 onMouseEnter={onNoHover}
