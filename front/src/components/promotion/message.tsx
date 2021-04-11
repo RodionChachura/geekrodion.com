@@ -68,9 +68,9 @@ interface Props {
   width?: number
 }
 
-const DEFAULT_TEXT = `Hi 👋 I'm building an app that makes programmers more productive.`
-const DEFAULT_YES_TEXT = 'Show me!'
-const DEFAULT_WIDTH = 350
+const DEFAULT_TEXT = `Hi there! Can I share a tool for deep work with you?`
+const DEFAULT_YES_TEXT = 'Sure!'
+const DEFAULT_WIDTH = 340
 
 export const Message = ({ onSelect, onNoHover, onNoLeave, onYesHover, onYesLeave, text = DEFAULT_TEXT, yesText = DEFAULT_YES_TEXT, width = DEFAULT_WIDTH }: Props) => {
   const props = useSpring({
